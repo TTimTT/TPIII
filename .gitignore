@@ -1,0 +1,8 @@
+*.pdf
+*.tuc
+*.log
+*.tmp
+*.dvi
+*.aux
+*.toc
+*~
