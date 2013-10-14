@@ -1,23 +1,33 @@
 #Esquisse du futur makefile
+RAP=Rapport
 
 all: figure context latex
-	pdflatex Rapport.tex
 
-latex:
-	pdflatex Rapport.tex
+latex: buildlatex cleanlatex
 
-context:
-	cd ./figures;for f in *.tex;do context $f;rm -vf *.tuc; rm -vf *.log; rm -vf *.tmp;done;
-	
+context: buildcontext cleancontext
 
 figure:
-	gnuplot figures.gnuplot
+	gnuplot figures.gnuplot	
+
+#3 fois car on veut la version final du rapport
+buildlatex:
+	pdflatex $(RAP).tex;
+	pdflatex $(RAP).tex;
+	pdflatex $(RAP).tex;
+
+buildcontext:
+	cd ./figures;context *.tex;
+
 
 clean: cleanlatex cleancontext
 	@echo "finnish the clean"
 
 cleanlatex:
-	rm -vf Rapport.aux Rapport.toc Rapport.log
+	rm -vf $(RAP).aux $(RAP).toc $(RAP).log
 
 cleancontext:
+	cd ./figures;rm -vf *.tuc; rm -vf *.log; rm -vf *.tmp;
+
+cleanfigure:
 	rm -vf ./figures/*.tex
