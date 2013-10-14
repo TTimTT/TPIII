@@ -1,0 +1,23 @@
+#Esquisse du futur makefile
+
+all: figure context latex
+	pdflatex Rapport.tex
+
+latex:
+	pdflatex Rapport.tex
+
+context:
+	cd ./figures;for f in *.tex;do context $f;rm -vf *.tuc; rm -vf *.log; rm -vf *.tmp;done;
+	
+
+figure:
+	gnuplot figures.gnuplot
+
+clean: cleanlatex cleancontext
+	@echo "finnish the clean"
+
+cleanlatex:
+	rm -vf Rapport.aux Rapport.toc Rapport.log
+
+cleancontext:
+	rm -vf ./figures/*.tex
