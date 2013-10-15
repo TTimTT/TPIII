@@ -49,23 +49,61 @@
 %domaine très théoriques
 %peu de compréhension sur le sujet ( pourquoi???)
 
+\newpage
 \section{Dispositif}
 %Description du dispositif expérimental
 %Tim's duty
 \subsection{Pendule inversé}
 
-\paragraph{Matériel}
-%Oui c'est du copier coller je vais voir is je change ca
+\paragraph{Matériels}
+%Oui c'est du copier coller je vais voir si je change ca
 \begin{enumerate}
-\item Générateur de tension.
-\item Générateur LD Series (A+D Products Bienne Switzerland, EPFL TP physique 466).
-\item Pendule inversé (EPFL TP Physique 41).
-\item Boitier ’Pendule chaotique’.
-\item Boitier SensorCassy (Leybold Didactic Gmbh).
-\item Voltmètre.
+	\item Générateur de tension.
+	\item Générateur LD Series (A+D Products Bienne Switzerland, EPFL TP physique 466).
+	\item Pendule inversé (EPFL TP Physique 41).
+	\item Boitier ’Pendule chaotique’.
+	\item Boitier SensorCassy (Leybold Didactic Gmbh).
+	\item Voltmètre.
 \end{enumerate}
 
-\subsection{Moteur bipolaire}
+\begin{figure}[h!]
+  \begin{center}
+  \includegraphics[width=0.5\linewidth,angle=0]{./figures/pendule_inverse.png}
+  \caption{Schéma du dispositif du pendule inversé pour le TP sur le chaos déterministe.} \label{fig:pendule1}
+  \end{center}
+\end{figure}
+
+%TODO PEAUFINER
+Le dispositif mesure, grâce au boitier SensorCassy, les valeurs de $\theta$ et $\dot{\theta}$,
+permettant de tracer l'espace de phase du pendule inversé.
+
+\subsection{Moteur dipolaire}
+
+\paragraph{Materiels}
+\begin{enumerate}
+	\item Générateur de fonctions: Wavetek, IPE 241-07/03.
+	\item Générateur d’impulsions: EPFL, IPE 242 - 07/03.
+	\item Oscilloscope: Hewlett Packard, HP 54600A.
+	\item Sonde de Hall : Bell 620 Gaussmeter, IPE 240 - 07/03.
+	\item Amplificateur C.C. : EPFL.
+	\item Moteur bipolaire : EPFL.
+\end{enumerate}
+
+\begin{figure}[h!]
+  \begin{center}
+  %\includegraphics[width=0.8\linewidth,angle=0]{}
+  \caption{} \label{fig:}
+  \end{center}
+\end{figure}
+
+Un générateur de fonction permet d'envoier un signal triangulaire au
+ bornes d'un aimant d'Helmotz, qui va provoquer une perturbation du
+ moteur dipolaire. Sur l'oscilloscope, l'entrée X est reliée à une
+ sonde de Hall mesurant l'angle $\theta$ du moteur dipolaire via la variation du champ magnétique,
+ l'entrée Y est reliée à un électroaimant dont on
+ mesure la variation de courant, induit par le champ magnétique
+ variant du moteur dipolaire. La fonction trigger est utilisé grâce
+ à une sorti sync. sur le générateur de fonction.
 
 \section{Résultats}
 %Exposition des graphes avec les légendes et un peu de texte explicatifs sur comment on les a obtenus.
