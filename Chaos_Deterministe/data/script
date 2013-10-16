@@ -1,0 +1,8 @@
+#A utiliser en shell dans ROROTUUVA
+
+#for i in *.lab;do tail -n+41 $i | tac | tail -n+19 | tac | cut -d$'\t' -f2-4 > ../../processed/$i;done;
+
+#Sur GNUplot
+
+gnuplot> list = "`echo $(ls *.lab)`"
+gnuplot> do for [i in list]{set title i; plot  i using 2:3 with lines; pause -1;}

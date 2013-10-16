@@ -1,0 +1,14 @@
+#config du TP
+1.1 Sans Perturbation:
+
+10 V d'amplification sur la mesure d'angle.
+10:10 25 Septembre:
+Changement de positionnement du ressort, le pendule admet 2 positions d'équilibre à proximité du sommet
+Ces changements sont observés à partir de l'expérience 1.1_008
+
+13:53 25 Septembre calibrage de l'angle d'excitatipon phi
+graphe =1.2_004
+
+Graphe phi_calibrage. permet de déterminer phi en fonction de la tension
+
+1.2_005 ~ 1.2_xxx : graphe de theta-theta' 

@@ -3,7 +3,7 @@
 \usepackage{graphicx}
 \usepackage{verbatim}
 \usepackage{amsmath}
-\usepackage[english]{babel} %CHANGER POUR METTRE FRANCAIS
+\usepackage[utf8]{inputenc}
 \usepackage[colorlinks,bookmarks=false,linkcolor=blue,urlcolor=blue]{hyperref}
 \usepackage{booktabs}
 
@@ -18,11 +18,8 @@
 \setlength{\evensidemargin}{0.56cm}
 
 \pagestyle{plain}
+\setcounter{secnumdepth}{2}
 
-
-\def \be {\begin{equation}}
-\def \ee {\end{equation}}
-\def \dd  {{\rm d}}
 
 \newcommand{\mail}[1]{{\href{mailto:#1}{#1}}}
 \newcommand{\ftplink}[1]{{\href{ftp://#1}{#1}}}
@@ -55,16 +52,18 @@
 %Tim's duty
 \subsection{Pendule inversé}
 
-\paragraph{Matériels}
+\subsubsection{Matériels}
 %Oui c'est du copier coller je vais voir si je change ca
-\begin{enumerate}
-	\item Générateur de tension.
-	\item Générateur LD Series (A+D Products Bienne Switzerland, EPFL TP physique 466).
-	\item Pendule inversé (EPFL TP Physique 41).
-	\item Boitier ’Pendule chaotique’.
-	\item Boitier SensorCassy (Leybold Didactic Gmbh).
-	\item Voltmètre.
-\end{enumerate}
+\begin{itemize}
+	\item[--] Générateur de tension.
+	\item[--] Générateur LD Series (A+D Products Bienne CH, EPFL TP Physique 466).
+	\item[--] Pendule inversé (EPFL TP Physique 41).
+	\item[--] Boitier ’Pendule chaotique’.
+	\item[--] Boitier SensorCassy (Leybold Didactic Gmbh).
+	\item[--] Voltmètre.
+\end{itemize}
+
+\subsubsection{Schéma}
 
 \begin{figure}[h!]
   \begin{center}
@@ -73,37 +72,55 @@
   \end{center}
 \end{figure}
 
+\subsubsection{Procédure}
+
 %TODO PEAUFINER
+Le pendule inversé est muni d'un potentiomètre, alimenté par un premier générateur, dont la position angulaire correspond à $\theta$ et sa vitesse angulaire à $\dot{theta}$. Celui ci est relié au boitier pendule chaotique.
 Le dispositif mesure, grâce au boitier SensorCassy, les valeurs de $\theta$ et $\dot{\theta}$,
 permettant de tracer l'espace de phase du pendule inversé.
+Un moteur alimenté par un deuxième générateur, peut provoquer une perturbation sur l'axe du ressort, ce qui engendre des effets de résonnance ou de mouvement chaotique. Il est aussi possible d'utiliser un frein electromagnétique pour réaliser des perturbations.
 
+L'objectif est donc de trouvé une tension d'alimentation du moteur, tel que la fréquence d'excitation provoque des mouvement chaotique du ressort, obtenu grâce à l'analyse des diagramme de phase.
+
+Le moteur est alimenté tel que: $U_{alimentation}=2-5$ [V].
+La sonde du pendule est alimenté tel que: $U_{alimentation}=10-20$ [V].
 \subsection{Moteur dipolaire}
 
-\paragraph{Materiels}
-\begin{enumerate}
-	\item Générateur de fonctions: Wavetek, IPE 241-07/03.
-	\item Générateur d’impulsions: EPFL, IPE 242 - 07/03.
-	\item Oscilloscope: Hewlett Packard, HP 54600A.
-	\item Sonde de Hall : Bell 620 Gaussmeter, IPE 240 - 07/03.
-	\item Amplificateur C.C. : EPFL.
-	\item Moteur bipolaire : EPFL.
-\end{enumerate}
+\subsubsection{Materiels}
+\begin{itemize}
+	\item[--] Générateur de fonctions: Wavetek, IPE 241-07/03.
+	\item[--] Générateur d’impulsions: EPFL, IPE 242 - 07/03.
+	\item[--] Oscilloscope: Hewlett Packard, HP 54600A.
+	\item[--] Sonde de Hall : Bell 620 Gaussmeter, IPE 240 - 07/03.
+	\item[--] Amplificateur C.C. : EPFL.
+	\item[--] Moteur bipolaire : EPFL.
+\end{itemize}
 
+\subsubsection{Schéma}
 \begin{figure}[h!]
   \begin{center}
-  %\includegraphics[width=0.8\linewidth,angle=0]{}
+  \includegraphics[width=0.8\linewidth,angle=0]{./figures/moteur1.png}
   \caption{} \label{fig:}
   \end{center}
 \end{figure}
 
+
+\subsubsection{Procédure}
+
 Un générateur de fonction permet d'envoier un signal triangulaire au
  bornes d'un aimant d'Helmotz, qui va provoquer une perturbation du
- moteur dipolaire. Sur l'oscilloscope, l'entrée X est reliée à une
+ moteur dipolaire, forcant sa redirection momentanément. Sur l'oscilloscope, l'entrée X est reliée à une
  sonde de Hall mesurant l'angle $\theta$ du moteur dipolaire via la variation du champ magnétique,
  l'entrée Y est reliée à un électroaimant dont on
  mesure la variation de courant, induit par le champ magnétique
- variant du moteur dipolaire. La fonction trigger est utilisé grâce
+ variant du moteur dipolaire, représentant $\dot{\theta}$. La fonction trigger est utilisé grâce
  à une sorti sync. sur le générateur de fonction.
+
+En utilise la fonction "XY display" de l'oscilloscope, il est possible de voir le diagramme de phase du moteur dipolaire sous l'influence d'un champ magnétique oscillant  une certaine fréquence.
+
+Il faut trouvé des fréquence d'excitation, tel que le mouvement soit 1 fois périodique, 2 fois périodique ou chaotique. Ceci est possible en utilisant le trigger et en observant le nombre de point distingue tracé sur le diagramme de phase.
+
+Par le suite, une schéma de bifurcation est réalisable en applicant la sorti du générateur de fonction directement sur l'entrée X de l'oscilloscope. Ceci représente le diagramme ($\theta$,$XXX$).%TODO COMPLETER XXX
 
 \section{Résultats}
 %Exposition des graphes avec les légendes et un peu de texte explicatifs sur comment on les a obtenus.
