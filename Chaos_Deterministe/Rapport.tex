@@ -6,6 +6,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[colorlinks,bookmarks=false,linkcolor=blue,urlcolor=blue]{hyperref}
 \usepackage{booktabs}
+\usepackage{subfig}
 
 \paperheight=297mm
 \paperwidth=210mm
@@ -127,7 +128,7 @@ Par le suite, une schéma de bifurcation est réalisable en applicant la sorti d
 
 \subsection{Pnedule inversé}
 
-\begin{figure}[h!]
+\begin{comment}\begin{figure}[h!]
   \begin{center}
   \includegraphics[width=0.8\linewidth,angle=0]{./figures/1_1_001_lab.pdf}
   \caption{Illustration de la difficulté à obtenir une symétrie du pendule inversé tel qu'il y a deux positions d'équilibre.} \label{fig:1_1_001_lab}
@@ -140,6 +141,7 @@ Par le suite, une schéma de bifurcation est réalisable en applicant la sorti d
   \caption{Tentative de rééquilibrage du pendule, la position de repos du pendule est passé de droite à gauche, cependant la présence d'une double position d'équilibre n'est pas encore effective.} \label{fig:1_1_008_lab}
   \end{center}
 \end{figure}
+
 
 \begin{figure}[h!]
   \begin{center}
@@ -154,6 +156,7 @@ Par le suite, une schéma de bifurcation est réalisable en applicant la sorti d
   \caption{$\omega \approx$} \label{fig:1_2_U_2_41_lab}
   \end{center}
 \end{figure}
+\end{comment}
 
 \begin{figure}[h!]
   \begin{center}
@@ -197,6 +200,30 @@ Par le suite, une schéma de bifurcation est réalisable en applicant la sorti d
   \end{center}
 \end{figure}
 \section{Discussion}%le plus important
+
+\begin{figure}[!ht]
+    \subfloat[Équilibre à droite.\label{fig:subfigeqd}]{%
+      \includegraphics[width=0.5\textwidth]{./figures/1_1_001_lab.pdf}
+    }
+    \hfill
+    \subfloat[Équilibre à gauche.\label{fig:subfigeqg}]{%
+      \includegraphics[width=0.5\textwidth]{./figures/1_1_008_lab.pdf}
+    }
+    \caption{Illustration de la difficulté à obtenir une symétrie du pendule inversé tel qu'il y a deux positions d'équilibre.}
+    \label{fig:dummy}
+\end{figure}
+
+\begin{figure}[!ht]
+    \subfloat[$\omega \approx XXX$\label{fig:subfigwpetit}]{%
+      \includegraphics[width=0.5\textwidth]{./figures/1_2_U_10_95_lab.pdf}
+    }
+    \hfill
+    \subfloat[$\omega \approx XXX$.\label{fig:subfigwgrand}]{%
+      \includegraphics[width=0.5\textwidth]{./figures/1_2_U_2_41_lab.pdf}
+    }
+    \caption{Illustration de la marges d'action sur le pendule selon la fréquence d'excitation causé par le moteur.}
+    \label{fig:dummy}
+\end{figure}
 
 \subsection{Interprétation}
 %Qu'est ce que les résultats nous permettent de conclure?
