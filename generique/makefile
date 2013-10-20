@@ -20,7 +20,7 @@ buildcontext:
 	cd ./figures;context *.tex;
 
 
-clean: cleanlatex cleancontext
+clean: cleanlatex cleancontext cleanfigure
 	@echo "finnish the clean"
 
 cleanlatex:
@@ -31,3 +31,4 @@ cleancontext:
 
 cleanfigure:
 	rm -vf ./figures/*.tex
+	rm -vf ./figures/*.pdf

@@ -1,0 +1,16 @@
+#ON GARDE TOUS LES FICHIERS EN THETA_PHI
+
+1.1_001.lab: Difficulté à obtenir la symétrie du pendule.
+1.1_008.lab: tentative de rééquilibrage. ( modification par tournevis)
+1.2_5.03_theta_phi_chaos.lab
+1.2_U_10.95: rotation rapide du moteur d'excitation
+1.2_U_2.41.lab: moteur très lent
+1.2_U_3.02.lab: présence d'un attracteur a droite
+1.2_U_3.44.lab: condition initiale font converger vers une position d'équilibre
+1.2_U_4.54_frottemt_chni.lab: convergence vers un point déquilibre a gauche
+1.2_U_4.97_theta....FREIN.lab: passage de periodique a chaotique avec l'enclenchement du frein.
+1.2_U_5.63.lab: Difficulté à obtenir la symétrie du pendule.
+1.3_U_5.01.lab_v1_v2: présence de deux point d'équilibre
+1.3_U_5.01.lab_v3: condition initiale différente plus grande énergie.
+1.2_U_5.28.lab: Difficulté à obtenir la symétrie du pendule.
+
