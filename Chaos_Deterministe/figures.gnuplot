@@ -41,3 +41,17 @@ plot datadir.'1.3_U_5.01.lab' using 2:3 with lines lc rgb "#77FF0000" , datadir.
 
 set output figuresdir.'1_1_001_lab.tex'
 plot datadir.'1.1_001.lab' using 2:3 with lines title '$\phi (\theta)$'
+
+
+set output figuresdir.'comparaison.tex'
+
+set xlabel '$t$ [s]'
+set ylabel '$\theta$'
+
+set xrange [0:75]
+
+plot datadir.'1.2_U_4.97_theta_phi_FREIN_comparison_2_1.lab' using ($1-1):2 with lines title '1', \
+	datadir.'1.2_U_4.97_theta_phi_FREIN_comparison_2_2.lab' using ($1-1.5):2 with lines title '2', \
+	datadir.'1.2_U_4.97_theta_phi_FREIN_comparison_2_3.lab' using ($1-0.3):2 with lines title '3', \
+	datadir.'1.2_U_4.97_theta_phi_FREIN_comparison_2_4.lab' with lines title '4'
+
