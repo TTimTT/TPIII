@@ -100,7 +100,7 @@ La sonde du pendule est alimenté tel que: $U_{alimentation}=10-20$ [V].
 \subsubsection{Schéma}
 \begin{figure}[h!]
   \begin{center}
-  \includegraphics[width=0.8\linewidth,angle=0]{./figures/moteur1.png}
+  \includegraphics[width=0.6\linewidth,angle=0]{./figures/moteur1.png}
   \caption{} \label{fig:}
   \end{center}
 \end{figure}
@@ -109,8 +109,8 @@ La sonde du pendule est alimenté tel que: $U_{alimentation}=10-20$ [V].
 \subsubsection{Procédure}
 
 Un générateur de fonction permet d'envoier un signal triangulaire au
- bornes d'un aimant d'Helmotz, qui va provoquer une perturbation du
- moteur dipolaire, forcant sa redirection momentanément. Sur l'oscilloscope, l'entrée X est reliée à une
+ bornes d'un aimant d'Helmotz, qui va provoquer une perturbation périodique du
+ moteur dipolaire ayant une fréquence propre d'oscillation $f\approx1.75$ [Hz], forcant sa redirection momentanément. Sur l'oscilloscope, l'entrée X est reliée à une
  sonde de Hall mesurant l'angle $\theta$ du moteur dipolaire via la variation du champ magnétique,
  l'entrée Y est reliée à un électroaimant dont on
  mesure la variation de courant, induit par le champ magnétique
@@ -241,27 +241,56 @@ Par le suite, une schéma de bifurcation est réalisable en applicant la sorti d
   \end{center}
 \end{figure}
 
+\begin{figure}[h!]
+  \begin{center}
+  \includegraphics[width=1.0\linewidth,angle=0]{./figures/comparaison.pdf}
+  \caption{Comparaison du mouvement du pendule selon différente conditions initiales. Il est apparent que ce mouvemnt est chaotique. Réalisé avec $\omega \approx XXX$} \label{fig:comparaison}
+  \end{center}
+\end{figure}
+
 %Sur la figure~\ref{fig:comparaison}, le graphe de $\theta(t)$ selon différents conditions initiales, à une fréquence d'excitation $\omega \approx XXX$.
 \subsection{Moteur dipolaire}
 
+\begin{figure}[h!]
+  \begin{center}
+  \includegraphics[width=1.0\linewidth,angle=0]{./figures/1T_1_18Hz.png}
+  \caption{Section de poincaré du diagramme $(\theta,\dot{\theta})$ du moteur dipolaire. Avec une fréquence d'excitation $f=1.18$ [Hz] le pendule a un mouvement une fois périodique.} \label{fig:dipol1T}
+  \end{center}
+\end{figure}
+
+\begin{figure}[h!]
+  \begin{center}
+  \includegraphics[width=1.0\linewidth,angle=0]{./figures/2T_0_48Hz.png}
+  \caption{Section de poincaré du diagramme $(\theta,\dot{\theta})$ du moteur dipolaire. Avec une fréquence d'excitation $f=0.48$ [Hz] le pendule a un mouvement deux fois périodique.} \label{fig:dipol2T}
+  \end{center}
+\end{figure}
+
+\begin{figure}[h!]
+  \begin{center}
+  \includegraphics[width=1.0\linewidth,angle=0]{./figures/chao_1_22Hz_v2.png}
+  \caption{Section de poincaré du diagramme $(\theta,\dot{\theta})$ du moteur dipolaire. Avec une fréquence d'excitation $f=1.22$ [Hz] le pendule a un mouvement chaotique.} \label{fig:chaos}
+  \end{center}
+\end{figure}
+
+
 \begin{figure}[!ht]
-    \subfloat[\label{fig:}]{%
+    \subfloat[f=0.486 \rm{[Hz]}\label{fig:a}]{%
       \includegraphics[width=0.5\textwidth]{./figures/bif_0_486Hz.png}
     }
     \hfill
-    \subfloat[\label{fig:}]{%
+    \subfloat[f=1.15 \rm{[Hz]}\label{fig:b}]{%
       \includegraphics[width=0.5\textwidth]{./figures/bif_1_15Hz.png}
     }
     \hfill
-    \subfloat[\label{fig:}]{%
+    \subfloat[f=1.35 \rm{[Hz]}\label{fig:c}]{%
       \includegraphics[width=0.5\textwidth]{./figures/bif_1_35Hz.png}
     }
     \hfill
-    \subfloat[\label{fig:}]{%
+    \subfloat[f=1.74 \rm{[Hz]}\label{fig:d}]{%
       \includegraphics[width=0.5\textwidth]{./figures/bif_1_74Hz.png}
     }
     \caption{Bifurcation}
-    \label{fig:}
+    \label{fig:bifurcation}
 \end{figure}
 
 \newpage
@@ -281,6 +310,21 @@ Lors de l'expérience, en appliquant une fréquence d'excitation $\omega \approx
 Il est aussi intéressant d'observé l'apparition de phénomène chaotique grâce à l'application d'un frein électromagnétique (illustré sur la figure~\ref{fig:1_2_U_4_97_theta__FREIN_PAS_FREIN_lab}). %TODO FINNISH HERE
 
 Par ailleurs, en utilisant la même fréquece d'excitation, une analyse du comportement selon les condtions initiales est présenté dans la figure~\ref{fig:comparaison}. Au départ, les oscillations sont similaires, puis à $t>10$ [s], des comportements différents apparaissent résultants de l'aspect chaotique du pendule inversé avec cette fréquence d'excitation. 
+
+\subsubsection{Moteur dipolaire}
+
+Selon les différentes fréquence d'excitation appliqué aux moteur, on peut comprendre et visualiser le mouvement du pendule grâce à la section de Poincaré réalisé avec l'aide d'un oscilloscope digital.
+
+En appliquant une fréquence de 0.48 [Hz], on observe une double périodicité, c'est à dire que le pendule oscille selon deux manières.%TODO COMPLETE
+Ceci est illustré dans la figure~\ref{fig:dipol2T}.
+
+Avec une fréquence de 1.18 [Hz], une uni-périodicité est observée (voir figure~\ref{fig:dipol1T}. Cela signifie que le pendule réalise un mouvement unique périodique, il n'existe pas d'autre composante périodique dans son mouvement et il n'est pas chaotique.
+
+Par la suite, en appliquant une fréquence d'excitation de 1.22 [Hz], le pendule subit un régime chaotique observable sur la figure~\ref{fig:chaos}, il n'y a aucune récurrence dans les points enregistre et afficher via la section de Poincaré, cela correspond au mouvement chaotique, son mouvement est imprévisible sur le long terme.
+
+
+La réalisation de différent diagramme de bifurcation est illustré dans la figure~\ref{fig:birfucation}. Le diagramme (b) est très intéressant car il montre que sur une certaine gamme d'intensité, la périodicité du pendule est uni-périodique, par la suite ce régime redevient chaotique.
+Dans le diagramme (d) au début il y a aussi un régime de période unique, puis une régime chaotique. Il faut remarquer que vers la fin, il existe un mouvement de périodicité 2T, qui correspond à des oscillations du pendule sur 2 orbites différents.
 
 \subsection{Sources d'incertitudes}
 %Validité de nos résultats
