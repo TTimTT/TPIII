@@ -1,8 +1,9 @@
 #Esquisse du futur makefile
 RAP=Rapport
 
-#all: figure context latex
 all: latex
+
+gla: figure context latex
 
 latex: buildlatex cleanlatex
 
