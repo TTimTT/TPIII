@@ -55,3 +55,14 @@ plot datadir.'1.2_U_4.97_theta_phi_FREIN_comparison_2_1.lab' using ($1-1):2 with
 	datadir.'1.2_U_4.97_theta_phi_FREIN_comparison_2_3.lab' using ($1-0.3):2 with lines title '3', \
 	datadir.'1.2_U_4.97_theta_phi_FREIN_comparison_2_4.lab' with lines title '4'
 
+
+set xlabel '$\dot{\theta}$'
+set ylabel '$phi$'
+
+set xrange [*:*]
+
+set output figuresdir.'comparaison2.tex'
+plot datadir.'1.2_U_4.97_theta_phi_FREIN_comparison_2_1.lab' using 2:3 with lines title '1', \
+	datadir.'1.2_U_4.97_theta_phi_FREIN_comparison_2_2.lab' using 2:3 with lines title '2', \
+	datadir.'1.2_U_4.97_theta_phi_FREIN_comparison_2_3.lab' using 2:3 with lines title '3', \
+	datadir.'1.2_U_4.97_theta_phi_FREIN_comparison_2_4.lab' using 2:3with lines title '4'
