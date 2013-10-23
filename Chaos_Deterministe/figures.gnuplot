@@ -35,7 +35,7 @@ set output figuresdir.'1_2_U_4_54_lab.tex'
 plot datadir.'1.2_U_4.54_frottement_chni.lab' using 2:3 with lines title "Point d'équilibre à gauche"
 
 set output figuresdir.'1_2_U_4_97_theta__FREIN_PAS_FREIN_lab.tex'
-plot datadir.'1.2_U_4.97_theta__FREIN_PAS_FREIN.lab' using 2:3 with lines title 'Passage périodique à chaotique'
+plot datadir.'1.2_U_4.97_theta__FREIN_PAS_FREIN.lab' every ::2800 with lines notitle, '' every ::::2800 with lines notitle
 
 set output figuresdir.'1_2_U_5_63_lab.tex'
 plot datadir.'1.2_U_5.63.lab' using 2:3 with lines title 'Symétrie du pendule problématique'

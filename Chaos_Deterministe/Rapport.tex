@@ -149,6 +149,7 @@ La sonde du pendule est alimentée avec $U_{alimentation}=10\sim20$ [V]. Le choi
 
 
 \subsubsection{Description}
+\label{description}
 
 Un générateur de fonction branché à un amplificateur C.C. permet d'envoier un signal triangulaire dans une paire de bobines comme illustré dans le schémas \ref{fig:pendule_2}. Ce courant permet de créer un champ magnétique à peu près linéaire dans le volume entre les deux bobines, ce qui a pour effet d'exiter l'aimant de Helmotz ayant la liberté de rotater autour d'un axe (cf fig \ref{fig:pendule_2}).
 
@@ -211,7 +212,7 @@ Une chose intéressante est que pour les mêmes paramètres pour l'expérience, 
 \begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/potentiel.pdf}
-  \caption{potentiel} \label{fig:potentiel}
+  \caption{allure du potentiel :$V(\theta,t)=\frac{1}{2}k(\theta-a sin(\omega t))^2-\frac{1}{2} m g cos(\theta)$} \label{fig:potentiel}
   \end{center}
 \end{figure}
 
@@ -221,37 +222,42 @@ Après avoir effectué un balayage sur une large gamme de fréquence d'exitation
 
 En effet pour les exitations trop lentes, le pendule ne fait que passe d'un point d'équilibre à l'autre avec peut d'oscillations, souvent le pendule se trouve dans un des puits de potentiel à droite ou à gauche, et oscille dans les déplacements du puits, sans passer dans le puits situé de l'autre côté (cf figure \ref{fig:potentiel}). Et si la fréquence est trop élevée, le pendule n'accumule pas d'énergie et ne fait que de très faibles oscillations autours de son point d'équilibre.
 
-L'effet du frottement est montré dans la figure \ref{fig:1_2_U_4_97_theta__FREIN_PAS_FREIN_lab} : il a pu être observé a plusieur reprise que l'ajout de frottement dans un pendule dans un régime non chaotique a contribué à un changement de régime aboutissant à un comportement chaotique. Ici le pendule se met à passer d'un creux de potentiel à l'autre de façon assez imprédictible. On observe des traces de l'asymétrie du pendule. 
+L'effet du frottement est montré dans la figure \ref{fig:1_2_U_4_97_theta__FREIN_PAS_FREIN_lab} : il a pu être observé a plusieur reprise que l'ajout de frottement dans un pendule dans un régime non chaotique a contribué à un changement de régime aboutissant à un comportement chaotique. Ici le pendule se met à passer d'un creux de potentiel à l'autre de façon assez imprédictible. On observe des traces de l'asymétrie du pendule par une préférence d'un des puits sur l'autre.
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! REGARDER CE TRUC !!!!!! CHANGER LA COULEUR
 \begin{figure}[h!]
   \begin{center}
-  \includegraphics[width=1.0\linewidth,angle=0]{./figures/1_2_U_4_97_theta__FREIN_PAS_FREIN_lab.pdf}
+  \includegraphics[width=0.8\linewidth,angle=0]{./figures/1_2_U_4_97_theta__FREIN_PAS_FREIN_lab.pdf}
   \caption{Passage d'un mode périodique à un mode chaotique par application d'un frein électromagnétique} \label{fig:1_2_U_4_97_theta__FREIN_PAS_FREIN_lab}
   \end{center}
 \end{figure}
 
 
-Un autre paramètre ayant une certaine importance dans l'obtention du chaos dans cette expérience a été la symétrie du pendule : si le point d'équilibre du pendule n'était pas au plus haut, un des côtés (droite ou gauche) avait un puit de potentiel plus profond. La conséquence de ceci est qu'il devient alors difficile d'observer des oscillations dans lesquelles le pendule reste pendant un moment à droite et pendant un autre à gauche : il n'a tendance à osciller que d'un seul côté. 
+Un autre paramètre ayant une certaine importance dans l'obtention du chaos dans cette expérience a été la symétrie du pendule : si le point d'équilibre du pendule n'était pas au plus haut, un des côtés (droite ou gauche) avait un puit de potentiel plus profond. La conséquence de ceci est qu'il devient alors difficile d'observer des oscillations dans lesquelles le pendule reste pendant un moment à droite et pendant un autre à gauche : il n'a tendance à osciller que d'un seul côté (cf graphe \ref{fig:1_2_U_3_44_lab}). 
 
 
-!!!!!!!! METTRE UN GRAPHE POUR ILLUSTRER CA !!!!!!
-
-
-
-
-
-
-
-
+\begin{figure}[h!]
+  \begin{center}
+  \includegraphics[width=0.8\linewidth,angle=0]{./figures/1_2_U_3_44_lab.pdf}
+  \caption{Le pendule tombe constemment du même côté, il faut le rééquilibrer} \label{fig:1_2_U_3_44_lab}
+  \end{center}
+\end{figure}
 
 
 
 
 
+\clearpage
 
 
 
+
+
+
+
+
+
+
+% \clearpage
 
 
 % \begin{comment}\begin{figure}[h!]
@@ -321,12 +327,6 @@ Un autre paramètre ayant une certaine importance dans l'obtention du chaos dans
 
 % %La figure~\ref{fig:1_2_U_3_02_lab} représente le diagramme de phase du pendule avec une fréquence d'excitation $\omega \approx XXX$.
 
-% \begin{figure}[h!]
-%   \begin{center}
-%   \includegraphics[width=1.0\linewidth,angle=0]{./figures/1_2_U_3_44_lab.pdf}
-%   \caption{Illustration de la convergence vers une position d'équilibre du pendule, malgré une perturbation crée par le moteur, avec $\omega \approx$} \label{fig:1_2_U_3_44_lab}
-%   \end{center}
-% \end{figure}
 
 % %La figure~\ref{fig:1_2_U_3_44_lab} représente l'étude sur la convergence vers un point d'équilibre du pendule. Ce point d0équilibre est sur la gauche selon l'axe de symétrie du pendule.
 
@@ -346,6 +346,152 @@ Un autre paramètre ayant une certaine importance dans l'obtention du chaos dans
 %   \caption{Problème de symétrie} \label{fig:1_2_U_5_63_lab}
 %   \end{center}
 % \end{figure}
+
+
+
+
+
+
+
+% \clearpage
+% \clearpage
+
+
+
+
+
+
+
+
+
+
+
+
+%Sur la figure~\ref{fig:comparaison}, le graphe de $\theta(t)$ selon différents conditions initiales, à une fréquence d'excitation $\omega \approx XXX$.
+\subsection{Moteur dipolaire}
+
+Après avoir réalisé des sections de Poincaré par des simulations numérique, il a pu être constaté qu'il est beaucoup plus difficile d'obtenir des figures avec beaucoup de détail expérimentalement. Les figures \ref{fig:dipol1T}, \ref{fig:dipol2T} et \ref{fig:chaos} sont des sections de Pointcaré obtenu expérimentalement et la figure \ref{fig:poincare_beauty} présente ce qu'on a pu obtenir numériquement. Les figures \ref{fig:dipol1T} et \ref{fig:dipol2T} montrent un nombre fini est faible d'orbites sur lesquels oscille l'aimant, cependant la figure \ref{fig:chaos} montre une plus grande irrégularité : nous sommes en présence d'un comportement chaotique.
+
+
+
+
+
+
+\begin{figure}[h!]
+  \begin{center}
+  \includegraphics[width=.5\linewidth,angle=0]{./figures/1T_1_18Hz.png}
+  \caption{Section de poincaré du diagramme $(\theta,\dot{\theta})$ du moteur dipolaire. Avec une fréquence d'excitation $f=1.18$ [Hz] le pendule a un mouvement une fois périodique.} \label{fig:dipol1T}
+  \end{center}
+\end{figure}
+
+\begin{figure}[h!]
+  \begin{center}
+  \includegraphics[width=0.5\linewidth,angle=0]{./figures/2T_0_48Hz.png}
+  \caption{Section de poincaré du diagramme $(\theta,\dot{\theta})$ du moteur dipolaire. Avec une fréquence d'excitation $f=0.48$ [Hz] le pendule a un mouvement deux fois périodique.} \label{fig:dipol2T}
+  \end{center}
+\end{figure}
+
+\begin{figure}[h!]
+  \begin{center}
+  \includegraphics[width=0.5\linewidth,angle=0]{./figures/chao_1_22Hz_v2.png}
+  \caption{Section de poincaré du diagramme $(\theta,\dot{\theta})$ du moteur dipolaire. Avec une fréquence d'excitation $f=1.22$ [Hz] le pendule a un mouvement chaotique.} \label{fig:chaos}
+  \end{center}
+\end{figure}
+
+
+
+
+
+
+
+
+% \begin{figure}[!ht]
+%     \subfloat[$\omega=2\pi1.18$ [Hz], mouvement une fois périodique.\label{fig:dipol1T}]{
+%       \includegraphics[width=0.5\linewidth,angle=0]{./figures/1T_1_18Hz.png}
+%     }
+%     % \hfill
+%     \subfloat[$\omega=2\pi0.48$ [Hz] mouvement deux fois périodique.\label{fig:dipol2T}]{%
+%       \includegraphics[width=0.5\linewidth,angle=0]{./figures/2T_0_48Hz.png}
+%       }
+%     \hfill
+%     \subfloat[$\omega=2\pi1.22$ [Hz] mouvement chaotique.\label{fig:chaos}]{%
+%       \includegraphics[width=0.5\linewidth,angle=0]{./figures/chao_1_22Hz_v2.png}
+%     }
+%     \caption{Sections de Poincaré}
+%     \label{fig:poincare_section}
+% \end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{figure}[!ht]
+    \subfloat[f=0.486 \rm{[Hz]}\label{fig:a}]{%
+      \includegraphics[width=0.5\textwidth]{./figures/poincare_beauty.png}
+    }
+    \hfill
+    \subfloat[f=1.15 \rm{[Hz]}\label{fig:b}]{%
+      \includegraphics[width=0.5\textwidth]{./figures/poincare_beauty_2.png}
+    }
+    \hfill
+    \subfloat[f=1.35 \rm{[Hz]}\label{fig:c}]{%
+      \includegraphics[width=0.5\textwidth]{./figures/poincare_beauty_3.png}
+    }
+    % \hfill
+    % \subfloat[f=1.74 \rm{[Hz]}\label{fig:d}]{%
+    %   \includegraphics[width=0.5\textwidth]{./figures/bif_1_74Hz.png}
+    % }
+    \caption{Il a été simulé à l'ordinateur la même expérience afin d'obtenir des setions de Poincaré plus fine, en voici quelques unes, disons juste pour nous rincer l'oeil ! La premiere montre en transparance la trajectoire du pendule. Nous n'avons malheureusement pas eu le temps de faire un diagramme de bifurcation avec notre code.}
+    \label{fig:poincare_beauty}
+\end{figure}
+
+Pour la réalisation des diagrammes de bifurcations fonction de $F$, il a d'abord été tenté une variation sur $\omega$, ce qui aboutit à une transformation compliquée pour retrouver l'allure du diagramme de bifurcation. Il a finalement été réalisé des diagrammes en itérant sur l'amplitude du champ magnétique (cf section \ref{description}).
+
+Pour obtenir de bons diagrammes de bifurcations, il faut faire attention à ce qu'on prenne des mesures sur la position du pendule dans l'espace de phase lorsque celui ci s'est rapproché au maximum d'un attracteur car si le système est en transition, il ne sera pas possible d'observer d'orbites et la tranche du diagramme de bifurcation obtenue ne sera pas distinguable d'un cas chaotique.
+
+Dans la série de graphes de \ref{fig:bifurcation}, il a été produit des diagrammes de bifurcations pour 4 valeurs de $\omega$ constantes. Il a été assez difficile de trouver des mesures pour lesquelles le pendule se trouve dans une dynamique non chaotique. On peut voir dans le diagramme d deux zones correspondant à des orbites simples, et une autre zone ou le pendule oscille dans deux orbites. 
+
+\begin{figure}[!ht]
+    \subfloat[$\omega$=2 $\pi$ 0.486 \rm{[Hz]}\label{fig:a}]{%
+      \includegraphics[width=0.5\textwidth]{./figures/bif_0_486Hz.png}
+    }
+    \hfill
+    \subfloat[$\omega$=2 $\pi$ 1.15 \rm{[Hz]}\label{fig:b}]{%
+      \includegraphics[width=0.5\textwidth]{./figures/bif_1_15Hz.png}
+    }
+    \hfill
+    \subfloat[$\omega$=2 $\pi$ 1.35 \rm{[Hz]}\label{fig:c}]{%
+      \includegraphics[width=0.5\textwidth]{./figures/bif_1_35Hz.png}
+    }
+    \hfill
+    \subfloat[$\omega$=2 $\pi$ 1.74 \rm{[Hz]}\label{fig:d}]{%
+      \includegraphics[width=0.5\textwidth]{./figures/bif_1_74Hz.png}
+    }
+    \caption{Bifurcation}
+    \label{fig:bifurcation}
+\end{figure}
+
+% \newpage
 
 
 
@@ -383,73 +529,15 @@ asteroides
 
 
 
-%Sur la figure~\ref{fig:comparaison}, le graphe de $\theta(t)$ selon différents conditions initiales, à une fréquence d'excitation $\omega \approx XXX$.
-\subsection{Moteur dipolaire}
 
-Après avoir réalisé des sections de Poincaré par des simulations numérique, il a pu être constaté qu'il est beaucoup plus difficile d'obtenir des figures avec beaucoup de détail expérimentalement. Les figures \ref{fig:dipol1T}, \ref{fig:dipol2T} et \ref{fig:chaos} sont des sections de Pointcaré obtenu expérimentalement et la figure \ref{fig:poincare_beauty} présente ce qu'on a pu obtenir numériquement. Les figures \ref{fig:dipol1T} et \ref{fig:dipol2T} montrent un nombre fini est faible d'orbites sur lesquels oscille l'aimant, cependant la figure \ref{fig:chaos} montre une plus grande irrégularité : nous sommes en présence d'un comportement chaotique.
 
-\begin{figure}[h!]
-  \begin{center}
-  \includegraphics[width=1.0\linewidth,angle=0]{./figures/1T_1_18Hz.png}
-  \caption{Section de poincaré du diagramme $(\theta,\dot{\theta})$ du moteur dipolaire. Avec une fréquence d'excitation $f=1.18$ [Hz] le pendule a un mouvement une fois périodique.} \label{fig:dipol1T}
-  \end{center}
-\end{figure}
 
-\begin{figure}[h!]
-  \begin{center}
-  \includegraphics[width=1.0\linewidth,angle=0]{./figures/2T_0_48Hz.png}
-  \caption{Section de poincaré du diagramme $(\theta,\dot{\theta})$ du moteur dipolaire. Avec une fréquence d'excitation $f=0.48$ [Hz] le pendule a un mouvement deux fois périodique.} \label{fig:dipol2T}
-  \end{center}
-\end{figure}
 
-\begin{figure}[h!]
-  \begin{center}
-  \includegraphics[width=1.0\linewidth,angle=0]{./figures/chao_1_22Hz_v2.png}
-  \caption{Section de poincaré du diagramme $(\theta,\dot{\theta})$ du moteur dipolaire. Avec une fréquence d'excitation $f=1.22$ [Hz] le pendule a un mouvement chaotique.} \label{fig:chaos}
-  \end{center}
-\end{figure}
 
-\begin{figure}[!ht]
-    \subfloat[f=0.486 \rm{[Hz]}\label{fig:a}]{%
-      \includegraphics[width=0.5\textwidth]{./figures/poincare_beauty.png}
-    }
-    \hfill
-    \subfloat[f=1.15 \rm{[Hz]}\label{fig:b}]{%
-      \includegraphics[width=0.5\textwidth]{./figures/poincare_beauty_2.png}
-    }
-    \hfill
-    \subfloat[f=1.35 \rm{[Hz]}\label{fig:c}]{%
-      \includegraphics[width=0.5\textwidth]{./figures/poincare_beauty_3.png}
-    }
-    % \hfill
-    % \subfloat[f=1.74 \rm{[Hz]}\label{fig:d}]{%
-    %   \includegraphics[width=0.5\textwidth]{./figures/bif_1_74Hz.png}
-    % }
-    \caption{Il a été simulé à l'ordinateur la même expérience afin d'obtenir des setions de Poincaré plus fine, en voici quelques unes, disons juste pour nous rincer l'oeil ! La premiere montre en transparance la trajectoire du pendule. Nous n'avons malheureusement pas eu le temps de faire un diagramme de bifurcation avec notre code.}
-    \label{fig:poincare_beauty}
-\end{figure}
 
-\begin{figure}[!ht]
-    \subfloat[f=0.486 \rm{[Hz]}\label{fig:a}]{%
-      \includegraphics[width=0.5\textwidth]{./figures/bif_0_486Hz.png}
-    }
-    \hfill
-    \subfloat[f=1.15 \rm{[Hz]}\label{fig:b}]{%
-      \includegraphics[width=0.5\textwidth]{./figures/bif_1_15Hz.png}
-    }
-    \hfill
-    \subfloat[f=1.35 \rm{[Hz]}\label{fig:c}]{%
-      \includegraphics[width=0.5\textwidth]{./figures/bif_1_35Hz.png}
-    }
-    \hfill
-    \subfloat[f=1.74 \rm{[Hz]}\label{fig:d}]{%
-      \includegraphics[width=0.5\textwidth]{./figures/bif_1_74Hz.png}
-    }
-    \caption{Bifurcation}
-    \label{fig:bifurcation}
-\end{figure}
 
-\newpage
+
+\clearpage
 \section{Analyse}%le plus important
 
 \subsection{Discussion}
