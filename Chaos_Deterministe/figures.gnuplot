@@ -6,7 +6,7 @@ set terminal context standalone
 set xlabel '$\theta$'
 set ylabel '$\dot{\theta}$'
 
-set key on
+set key off
 
 set output figuresdir.'1_1_001_lab.tex'
 plot datadir.'1.1_001.lab' using 2:3 with lines title 'Asymétrie du pendule'
@@ -40,10 +40,16 @@ plot datadir.'1.2_U_4.97_theta__FREIN_PAS_FREIN.lab' using 2:3 with lines title 
 set output figuresdir.'1_2_U_5_63_lab.tex'
 plot datadir.'1.2_U_5.63.lab' using 2:3 with lines title 'Symétrie du pendule problématique'
 
+
+set xrange [-10:-3]
+set yrange [-0.1:0.12]
+
 set output figuresdir.'1_3_U_5_01_lab.tex'
 plot datadir.'1.3_U_5.01.lab' using 2:3 with lines lc rgb "#77FF0000" , datadir.'1.3_U_5.01_v2.lab' using 2:3 with lines lc rgb "#7700FF00", datadir.'1.3_U_5.01_v3.lab' using 2:3 with lines lc rgb "#AA000000", datadir.'1.3_U_5.01_v4.lab' using 2:3 with lines lc rgb "#AA0000FF"
 
 
+set xrange [*:*]
+set yrange [*:*]
 set output figuresdir.'1_1_001_lab.tex'
 plot datadir.'1.1_001.lab' using 2:3 with lines title '$\phi (\theta)$'
 
