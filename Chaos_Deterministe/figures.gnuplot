@@ -11,15 +11,20 @@ set key on
 set output figuresdir.'1_1_001_lab.tex'
 plot datadir.'1.1_001.lab' using 2:3 with lines title 'Asymétrie du pendule'
 
+
+unset ytics
 set output figuresdir.'1_1_008_lab.tex'
 plot datadir.'1.1_008.lab' using 2:3 with lines title 'Rééquilibrage'
 
+set ytics auto
 set output figuresdir.'1_2_U_10_95_lab.tex'
 plot datadir.'1.2_U_10.95.lab' using 2:3 with lines title 'Rotation rapide du moteur'
 
+unset ytics
 set output figuresdir.'1_2_U_2_41_lab.tex'
 plot datadir.'1.2_U_2.41.lab' using 2:3 with lines title 'Rotation lente du moteur'
 
+set ytics auto
 set output figuresdir.'1_2_U_3_02_lab.tex'
 plot datadir.'1.2_U_3.02.lab' using 2:3 with lines title 'Attracteur à droite'
 
@@ -66,3 +71,33 @@ plot datadir.'1.2_U_4.97_theta_phi_FREIN_comparison_2_1.lab' using 2:3 with line
 	datadir.'1.2_U_4.97_theta_phi_FREIN_comparison_2_2.lab' using 2:3 with lines title '2', \
 	datadir.'1.2_U_4.97_theta_phi_FREIN_comparison_2_3.lab' using 2:3 with lines title '3', \
 	datadir.'1.2_U_4.97_theta_phi_FREIN_comparison_2_4.lab' using 2:3with lines title '4'
+
+
+#set output figuresdir.'potentiel' 
+set terminal context standalone
+set output figuresdir.'potentiel.tex'
+
+#set title '$V(\theta,t)=\frac{k}{2}(\theta-a.sin(\omega t))^2-\frac{mg}{2}cos(x)$'
+set palette gray
+set border 4095 front linetype -1 linewidth 1.000
+set pm3d implicit at s
+set ticslevel 0
+set hidden3d
+
+#set contour
+set samples 100;set isosamples 100
+
+set xlabel '$\theta$'
+set ylabel '$t$ [s]'
+
+set ztics 100
+set cbtics 100
+
+k=10.0; a=3.0; w=1.0; b=30.0;
+
+set xrange [-3.14:3.14]
+set yrange [0:6.28*3/w]
+
+f(x,t)=k*(x-a*sin(w*t))**2-b*cos(x)
+
+splot f(x,y) notitle
