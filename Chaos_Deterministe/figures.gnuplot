@@ -67,8 +67,8 @@ plot datadir.'1.2_U_4.97_theta_phi_FREIN_comparison_2_1.lab' using ($1-1):2 with
 	datadir.'1.2_U_4.97_theta_phi_FREIN_comparison_2_4.lab' with lines title '4'
 
 
-set xlabel '$\dot{\theta}$'
-set ylabel '$phi$'
+set xlabel '$\theta$'
+set ylabel '$\phi$'
 
 set xrange [*:*]
 

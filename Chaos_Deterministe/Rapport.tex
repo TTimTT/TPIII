@@ -46,7 +46,7 @@
 \newpage
 
 \section{Introduction}
-Si on prend deux bâtons et qu'on fixe le bout d'un baton sur l'autre par un axe, et que cet autre bâton est maintenu par un autre axe, on obtient un pendule double, un objet remarquable à la fois pour sa simplicité et son comportement beaucoup moins simple. Poser une balle de ping-pong sur une surface qui vibre, laisser évoluer 3 corps ou plus, massique ou chargé, mettre un aimant dans un champ magnétique oscillant, exiter un ressort attaché à une masse, etc... en fait, dans un grand nombre d'expériences relativement faciles à imaginer, il est possible d'obtenir un comportement relativement complexe à décrire. Cette complexité s'exprimme entre autre par un rapide divergence de la même expérience reproduite avec des conditions initiales similaires et un comportement aperiodique, très difficile à prédire.
+Si on prend deux bâtons et qu'on fixe le bout d'un baton sur l'autre par un axe, et que cet autre bâton est maintenu par un autre axe, on obtient un pendule double, un objet remarquable à la fois pour sa simplicité et son comportement beaucoup moins simple. Poser une balle de ping-pong sur une surface qui vibre, laisser évoluer 3 corps ou plus, massique ou chargé, mettre un aimant dans un champ magnétique oscillant, exciter un ressort attaché à une masse, etc... en fait, dans un grand nombre d'expériences relativement faciles à imaginer, il est possible d'obtenir un comportement relativement complexe à décrire. Cette complexité s'exprime entre autre par une rapide divergence de la même expérience reproduite avec des conditions initiales similaires et un comportement aperiodique, très difficile à prédire.
 
 Il sera étudié ici deux expériences dont il est possible de facilement prendre des mesures, à savoir un pendule inversé dont l'angle de repos est modifié au cours du temps ainsi qu'un dispositif laissant libre l'orientation d'un aimant qui est plongé dans un champ magnétique qui varie au cours du temps.
 
@@ -101,9 +101,9 @@ Pour ranger les différentes zones par nombre d'orbites, on peut projeter les po
 \subsubsection{Description}
 
 %TODO PEAUFINER
-Le pendule inversé est muni d'un potentiomètre, alimenté par un premier générateur, dont la position angulaire correspond à $\theta$. Le dispositif permet aussi de mesurer la vitesse angulaire $\dot{theta}$ par une différence de potentiel. Le dispositif est relié à un amplificateur.
+Le pendule inversé est muni d'un potentiomètre, alimenté par un premier générateur, dont la position angulaire correspond à $\theta$. Le dispositif permet aussi de mesurer la vitesse angulaire $\dot{\theta}$ par une différence de potentiel. Le dispositif est relié à un amplificateur.
 Un boitier SensorCassy mesure le potentiel amplifié, le digitalise et passe les valeurs lues à un ordinateur, ce qui permet de relever les différentes valeurs de $\theta$ et $\dot{\theta}$ au cours du temps, ce qui permet de tracer les différetes positions prises par le pendule dans l'espace de phase.
-Un moteur alimenté par un deuxième générateur, peut provoquer une perturbation sur l'axe du ressort : le moteur permet d'agiter la position d'équilibre du pendule, ce qui a pour effet d'exiter la masse et donc de le mettre en mouvement. Un autre appareil est mis à disposition pour mesurer la position du moteur d'exitation.
+Un moteur alimenté par un deuxième générateur, peut provoquer une perturbation sur l'axe du ressort : le moteur permet d'agiter la position d'équilibre du pendule, ce qui a pour effet d'exciter la masse et donc de le mettre en mouvement. Un autre appareil est mis à disposition pour mesurer la position du moteur d'exitation.
 Il est aussi possible d'utiliser un frein electromagnétique pour réaliser une autre forme de perturbation.
 
 \subsubsection{Procédure}
@@ -151,7 +151,7 @@ La sonde du pendule est alimentée avec $U_{alimentation}=10\sim20$ [V]. Le choi
 \subsubsection{Description}
 \label{description}
 
-Un générateur de fonction branché à un amplificateur C.C. permet d'envoier un signal triangulaire dans une paire de bobines comme illustré dans le schémas \ref{fig:pendule_2}. Ce courant permet de créer un champ magnétique à peu près linéaire dans le volume entre les deux bobines, ce qui a pour effet d'exiter l'aimant de Helmotz ayant la liberté de rotater autour d'un axe (cf fig \ref{fig:pendule_2}).
+Un générateur de fonction branché à un amplificateur C.C. permet d'envoier un signal triangulaire dans une paire de bobines comme illustré dans le schémas \ref{fig:pendule_2}. Ce courant permet de créer un champ magnétique à peu près linéaire dans le volume entre les deux bobines, ce qui a pour effet d'exciter l'aimant de Helmotz ayant la liberté de rotater autour d'un axe (cf fig \ref{fig:pendule_2}).
 
 Une sonde Hall est installée dans la direction orthogonale au champ généré par les bobines, et qui se trouve sur le plan dans lequel rotate l'aimant. Mesurant la composante du champ magnétique orthogonale à celui généré par les bobines, cette sonde mesure le champ généré par l'aimant de Helmotz dans une direction, et ainsi elle permet la mesure de l'angle de l'aimant par rapport à l'axe des bobines.
 
@@ -304,17 +304,6 @@ Un autre paramètre ayant une certaine importance dans l'obtention du chaos dans
 
 % %La figure~\ref{fig:equilibre} montre la position d'équilibre du pendule inversé dans un diagrame de phase $(\theta,\dot{\theta})$, avant et après une tentative de rééquilibrage. Ce diagramme est réalisé par une oscillation propre du pendule sans perturbation, la figure de gauche correspond à avant la tentative. Dans ce cas la position d'équilibre était à gauche. À droite, le graphe du pendule avec une correction trop prononcé à gauche.
 
-% \begin{figure}[!ht]
-%     \subfloat[$\omega \approx XXX$\label{fig:subfigwpetit}]{%
-%       \includegraphics[width=0.5\textwidth]{./figures/1_2_U_10_95_lab.pdf}
-%     }
-%     \hfill
-%     \subfloat[$\omega \approx XXX$.\label{fig:subfigwgrand}]{%
-%       \includegraphics[width=0.5\textwidth]{./figures/1_2_U_2_41_lab.pdf}
-%     }
-%     \caption{Illustration de la marges d'action sur le pendule selon la fréquence d'excitation causé par le moteur.}
-%     \label{fig:vitesse}
-% \end{figure}
 
 % %La figure~\ref{fig:vitesse} montre une comparaison de la vitesse du moteur excitant le pendule inversé. À gauche, la fréquence étant très élevé ($\omega \approx XXX$) alors qu'à droite, le pendule subit une fréquence de perturbation faible ($\omega \approx$).
 
@@ -370,7 +359,7 @@ Un autre paramètre ayant une certaine importance dans l'obtention du chaos dans
 %Sur la figure~\ref{fig:comparaison}, le graphe de $\theta(t)$ selon différents conditions initiales, à une fréquence d'excitation $\omega \approx XXX$.
 \subsection{Moteur dipolaire}
 
-Après avoir réalisé des sections de Poincaré par des simulations numérique, il a pu être constaté qu'il est beaucoup plus difficile d'obtenir des figures avec beaucoup de détail expérimentalement. Les figures \ref{fig:dipol1T}, \ref{fig:dipol2T} et \ref{fig:chaos} sont des sections de Pointcaré obtenu expérimentalement et la figure \ref{fig:poincare_beauty} présente ce qu'on a pu obtenir numériquement. Les figures \ref{fig:dipol1T} et \ref{fig:dipol2T} montrent un nombre fini est faible d'orbites sur lesquels oscille l'aimant, cependant la figure \ref{fig:chaos} montre une plus grande irrégularité : nous sommes en présence d'un comportement chaotique.
+Après avoir réalisé des sections de Poincaré par des simulations numérique, il a pu être constaté qu'il est beaucoup plus difficile d'obtenir des figures avec beaucoup de détail expérimentalement. Les figures \ref{fig:dipol1T}, \ref{fig:dipol2T} et \ref{fig:chaos} sont des sections de Pointcaré obtenu expérimentalement et la figure \ref{fig:poincare_beauty} présente ce qu'on a pu obtenir numériquement. Les figures \ref{fig:dipol1T} et \ref{fig:dipol2T} montrent un nombre fini et faible d'orbites sur lesquels oscille l'aimant, cependant la figure \ref{fig:chaos} montre une plus grande irrégularité : nous sommes en présence d'un comportement chaotique.
 
 
 
@@ -501,43 +490,7 @@ Dans la série de graphes de \ref{fig:bifurcation}, il a été produit des diagr
 
 
 
-
-
-\clearpage
-\section{TODO FEST !!!! OMG OMG OMG OMG OMG OMG OMG OMG OM}
-
-
-expliquer qu'il faut attendre un certain temps pour que le systeme approche de l'attracteur pour la construction du diagramme de bifurcations
-
-type de mouvement
-
-probleme du montage avec pendule inverse :
-dessiner le potentiel au cours du temps
-potentiel -> probleme de la symetrie
-
-simulation
-
-de jolis shemas
-
-origine section poincare ?
-
-conditions initiales
-asteroides
-
-% \newpage
-
-
-
-
-
-
-
-
-
-
-
-
-\clearpage
+% \clearpage
 \section{Analyse}%le plus important
 
 \subsection{Discussion}
@@ -545,30 +498,65 @@ asteroides
 %Est ce que cela nous aide pour nôtre but?
 
 \subsubsection{Pendule inversé}
-La figure~\ref{fig:equilibre}, explique bien le problème d'asymétrie du pendule. On aimerait avoir un double puit de potentiel mais cela nécessite une manipulation et un positionnement du ressort assez précise. Il est fréquent que la correction nous ramène à une situation trop extrème. Ce problème fut assez conséquent dans notre analyse du chaos.
+La figure~\ref{fig:1_2_U_3_44_lab}, illustre bien le problème d'asymétrie du pendule. On aimerait avoir en moyenne sur le temps une symétrie du potentiel mais cela nécessite une manipulation et un positionnement du ressort assez précise. Il est fréquent que la correction nous ramène à une situation trop extrème. Ce problème fut assez conséquent dans le nombre de prises de mesures.
 
 Avec l'application d'une perturbation périodique sur le ressort, celui rentre soit dans un régime périodique, de résonnance ou chaotique. Cependant, l'application d'une fréquence trop faible ou trop élevé ne permet pas d'avoir un régime chaotique intéressant. Ceci est illustré dans la figure~\ref{fig:vitesse}.
 
-Lors de l'expérience, en appliquant une fréquence d'excitation $\omega \approx XXX$, un attracteur à droite est visible (voir figure~\ref{fig:1_2_U_3_02_lab}), %TODO FINNISh HERE
+\begin{figure}[!ht]
+    \subfloat[\label{fig:subfigwpetit}]{%
+      \includegraphics[width=0.5\textwidth]{./figures/1_2_U_10_95_lab.pdf}
+    }
+    \hfill
+    \subfloat[\label{fig:subfigwgrand}]{%
+      \includegraphics[width=0.5\textwidth]{./figures/1_2_U_2_41_lab.pdf}
+    }
+    \caption{Illustration de la marges d'action sur le pendule selon la fréquence d'excitation causé par le moteur.}
+    \label{fig:vitesse}
+\end{figure}
 
-Il est aussi intéressant d'observé l'apparition de phénomène chaotique grâce à l'application d'un frein électromagnétique (illustré sur la figure~\ref{fig:1_2_U_4_97_theta__FREIN_PAS_FREIN_lab}). %TODO FINNISH HERE
+
+
+% Lors de l'expérience, en appliquant une fréquence d'excitation $\omega \approx XXX$, un attracteur à droite est visible (voir figure~\ref{fig:1_2_U_3_02_lab}), %TODO FINNISh HERE
+
+Il est aussi intéressant d'observer l'apparition de phénomènes chaotique grâce à l'application d'un frein électromagnétique (illustré sur la figure~\ref{fig:1_2_U_4_97_theta__FREIN_PAS_FREIN_lab}). %TODO FINNISH HERE
 
 Par ailleurs, en utilisant la même fréquece d'excitation, une analyse du comportement selon les condtions initiales est présenté dans la figure~\ref{fig:comparaison}. Au départ, les oscillations sont similaires, puis à $t>10$ [s], des comportements différents apparaissent résultants de l'aspect chaotique du pendule inversé avec cette fréquence d'excitation. 
+
+
+
+
 
 \subsubsection{Moteur dipolaire}
 
 Selon les différentes fréquence d'excitation appliqué aux moteur, on peut comprendre et visualiser le mouvement du pendule grâce à la section de Poincaré réalisé avec l'aide d'un oscilloscope digital.
 
-En appliquant une fréquence de 0.48 [Hz], on observe une double périodicité, c'est à dire que le pendule oscille selon deux manières.%TODO COMPLETE
-Ceci est illustré dans la figure~\ref{fig:dipol2T}.
+Dans certaines gammes de fréquence d'oscillation forcée, on observe une $n$ périodicité, c'est à dire que le pendule oscille selon $n$ manières.%TODO COMPLETE
+ Ceci est illustré dans la figure~\ref{fig:dipol2T} par un exemple dans le cas $n=2$ dans la figure \ref{fig:dipol1T}, on a la même chose pour $n=1$. On peut aussi regarder les diagrammes de bifurcations.
 
-Avec une fréquence de 1.18 [Hz], une uni-périodicité est observée (voir figure~\ref{fig:dipol1T}. Cela signifie que le pendule réalise un mouvement unique périodique, il n'existe pas d'autre composante périodique dans son mouvement et il n'est pas chaotique.
+Dans la figure \ref{fig:chaos} , le pendule subit un régime chaotique : il n'y a aucune récurrence dans les points enregistrés et affichés via la section de Poincaré, cela correspond à un mouvement chaotique, un mouvement imprévisible sur le long terme.
 
-Par la suite, en appliquant une fréquence d'excitation de 1.22 [Hz], le pendule subit un régime chaotique observable sur la figure~\ref{fig:chaos}, il n'y a aucune récurrence dans les points enregistre et afficher via la section de Poincaré, cela correspond au mouvement chaotique, son mouvement est imprévisible sur le long terme.
-
-
-La réalisation de différent diagramme de bifurcation est illustré dans la figure~\ref{fig:birfucation}. Le diagramme (b) est très intéressant car il montre que sur une certaine gamme d'intensité, la périodicité du pendule est uni-périodique, par la suite ce régime redevient chaotique.
+La réalisation de différent diagramme de bifurcation est illustré dans la figure~\ref{fig:bifurcation}. Le diagramme (b) est très intéressant car il montre que sur une certaine gamme d'intensité, la périodicité du pendule est uni-périodique, par la suite ce régime redevient chaotique.
 Dans le diagramme (d) au début il y a aussi un régime de période unique, puis une régime chaotique. Il faut remarquer que vers la fin, il existe un mouvement de périodicité 2T, qui correspond à des oscillations du pendule sur 2 orbites différents.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{TODO FEST !!!! OMG OMG OMG OMG OMG OMG OMG OMG OM}
+
+
+% type de mouvement
+
+% origine section poincare ?
+
+% conditions initiales
+% asteroides
+
+% \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 \subsection{Sources de problèmes}
 %Validité de nos résultats
@@ -577,23 +565,24 @@ Dans le diagramme (d) au début il y a aussi un régime de période unique, puis
 
 \subsubsection{Pendule inversé}
 \begin{itemize}
-	\item[--] Asymétrie du pendule inversé, voir figure~\ref{fig:potentiel}.
-	\item[--] Force de frottements non négligeables dans le pendule.
-	\item[--] Précision des mesures sur des petites oscillations.
+  \item[--] Asymétrie du pendule inversé, voir figure~\ref{fig:potentiel}. On peut calculer le nouveau potentiel en remplaçant $a sin(\omega t)$ par $a sin(\omega t) + b$.
+  \item[--] Force de frottements non négligeables dans le pendule.
+  \item[--] Précision des mesures sur des petites oscillations.
 \end{itemize}
 
 \subsubsection{Moteur dipolaire}
 \begin{itemize}
-	\item[--] Beaucoup de bruit électronique malgré les filtres.
-	\item[--] Impossibilité du traitement numérique des données.
+  \item[--] Beaucoup de bruit électronique malgré les filtres.
+  \item[--] Impossibilité du traitement numérique des données.
+  \item[--] Difficulté d'estimer une "convergence" dans un attracteur lors de la réalisation d'un diagramme de bifurcation
 
 \end{itemize}
 
 
 \section{Conclusion}
 
-L'expérience à permis de mieux comprendre et de visualiser les mouvements chaotique grâce au pendule inversé et au moteur dipolaire. Ceux-ci pouvaient révéler des aspect périodique, qui après analyse, correspondait à des mouvements chaotique dont la position et la vitesse sont imprédictibles sur le long terme, tel que l'étude sur la variation des conditions initiales le montre. Par ailleurs, l'étude en diagramme de phase et en Section de Poincaré fut une aide pour la compréhension des mouvements et de l'analyse de ces derniers.
-Cependant, l'expérience fut laborieuse dû aux quelques sources de problèmes, tel que l'asymétrie du pendule ou le bruit du signal mesuré.
+Par les expériences réalisées, il a pu être constaté qu'il est très difficile de reproduire exactement la même expérience car la moindre variation aux conditions initiale fait totalement diverger les résultats. Une conséquence de ceci étant par exemple le problème qu'il y a à estimer la trajectoire d'un astéroide : bien que la dynamique de l'asteroide soit parfaitement connue, une petite barre d'erreur sur l'estimation de la position relative des corps l'entourant implique une rapide déviation de la solution réelle, le véritable problème devient la précision des mesures. De plus, bien que les trajectoires sont toutes divergentes, il a pu être constaté que sur le long terme, les trajectoires sont toutes sur un même attracteur, ce qui donne une estimation des position accessibles aux objets chaotiques même si on ne peut que difficilement prédire exactement leur évolution.
+
 
 %Résumer du rapport
 %Ouverture
@@ -603,7 +592,7 @@ Cependant, l'expérience fut laborieuse dû aux quelques sources de problèmes, 
 
 
 %Reference
-\begin{thebibliography}{99}
-\end{thebibliography}
+% \begin{thebibliography}{99}
+% \end{thebibliography}
 
 \end{document}
