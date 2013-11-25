@@ -1,0 +1,261 @@
+\documentclass[a4paper,12pt,oneside]{article}
+
+% \usepackage{graphicx}
+% \usepackage{verbatim}
+% \usepackage{amsmath}
+% \usepackage[english]{babel}
+% \usepackage[colorlinks,bookmarks=false,linkcolor=blue,urlcolor=blue]{hyperref}
+% \usepackage{booktabs}
+
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[colorlinks,bookmarks=false,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{subfig}
+\usepackage{amssymb}
+
+
+\paperheight=297mm
+\paperwidth=210mm
+
+\setlength{\textheight}{235mm}
+\setlength{\topmargin}{-1.2cm}
+%\setlength{\footskip}{5mm}
+\setlength{\textwidth}{15cm}
+\setlength{\oddsidemargin}{0.56cm}
+\setlength{\evensidemargin}{0.56cm}
+
+\pagestyle{plain}
+
+
+\def \be {\begin{equation}}
+\def \ee {\end{equation}}
+\def \dd  {{\rm d}}
+
+\newcommand{\mail}[1]{{\href{mailto:#1}{#1}}}
+\newcommand{\ftplink}[1]{{\href{ftp://#1}{#1}}}
+
+
+\begin{document}
+
+\title{Physique des couches minces}
+\author{Laurent Rohrbasser \& Tim Tuuva}
+
+\maketitle
+\tableofcontents
+\baselineskip=16pt
+\parindent=15pt
+\parskip=5pt
+
+
+\newpage
+
+% \begin{abstract}
+% %Résumé de l'expérience, on fait des tps sur le chaos, rappeler vite fait 
+% %dire le but de ces manips, qu'est ce qu'on veut?
+% \end{abstract}
+
+\section{Introduction}
+Il est possible de faire des dépôts de très faibles épaisseur sur des surfaces quelconques relativement lisses. En plus de ne prendre qu'un espace relativement petit, les couches minces ont des propriétés utiles dans le domaine de l'électronique, et la protection aux interfaces d'un autre matériau. Il sera étudié ici les différents résultats de dépot de ZnO par pulvérisation cathodique magnétron sur une plaque de verre pour une variation de la température de dépôt, ainsi que l'effet d'un recuit à différentes températures pour chaque échantillons des couches déposées aux température précédentes.
+
+\section{Un peu de Theorie}
+
+Une couche mince, comme son nom l'indique, est une fine couche d'un matériau sur une surface appelée substratqui a généralement une épaisseur variant de $1\AA$ à $10$ micromètres.
+
+Dans les expériences qui suivent, il a été effectué un certain nombre de dépôts de ZnO sur une plaque de verre par pulvérisation cathodique magnétron. Le principe se décrit comme suit (cf fig \ref{fig:illustration_depot}): une cible de ZnO est installée dans une enceinte à vide, le subtrat, ici une plaque de verre, est installée en face, la cible étant exposée à la face sur laquel il est souhaité faire le dépot. Ensuite un gaz réagissant peu (un gaz noble par exemple, ici de l'argon) est introduit dans l'enceinte et une grande différence de potentiel est imposée entre la cible et le substrat. Ceci a pour effet d'arracher un électron de l'argon et donc de le séparer en $Ag^+ + e^-$ et donc d'accélérer les particules $Ag^+$ contre la cible, en transférant de l'energie à la cible, des particules $Zn^+$ et $O^-$ quittent la cible pour se diriger vers la plaque de verre et se recristalliser. Un champ magnétique redirige les particules arrachées de la cible vers la zone où se trouve la plaque de verre. Chaque particule qui arrive sur la surface du verre pourra se déposer en un point et commencer un cluster de particules, se déposer à côté d'une particule ou d'un groupe de particules et ainsi participer à l'agrandissement d'un cluster (cristallisation), diffuser sur la plaque ou réévaporer, ainsi que toutes les combinisons possibles (cf fig \ref{fig:illustration_depot2}). 
+
+\begin{figure}[h!]
+	\begin{center}
+	\includegraphics[width=1.\linewidth,angle=0]{./figures/illustration_depot.png}
+	\caption{pulvérisation cathodique magnétron} \label{fig:illustration_depot}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h!]
+	\begin{center}
+	\includegraphics[width=1.\linewidth,angle=0]{./figures/illustration_depot2.png}
+	\caption{différentes interractions pour une particule de la cible envoyée sur le substrat, à la surface du substrat} \label{fig:illustration_depot2}
+	\end{center}
+\end{figure}
+
+
+Couche mince : c'est quoi ?
+depot principe, on depose du ZnO
+
+les differents defauts, leurs effets 
+	- absence de particule
+	- remplacement Z
+	- remplacement O
+semiconducteur
+	- gap $\delta$V
+	- P ou N
+les choses qu'on peut faire avec
+	- diode shotzky
+	- diode normale
+	- diode photovoltaique (transparence de la couche)
+
+differents depots : Temperature
+	- change l'energie fournue a la particule envoyee sur le substrat (favorise la formation de gros cristaux)
+recuit
+	- change la taille des cristaux (recristalisation)
+
+
+\section{Experience}
+
+resistivite (methode Van der Pauw)
+
+profilometre
+
+effe Hall:
+	- mesure concentration porteur de charges libres
+
+spectre de reflexion :
+	- coeff absorption
+	- gap optique
+
+spectre de transmission :
+	- 
+	- 
+
+Diffraction rayonX
+
+
+\section{Introduction}
+
+
+
+
+1:
+2:
+3: Zn + O2
+
+
+
+
+
+
+% [x] A0 dépot 20° (No O2)
+% [x] Ax dépot 20° (No O2) + recuit 400°
+
+% [x] A1 dépot 20°
+% [x] A2 dépot 20° + recuit 400°
+% [x] A3 dépot 20° + recuit 600°
+
+% [x] B1 dépot 200°
+% [x] B2 dépot 200° + recuit 600°
+
+% [x] C1 dépot 400°
+% [x] C2 dépot 400° + recuit 600°
+
+
+
+% résistivité
+% [x]A0
+% [ ]Ax
+% [x]A1
+% [ ]A2
+% [ ]A3
+% [ ]B1
+% [ ]B2
+% [x]C1
+% [ ]C2
+
+% épaisseur (profilomètre)
+% [x]A0
+% [!]Ax
+% [x]A1
+% [!]A2
+% [!]A3
+% [x]B1
+% [!]B2
+% [x]C1
+% [!]C2
+
+% concentration charge par effet Hall
+% [?]A0
+% [?]Ax
+% [?]A1
+% [?]A2
+% [?]A3
+% [?]B1
+% [?]B2
+% [?]C1
+% [?]C2
+
+% Spectre
+% [x]A0
+% [x]Ax
+% [x]A1
+% [ ]A2
+% [x]A3
+% [x]B1
+% [x]B2
+% [x]C1
+% [x]C2
+
+% Diffraction 
+% [ ]A0
+% [ ]Ax
+% [ ]A1
+% [ ]A2
+% [ ]A3
+% [ ]B1
+% [ ]B2
+% [ ]C1
+% [ ]C2
+
+
+trucs marrants a traiter :
+
+- effet de la presence de O dans l'enceinte
+- ration Zn - O 
+--- affinite electronique
+
+
+- la temperature dans l'enceinte augmente avec le plasma
+
+- expliquer la reformation des microcristaus en un gros cristal a haute temperature
+--- pourquoi les gros cristaux grandissent et les petits raptississent ?
+
+- pourquoi depot a chaud change
+--- energie de la plaque de verre transmise dans les particules de Zn, ainsi les Zn regagnent de l'energie et peuvent se mettre dans des endroits ou leur potentiel est plus faible.
+
+
+\section{Dispositif}
+
+\section{Résultats}
+%Exposition des graphes avec les légendes et un peu de texte explicatifs sur comment on les a obtenus.
+
+\begin{figure}[h!]
+  \begin{center}
+  %\includegraphics[width=0.8\linewidth,angle=0]{}
+  \caption{} \label{fig:}
+  \end{center}
+\end{figure}
+
+\section{Discussion}%le plus important
+
+\subsection{Interprétation}
+%Qu'est ce que les résultats nous permettent de conclure?
+%Est ce que cela nous aide pour nôtre but?
+
+\subsection{Discussions}
+%Validité de nos résultats
+%S'il y a des erreurs, d'ou viennent elle!
+%Avons nous atteind les buts du TP?
+\section{Conclusion}
+
+%Résumer du rapport
+%Ouverture
+
+
+
+
+
+%Reference
+\begin{thebibliography}{99}
+\end{thebibliography}
+
+\end{document}
