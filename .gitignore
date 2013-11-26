@@ -6,4 +6,4 @@
 *.aux
 *.toc
 *~
-!*/data/*
+!*.pdf.data
