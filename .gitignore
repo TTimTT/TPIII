@@ -6,4 +6,4 @@
 *.aux
 *.toc
 *~
-!*.pdf.data
+!./Couches_minces/data/*.pdf
