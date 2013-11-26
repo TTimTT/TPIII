@@ -80,43 +80,34 @@ Dans les expériences qui suivent, il a été effectué un certain nombre de dé
 	\end{center}
 \end{figure}
 
-Il est assez intuitif qu'il ne va pas se former un seul cristal sans défauts : les clusters peuvent commencer n'importe où avec des orientations différentes, et même au sein des clusters, on aura des défauts de substitution (un atome du cristal est remplacé par un autre atome), interstitielles (un atome se trouve inséré dans une position où on n'atend aucun atome) et lacunes (absence d'atome dans une position où on en attend un). Ces défauts ont des effets différents :
-
-++++++ absence de particule
-
-++++++ remplacement Z
-
-++++++ remplacement O
+Il est assez intuitif qu'il ne va pas se former un seul cristal sans défauts : les clusters peuvent commencer n'importe où avec des orientations différentes, et même au sein des clusters, on aura des défauts de substitution (un atome du cristal est remplacé par un autre atome), interstitielles (un atome se trouve inséré dans une position où on n'atend aucun atome) et lacunes (absence d'atome dans une position où on en attend un). Ces défauts ont des effets différents qui sont exploités pour faire ce qu'on appelle des dopages dans le cas de semi-conducteurs : en forcant l'introduction de particules étrangère on peut augmenter la densité d'électrons (dopage type N) ou la diminuer (dopage type P). Dans le cadre des expériences qui suivent, il sera étudié le ZnO qui est un semi-conducteur.
 
 
-Dans les dépôts qui sont rélisé ici, on peut aussi considérer le ratio Zn - O : leurs affinités électronique étant différentes, ce ration aura un effet quand à la résistiité de l'échantillon. L'oxygène 
-+++ effet de la presence de O dans l'enceinte
+Dans le cadre des dépôts réalisés ici, on peut aussi considérer le ratio Zn - O : leurs affinités électronique étant différentes, ce ration aura un effet quand à la résistivité de l'échantillon. L'oxygène ayant une affinité électronique plus grande que le zinc, plus il y a de places occupées par des atomes d'oxygène dans le dépôt, plus le nombre d'électrons non mobiles sera grand et entrainera une rélusion des électrons mobiles, ce qui a pour effet de diffuser les électrons libres et donc d'augmenter la résistivité du milieu. Remplacer l'oxygène par du zinc permet donc de réduire la résistivité, et vice et versa.
 
-+++ ration Zn - O 
+Pour ajouter des particules dans le dépôt ou juste changer le rapport en nombre d'atomes Zn-O, il suffit d'ajouter dans l'enceinte l'élément souhaité avec le gaz noble. Par ailleurs, l'oxygene étant plus volatile que le zinc, pendant un dépôt on se retrouve facilement en déficite d'oxygene, on peut utiliser la procédure précédente pour réablir la stoechiométrie.
 
-++++++ affinite electronique
+
+Comme dit précédemment, les cristaux ont non seulement des défauts ponctuels, mais aussi ne sont pas un unique cristal. En effet, vu que pendant le dépôt il se forme un grand nombre de clusters de ZnO, il se forme de nombreux petits cristaux, tous orientés différemment. Pour agir sur la façon dont se fait cette cristallisation, on peut faire un dépôt à une température différente : avec l'agitation thermique, une particule qui se dépose sur la plaque de verre se verra transmettre de l'énergie cinétique (depuis le verre) et aura plus de chance d'être redirigée vers un cluster déjà existant et donc ne va pas créer un autre début de cristal : la taille moyenne des cristaux va augmenter. Avec ceci on s'attend à ce qu'il soit plus facile pour les électrons de passer d'un point à l'autre de la couche mince (plus de régularité diminue le nombre de collisions), on peut mesurer la résistivité en fonction de la température du dépôt pour vérifier cela, de plus on peut faire une diffraction par rayon X pour comparer la taille des cristaux qu'on trouve dans le dépôt.
+
+Il y a encore une autre solution pour agir sur la taille des cristaux : on peut a posteriori recristalliser la couche mince en faisant un recuit. Lors d'un recuit, les particules reçoivent de l'énergie et deviennet mobiles, ainsi les dislocations deviennent mobiles et les particules aux joins de grains (contact entre les différents petits cristaux) peuvent changer d'alignement. Il peut être observé que les cristaux les plus gros ont tendance à s'agrandir alors que les petits diminuent de taille avant de disparaître. 
 
 
 
-- expliquer la reformation des microcristaus en un gros cristal a haute temperature
---- pourquoi les gros cristaux grandissent et les petits raptississent ?
+% - expliquer la reformation des microcristaus en un gros cristal a haute temperature
+% --- pourquoi les gros cristaux grandissent et les petits raptississent ?
 
-- pourquoi depot a chaud change
---- energie de la plaque de verre transmise dans les particules de Zn, ainsi les Zn regagnent de l'energie et peuvent se mettre dans des endroits ou leur potentiel est plus faible.
+% - pourquoi depot a chaud change
+% --- energie de la plaque de verre transmise dans les particules de Zn, ainsi les Zn regagnent de l'energie et peuvent se mettre dans des endroits ou leur potentiel est plus faible.
 
-differents depots : Temperature
-	- change l'energie fournue a la particule envoyee sur le substrat (favorise la formation de gros cristaux)
-recuit
-	- change la taille des cristaux (recristalisation)
+% differents depots : Temperature
+% 	- change l'energie fournue a la particule envoyee sur le substrat (favorise la formation de gros cristaux)
+% recuit
+% 	- change la taille des cristaux (recristalisation)
 
 
-semiconducteur
-	- gap $\delta$V
-	- P ou N
-les choses qu'on peut faire avec
-	- diode shotzky
-	- diode normale
-	- diode photovoltaique (transparence de la couche)
+Une application possible des couches minces semi-conducteur est la diode photovoltaique : dans un dépôt mince de semi-conducteur sur un autre semi-conducteur (en faisant un contact N-P) ou sur un métal (diode Schottky) le fait que la couche soit mince permet à la lumière de le traverser, et ainsi, par le principe inverse d'une diode luminescente, de produire une différence de potentiel à partir d'un flux de photons. 
+
 
 \subsection{resistivite (methode Van der Pauw)}
 	La méthode devan der Pauw fonctionne sur des échantillons plats, homogène et de faible épaisseur. On prends 4 points de contacts comme dans la figure \ref{fig:illustration_van_der_pauw}, et on applique sur toutes les combinaisons possibles un courant et on mesure la tension entre les autres contacts restant (à un signe près) ce qui permet de calculer la résistivité avec la relation
@@ -132,7 +123,7 @@ les choses qu'on peut faire avec
 		\end{figure}
 
 \subsection{profilometre}
-	Le profilomètre sert à simplement mesurer l'épaisseur des échantillons en faisant un balayage entre une surface qui a un dépôt et une surface qui a été converte pendant le dépôt (où il n'y a pas de couche mince donc) et qui va mesurer les variations de l'épaisseur.
+	Le profilomètre sert à mesurer l'épaisseur des couches minces sur les échantillons. Le processus consiste à faire un balayage de mesures de hauteur sur un chemin passant de la partie de la surface de l'échantillon qui a un dépôt jusqu'une partie qui a été converte pendant le dépôt (où il n'y a pas de couche mince). En mesurant les variations de l'épaisseur entre ces deux surfaces, on obtient l'épaisseur de la couche mince déposée.
 
 \subsection{Effet Hall}
 	L'effet Hall est la création d'une différence de potentiel lorsqu'on fait passer un courant dans un échantillon plongé dans un champ magnétique. La force de Lorentz appliquée aux électrons qui circulent dans l'échantillon implique une déviation des charges sur le côté et donc une différence de potentiel dans la direction orthogonale au courant (il faut que le champ ne soit pas aligné avec le courant).
@@ -210,11 +201,6 @@ L'expérience a causé un problème quand à la mesurabilité de l'effet : il n'
 
 
 
-% 1:
-% 2:
-% 3: Zn + O2
-
-
 
 
 
@@ -290,16 +276,6 @@ L'expérience a causé un problème quand à la mesurabilité de l'effet : il n'
 % [ ]C2
 
 
-
-
-%Exposition des graphes avec les légendes et un peu de texte explicatifs sur comment on les a obtenus.
-
-% \begin{figure}[h!]
-%   \begin{center}
-%   %\includegraphics[width=0.8\linewidth,angle=0]{}
-%   \caption{} \label{fig:}
-%   \end{center}
-% \end{figure}
 
 \section{Discussion}%le plus important
 
