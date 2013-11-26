@@ -138,6 +138,7 @@ Une application possible des couches minces semi-conducteur est la diode photovo
 	\be
 		\sigma = q N \mu
 	\ee
+	avec $\sigma=\rho^{-1}$ qui a pu être obtenu avec la méthode van der Pauw.
 
 \subsection{spectre de reflexion}
 % coeff absorption
@@ -190,17 +191,55 @@ où $K_s$ est une constante dépendante de la géométrie de la cellule unitaire
 
 
 % \newpage
-\section{résultats des expériences}
+\section{résultats des expériences et discussion}
 
 L'idée est de faire des dépôts à différentes températures pour observer vers quel état final tend la couche mince obtenue : il sera donc mesuré et comparé résistivité, épaisseur, taille des cristaux formés et densité de porteurs de charges libres par les méthodes décrites précédemment. Il sera aussi comparé les effets de recuits à différentes température.
 
 Note : Dans l'ensemble des expérience, il a été ajouté dans l'enceinte du pulvérisateur cathodique magnétron un peu d'oxygène afin de rétablir la stoechiométrie pour le cristal ZnO : en effet, l'oxygène étant plus volatile que le zinc, on se retrouve avec un déficit en O. Malheureusement, le gaz introduit n'était pas purement de l'oxygène, mais une composition $21 \% O_2 $ et $78 \% N_2 $ et $1 \% $ de diverses impuretés.
 
-+++ la temperature dans l'enceinte augmente avec le plasma
+Durant les dépôts à température supposément constante (donc chauffage éteint), il a pu être observé une augmentation de la température dans l'enceinte. Ceci peut s'expliquer par l'accélération des particules par le champ (cf fig \ref{fig:illustration_depot}) qui en percutant le support pour la plaque, lui transmet de l'energie et donc chauffe.
+
+Dans la suite de ce document, les échantillons seront nommés selon leur température de dépôt et de recuit selon la règle suivante :
+
+A correspond à un dépôt sans chauffage (température ambiante).
+
+B correspond à un dépôt à $200^oC$.
+
+C correspond à un dépôt à $400^oC$.
+
+A1, B1 et C1 n'ont pas été recuit.
+
+A2 a été recuit à $400^oC$.
+
+A3, B2 et C2 ont été recuit à $600^oC$.
+% +++ la temperature dans l'enceinte augmente avec le plasma
+
+\subsection{Profilomètre}
+
+\begin{table}[ht]
+\centering
+   \begin{tabular}{|c|c|}
+	  \hline
+      Type & Épaisseur [nm]\\
+      \hline
+      A & 571 \\
+      B & 674 \\
+      C & 872 \\
+      \hline
+   \end{tabular}
+   \caption{autre tableau}\label{tab:profil}
+\end{table}
+On constate que l'épaisseur est du même ordre de grandeur. Les dépôts à haute température ont des épaisseurs différentes, ce qui est pricipalement dû à une différence dans les préparation : les temps de cuisson étants approximativement égaux, il est possible qu'une différence de l'ordre de la quintaine de minute ait pu contribuer à ces différences.
+
+En plus de cela, le dépôt n'est pas complètement homogène : plus on est proche du centre, plus le dépôt est important, ce qui était visible à la couleur des couches minces obtenues pendant les expériences. Comme l'indique la figure \ref{fig:illustration_depot}, il y a bien un dispositif pour rediriger les particules de la cible (champ magnétique), mais il n'est pas parfait.
+
+Pour les prochaines expérimentations, il peut être utile de mesurer les épaisseurs des dépôts en fonction de la position.
 
 \subsection{Résistivité (methode Van der Pauw)}
 
-\begin{table}
+s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s 
+
+\begin{table}[ht]
 \centering
    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 	  \hline
@@ -218,21 +257,6 @@ Note : Dans l'ensemble des expérience, il a été ajouté dans l'enceinte du pu
    \caption{Tableau de la résistivité de la couche mince, par la méthode de Van Der Pauw}\label{tab:vanderpauw}
 \end{table}
 
-\subsection{Profilomètre}
-
-\begin{table}
-\centering
-   \begin{tabular}{|c|c|}
-	  \hline
-      Type & Épaisseur [nm]\\
-      \hline
-      A & 571 \\
-      B & 674 \\
-      C & 872 \\
-      \hline
-   \end{tabular}
-   \caption{autre tableau}\label{tab:profil}
-\end{table}
 
 
 \subsection{Effet Hall}
@@ -241,6 +265,7 @@ L'expérience a causé un problème quand à la mesurabilité de l'effet : il n'
 
 
 \subsection{Spectre de réflexion}
+s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s 
 
 
 \begin{figure}[!ht]
@@ -276,6 +301,7 @@ L'expérience a causé un problème quand à la mesurabilité de l'effet : il n'
 \end{figure}
 
 \subsection{Diffraction rayonX}
+s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s 
 
 \begin{figure}[!ht]
 	\centering
@@ -387,12 +413,6 @@ L'expérience a causé un problème quand à la mesurabilité de l'effet : il n'
 % [ ]C2
 
 
-
-\section{Discussion}%le plus important
-
-\subsection{Interprétation}
-%Qu'est ce que les résultats nous permettent de conclure?
-%Est ce que cela nous aide pour nôtre but?
 
 \section{Conclusion}
 

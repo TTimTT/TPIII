@@ -1,5 +1,5 @@
-% Written by ConTeXt terminal for GNUPLOT on: 2013-11-26 15:42 CET
-% GNUPLOT version: 4.7.0, terminal version: 1.0.0 (2011-11-05)
+% Written by ConTeXt terminal for GNUPLOT on: 2013-11-26 22:34 CET
+% GNUPLOT version: 4.6.4, terminal version: 1.0.0 (2011-11-05)
 % See also http://wiki.contextgarden.net/Gnuplot
 %
 \usemodule
@@ -22,7 +22,7 @@
 \starttext
 
 \startGNUPLOTpage % Graphic Nr. 1
-string gnuplotversion; gnuplotversion := "4.7";
+string gnuplotversion; gnuplotversion := "4.6";
 string termversion;    termversion    := "1.0";
 % scaling factor, width and height of the figure
 a := 1cm; w := 12.700a; h := 7.620a; % (5in, 3in)
@@ -43,106 +43,149 @@ gp_set_linewidth(1);
 gp_setup_after;
 % -------------------------
 gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (1.560a,1.350a)--(1.683a,1.350a);
 gp_draw(p);
 p := (12.078a,1.350a)--(11.955a,1.350a);
 gp_draw(p);
 gp_put_text((1.353a, 1.350a), align(right), \sometxt[gp]{0});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (1.560a,2.001a)--(1.683a,2.001a);
 gp_draw(p);
 p := (12.078a,2.001a)--(11.955a,2.001a);
 gp_draw(p);
 gp_put_text((1.353a, 2.001a), align(right), \sometxt[gp]{10});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (1.560a,2.651a)--(1.683a,2.651a);
 gp_draw(p);
 p := (12.078a,2.651a)--(11.955a,2.651a);
 gp_draw(p);
 gp_put_text((1.353a, 2.651a), align(right), \sometxt[gp]{20});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (1.560a,3.302a)--(1.683a,3.302a);
 gp_draw(p);
 p := (12.078a,3.302a)--(11.955a,3.302a);
 gp_draw(p);
 gp_put_text((1.353a, 3.302a), align(right), \sometxt[gp]{30});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (1.560a,3.952a)--(1.683a,3.952a);
 gp_draw(p);
 p := (12.078a,3.952a)--(11.955a,3.952a);
 gp_draw(p);
 gp_put_text((1.353a, 3.952a), align(right), \sometxt[gp]{40});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (1.560a,4.603a)--(1.683a,4.603a);
 gp_draw(p);
 p := (12.078a,4.603a)--(11.955a,4.603a);
 gp_draw(p);
 gp_put_text((1.353a, 4.603a), align(right), \sometxt[gp]{50});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (1.560a,5.253a)--(1.683a,5.253a);
 gp_draw(p);
 p := (12.078a,5.253a)--(11.955a,5.253a);
 gp_draw(p);
 gp_put_text((1.353a, 5.253a), align(right), \sometxt[gp]{60});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (1.560a,5.904a)--(1.683a,5.904a);
 gp_draw(p);
 p := (12.078a,5.904a)--(11.955a,5.904a);
 gp_draw(p);
 gp_put_text((1.353a, 5.904a), align(right), \sometxt[gp]{70});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (1.560a,6.554a)--(1.683a,6.554a);
 gp_draw(p);
 p := (12.078a,6.554a)--(11.955a,6.554a);
 gp_draw(p);
 gp_put_text((1.353a, 6.554a), align(right), \sometxt[gp]{80});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (1.560a,7.205a)--(1.683a,7.205a);
 gp_draw(p);
 p := (12.078a,7.205a)--(11.955a,7.205a);
 gp_draw(p);
 gp_put_text((1.353a, 7.205a), align(right), \sometxt[gp]{90});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (1.560a,1.350a)--(1.560a,1.473a);
 gp_draw(p);
 p := (1.560a,7.205a)--(1.560a,7.082a);
 gp_draw(p);
 gp_put_text((1.560a, 0.928a), align(center), \sometxt[gp]{800});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (2.729a,1.350a)--(2.729a,1.473a);
 gp_draw(p);
 p := (2.729a,7.205a)--(2.729a,7.082a);
 gp_draw(p);
 gp_put_text((2.729a, 0.928a), align(center), \sometxt[gp]{1000});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (3.897a,1.350a)--(3.897a,1.473a);
 gp_draw(p);
 p := (3.897a,7.205a)--(3.897a,7.082a);
 gp_draw(p);
 gp_put_text((3.897a, 0.928a), align(center), \sometxt[gp]{1200});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (5.066a,1.350a)--(5.066a,1.473a);
 gp_draw(p);
 p := (5.066a,7.205a)--(5.066a,7.082a);
 gp_draw(p);
 gp_put_text((5.066a, 0.928a), align(center), \sometxt[gp]{1400});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (6.235a,1.350a)--(6.235a,1.473a);
 gp_draw(p);
 p := (6.235a,7.205a)--(6.235a,7.082a);
 gp_draw(p);
 gp_put_text((6.235a, 0.928a), align(center), \sometxt[gp]{1600});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (7.403a,1.350a)--(7.403a,1.473a);
 gp_draw(p);
 p := (7.403a,7.205a)--(7.403a,7.082a);
 gp_draw(p);
 gp_put_text((7.403a, 0.928a), align(center), \sometxt[gp]{1800});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (8.572a,1.350a)--(8.572a,1.473a);
 gp_draw(p);
 p := (8.572a,7.205a)--(8.572a,7.082a);
 gp_draw(p);
 gp_put_text((8.572a, 0.928a), align(center), \sometxt[gp]{2000});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (9.741a,1.350a)--(9.741a,1.473a);
 gp_draw(p);
 p := (9.741a,7.205a)--(9.741a,7.082a);
 gp_draw(p);
 gp_put_text((9.741a, 0.928a), align(center), \sometxt[gp]{2200});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (10.909a,1.350a)--(10.909a,1.473a);
 gp_draw(p);
 p := (10.909a,7.205a)--(10.909a,7.082a);
 gp_draw(p);
 gp_put_text((10.909a, 0.928a), align(center), \sometxt[gp]{2400});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (12.078a,1.350a)--(12.078a,1.473a);
 gp_draw(p);
 p := (12.078a,7.205a)--(12.078a,7.082a);
 gp_draw(p);
 gp_put_text((12.078a, 0.928a), align(center), \sometxt[gp]{2600});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (1.560a,7.205a)--(1.560a,1.350a)--(12.078a,1.350a)--(12.078a,7.205a)--cycle;
 gp_draw(p);
 gp_set_color(lt(-2));
@@ -152,11 +195,15 @@ gp_set_color(lt(-2));
 gp_put_text((6.819a, 0.295a), align(center), \sometxt[gp]{$\lambda$ [nm]});
 gp_set_linetype(-2);
 gp_put_text((6.352a, 2.131a), align(left), \sometxt[gp]{1615});
+gp_set_color(lt(-2));
 p := (6.291a,1.633a)--(6.322a,1.480a)--(6.371a,1.628a);
 gp_draw(p);
 p := (6.352a,2.001a)--(6.322a,1.480a);
 gp_draw(p);
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 gp_set_linetype(0);
+gp_set_color(lt(0));
 p := (1.902a,1.350a)--(1.940a,2.321a)--(1.979a,2.246a)--(2.018a,2.223a)
   --(2.057a,2.168a)--(2.095a,2.117a)--(2.134a,2.065a)--(2.173a,2.030a)
   --(2.212a,1.998a)--(2.251a,1.990a)--(2.289a,1.984a)--(2.328a,1.984a)
@@ -223,6 +270,7 @@ p := (1.902a,1.350a)--(1.940a,2.321a)--(1.979a,2.246a)--(2.018a,2.223a)
   --(11.816a,2.832a)--(11.856a,2.847a)--(11.896a,3.890a)--(11.936a,2.510a);
 gp_draw(p);
 gp_set_linetype(1);
+gp_set_color(lt(1));
 p := (6.372a,1.350a)--(6.463a,1.443a)--(6.564a,1.546a)--(6.666a,1.649a)
   --(6.767a,1.752a)--(6.868a,1.855a)--(6.970a,1.959a)--(7.071a,2.062a)
   --(7.172a,2.165a)--(7.274a,2.268a)--(7.375a,2.371a)--(7.476a,2.474a)
@@ -239,8 +287,11 @@ p := (6.372a,1.350a)--(6.463a,1.443a)--(6.564a,1.546a)--(6.666a,1.649a)
   --(11.632a,6.703a)--(11.734a,6.807a)--(11.835a,6.910a)--(11.936a,7.013a);
 gp_draw(p);
 gp_set_linetype(-2);
+gp_set_color(lt(-2));
 p := (1.560a,7.205a)--(1.560a,1.350a)--(12.078a,1.350a)--(12.078a,7.205a)--cycle;
 gp_draw(p);
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
 setbounds currentpicture to unitsquare xyscaled (w,h);
 \stopGNUPLOTpage
 \stoptext
