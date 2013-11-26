@@ -82,8 +82,8 @@ X1=1700
 X2=1900
 fit [X1:X2] f(x) datadir.'C1_v1.txt' via a,b
 
-set arrow from 1610,10 to 1605,2 as 1
-set label sprintf("%d",1605) at 1610,12
+set arrow from 1620,10 to 1615,2 as 1
+set label sprintf("%d",1615) at 1620,12
 plot datadir.'C1_v1.txt' with lines, f(x) with lines
 
 unset arrow
