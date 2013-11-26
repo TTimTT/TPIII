@@ -143,7 +143,7 @@ Une application possible des couches minces semi-conducteur est la diode photovo
 % coeff absorption
 % gap optique
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-L'expérience consiste en envoyer de la lumière d'un spectre assez large, et voir ce qui est réfléchi.
+L'expérience consiste en envoyer de la lumière d'un spectre assez large, et de voir ce qui est réfléchi.
 
 \be
 	\omega_{min}=\sqrt{ \frac{q^2 N_{opt}} {\epsilon_0(\epsilon_\infty-1)m^*} }
@@ -151,27 +151,45 @@ L'expérience consiste en envoyer de la lumière d'un spectre assez large, et vo
 
 ou $m^*$ est la masse effective de l'électron ($0.35 m_e$ pour le ZnO),
 
+
+
+
+
+Avec le spectre de réflexion, il est aussi possible de mesurer l'épaisseur de l'échantillon : pour les longueur d'ondes les plus faibles, on constate un pattern régulier avec des interférences. Ces interférences sont due à la réflexion sur toute l'épaisseur de la lumière introduite. Pour la mesure de d, il suffit alors de regarder la distance entre 2 maximas donnés par $\lambda_1$ et $\lambda_2$, on utilise alors la relation :
+
+\be
+	d=\frac{M\lambda_1 \lambda_2}{2 n_f (\lambda_2 - \lambda_1)}
+\ee
+
+
+où $n_f$ est !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 % \subsection{spectre de transmission}
 
 
 
 \subsection{Diffraction rayonX}
 
+		\begin{figure}[h!]
+			\begin{center}
+			\includegraphics[width=0.8\linewidth,angle=0]{./figures/illustration_rayon_X.png}
+			\caption{Les contacts sont sur les sommets d'un carré pour avoir des distances identiques entre 1-3 et 2-4 ainsi que 1-2 et 2-3 et 3-4 et 4-1} \label{fig:illustration_rayon_X}
+			\end{center}
+		\end{figure}
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Dans cette partie, il est envoyé un faisceau de rayons X à un angle fixe sur l'échantillon, puis il est observé comment il est diffracté (cf figure \ref{fig:illustration_rayon_X}). Il est choisi un angle $\theta_i$ faible pour faire un sondage sur toute l'épaisseur de la couche mince. En mesurant l'intensité du faisceau selon l'angle $\theta$ comme montré dans la figure \ref{fig:illustration_rayon_X} , on constate l'existance d'angles avec des pics, ceci est dû à l'orientation des cristaux dans la couche : plus les pics sont nombreux et faibles, plus il y a d'orientation différentes.
+
+Il se trouve qu'il y a une direction favorisée par la surface du verre sur lequel on fait le dépôt : il y a un pic permanent, plus ou moins large et plus ou moins haut. On peut utiliser pour ce picla relation de Deby-Scherrer pour estimer le volume moyen des cristaux dans le dépôt :
+
+\be
+	<z>_{vol}=\frac{K_s\lambda}{\beta^{hkl}_{1/2} cos\theta_{hkl}}
+\ee
+
+où $K_s$ est une constante dépendante de la géométrie de la cellule unitaire (typiquement comprise entre 0.85 et 0.99), $\lambda$ la longueur d'onde de la source de rayons X (il a été utilisé ici $Cu K_{\alpha}$ pour la source de rayons X, donc $\lambda = 1.5406 \AA$), $\beta^{hkl}_{1/2}$ la largeur à mi-hauteur du pic hkl de la diffraction et $\theta_{hkl}$ l'angle correspondant.
 
 
 
-
-
-
-
-
-
-
-
-
-
+% \newpage
 \section{résultats des expériences}
 
 L'idée est de faire des dépôts à différentes températures pour observer vers quel état final tend la couche mince obtenue : il sera donc mesuré et comparé résistivité, épaisseur, taille des cristaux formés et densité de porteurs de charges libres par les méthodes décrites précédemment. Il sera aussi comparé les effets de recuits à différentes température.
@@ -260,7 +278,6 @@ L'expérience a causé un problème quand à la mesurabilité de l'effet : il n'
     \caption{Spectres de diffraction par rayonX des couches minces.}
     \label{fig:diff_main}
 \end{figure}
-
 
 
 
