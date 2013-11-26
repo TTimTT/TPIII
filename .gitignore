@@ -1,4 +1,5 @@
-*.pdf
+*/*.pdf
+*/figures/*.pdf
 *.tuc
 *.log
 *.tmp
@@ -6,4 +7,3 @@
 *.aux
 *.toc
 *~
-!./Couches_minces/data/*.pdf
