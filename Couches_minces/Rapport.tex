@@ -159,7 +159,7 @@ ou $m^*$ est la masse effective de l'électron ($0.35 m_e$ pour le ZnO),
 Avec le spectre de réflexion, il est aussi possible de mesurer l'épaisseur de l'échantillon : pour les longueur d'ondes les plus faibles, on constate un pattern régulier avec des interférences. Ces interférences sont due à la réflexion sur toute l'épaisseur de la lumière introduite. Pour la mesure de d, il suffit alors de regarder la distance entre 2 maximas donnés par $\lambda_1$ et $\lambda_2$, on utilise alors la relation :
 
 \be
-	d=\frac{M\lambda_1 \lambda_2}{2 n_f (\lambda_2 - \lambda_1)}
+	d=\frac{M\lambda_1 \lambda_2}{2 n_f (\lambda_2 - \lambda_1)} \label{eq:refl}
 \ee
 
 
@@ -247,16 +247,16 @@ LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT 
 \centering
    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 	  \hline
-	  Type & I & $V_{3-4}$ & $V_{4-1}$ & $V_{1-2}$ & $V_{2-3}$ & Résistance& Résistivité\\
-	  &  [$\mu$A] & [mV] & [mV] & [mV] & [mV] & [$\Omega$] & [$\Omega$ m] \\
-	  \hline
-	  A0 & 29.996 & 1.929 & 7.347 & 1.932 & 7.362 & 0.70 & 400\ $10^{-9}$\\
-	  A1 & 30.003 & 0.41 & 1.92 & 0.421 & 2.24 & 0.176 & 100\ $10^{-9}$\\
-	  B1 & 30.004 & 0.349 & 0.426 & 0.370 & 0.431 & 0.06 & 40.44\ $10^{-9}$\\
-	  B2 & 30.004 & 2.463 & 1.170 & 2.409 & 1.180 & 0.27 & 182\ $10^{-9}$\\
-	  C1 & 29.996 & 0.62 & 2.29 & 0.62 & 2.30 & 0.22 & 192\ $10^{-9}$\\
-	  C2 & 30.004 & 3.08 & 1.22 & 3.18 & 1.37 & 0.33 & 288\ $10^{-9}$\\
-	  \hline
+      Type & I & $V_{3-4}$ & $V_{4-1}$ & $V_{1-2}$ & $V_{2-3}$ & Résistance& Résistivité\\
+      &  [$\mu$A] & [mV] & [mV] & [mV] & [mV] & [$\Omega$] & [$\Omega$ m] \\
+      \hline
+% 	  A0 & 29.996 & 1.929 & 7.347 & 1.932 & 7.362 & 0.70 & 400\ $10^{-9}$\\
+      A1 & 30.003 & 0.41 & 1.92 & 0.421 & 2.24 & 0.176 & 100\ $10^{-9}$\\
+      B1 & 30.004 & 0.349 & 0.426 & 0.370 & 0.431 & 0.06 & 40.44\ $10^{-9}$\\
+      B2 & 30.004 & 2.463 & 1.170 & 2.409 & 1.180 & 0.27 & 182\ $10^{-9}$\\
+      C1 & 29.996 & 0.62 & 2.29 & 0.62 & 2.30 & 0.22 & 192\ $10^{-9}$\\
+      C2 & 30.004 & 3.08 & 1.22 & 3.18 & 1.37 & 0.33 & 288\ $10^{-9}$\\
+      \hline
    \end{tabular}
    \caption{Tableau de la résistivité de la couche mince, par la méthode de Van Der Pauw}\label{tab:vanderpauw}
 \end{table}
@@ -307,6 +307,44 @@ s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s 
 	\label{fig:diff_main}
 \end{figure}
 
+\begin{table}[ht]
+   \centering
+   \begin{tabular}{|c|c|}
+	  \hline
+      Type & $\lambda$ [nm]\\
+      \hline
+      A0 & 1719 \\
+      A1 & 1820 \\
+      A2 & 2185 \\
+      B1 & 1590 \\
+      B2 & 1950 \\
+      C1 & 1615 \\
+      C2 & 2070 \\
+      \hline
+   \end{tabular}
+   \caption{Tableau récapitulatif pour les mesure via la méthode de la réflexion.}\label{tab:reflexion}
+\end{table}
+
+\begin{table}[ht]
+   \centering
+   \begin{tabular}{|c|c|}
+	  \hline
+      Type & $d$ [nm]\\
+      \hline
+      A0 & 546.6 \\
+      A1 & 450.5 \\
+      A2 & 504.9 \\
+      B1 & 706.8 \\
+      B2 & 465.1 \\
+      C1 & 730.2 \\
+      C2 & 620.6 \\
+      \hline
+   \end{tabular}
+   \caption{Tableau récapitulatif pour les mesure de l'épaisseur, via la méthode de la réflexion.}\label{tab:epaisseur}
+\end{table}
+
+Les mesures présentées dans le tableau~\ref{tab:epaisseur},~\ref{tab:profil} sont similaires, et permettent de conclure de la fiabilité de la mesure par réflexion et/ou par profilomètre. Cependant les subtiles différences observées sont dues par la lectures graphiques des longueurs d'onde $\lambda_1$ et $\lambda_2$ utilisées dans la formules~\ref{eq:refl}, sur les graphes de réflexion obtenus expérimentalement.
+
 \subsection{Diffraction rayonX}
 La figure \ref{fig:diff_main} montre l'ensemble des résultats obtenus de la diffration de chaque échantillon. Il peut être constaté que selon les dépôts, on observe des figures de diffraction plus ou moins bruitées et plus ou moins "piquées".
 
@@ -348,7 +386,23 @@ En revanche si on compare le dépôt C2 avec les dépôts B2 et A3, on remarque 
 \end{figure}
 
 
-
+\begin{table}[ht]
+\centering
+   \begin{tabular}{|c|c|}
+	  \hline
+      Type & $<z>$\\
+      \hline
+      A1 & 1.639 \\
+      A2 & 1.594 \\
+      A3 & 2.48 \\
+      B1 & 2.409 \\
+      B2 & 2.741 \\
+      C1 & 2.437 \\
+      C2 & 3.282 \\
+      \hline
+   \end{tabular}
+   \caption{Tableau des mesures de $<z>$ via la diffraction par rayon X.}\label{tab:X}
+\end{table}
 
 
 
