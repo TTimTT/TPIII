@@ -144,7 +144,7 @@ Une application possible des couches minces semi-conducteur est la diode photovo
 % coeff absorption
 % gap optique
 s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s 
-L'expérience consiste en envoyer de la lumière d'un spectre assez large, et de voir ce qui est réfléchi.
+L'expérience consiste en envoyer de la lumière d'un spectre assez large, et de voir ce qui est réfléchi. On observe dans la réflexion qu'une partie du spectre est très absorbée et que la réflexivité augmente avec la longueur d'onde. 
 
 \be
 	\omega_{min}=\sqrt{ \frac{q^2 N_{opt}} {\epsilon_0(\epsilon_\infty-1)m^*} }
@@ -163,7 +163,7 @@ Avec le spectre de réflexion, il est aussi possible de mesurer l'épaisseur de 
 \ee
 
 
-où $n_f$ est s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s 
+où $n_f$ est l'incide de réfraction de la couche mince, et M correspond au du nombre de maximas entre $\lambda_1$ et $\lambda_2$ (exemple : M=1 si $\lambda_1$ et $\lambda_2$ sont des maximas consécutifs ; M=.5 si $\lambda_1$ et $\lambda_2$ sont un maximum et un minimum)
 
 
 % \subsection{spectre de transmission}
@@ -228,7 +228,7 @@ A3, B2 et C2 ont été recuit à $600^oC$.
 	  C & 872 \\
 	  \hline
    \end{tabular}
-   \caption{autre tableau}\label{tab:profil}
+   \caption{épaisseur des couches mesurées par le profilomètre}\label{tab:profil}
 \end{table}
 On constate que l'épaisseur est du même ordre de grandeur. Les dépôts à haute température ont des épaisseurs différentes, ce qui est pricipalement dû à une différence dans les préparation : les temps de cuisson étants approximativement égaux, il est possible qu'une différence de l'ordre de la quintaine de minute ait pu contribuer à ces différences.
 
@@ -238,10 +238,12 @@ Pour les prochaines expérimentations, il peut être utile de mesurer les épais
 
 \subsection{Résistivité (methode Van der Pauw)}
 
-Il est mesuré ici les différentes résistivités des échantillons. On s'attend à ce que la résistivité chute avec les recuits, et avec la température de dépôt. Comme dit précédemment, les cristaux devenant en moyenne plus grand avec la recristallisation (réalisée par recuit), on s'attend à ce que le nombre de collision entre électrons libres et cristal diminue, et donc que la résistivité diminue.
+Il est mesuré ici les différentes résistivités des échantillons. Le tableau \ref{tab:vanderpauw} présente les résultats obtenus. On s'attend à ce que la résistivité chute avec les recuits, et avec la température de dépôt. Comme dit précédemment, les cristaux devenant en moyenne plus grand avec la recristallisation (réalisée par recuit), on s'attend à ce que le nombre de collision entre électrons libres et cristal diminue, et donc que la résistivité diminue. Cependant ce n'est pas ce qui est observé. Le seul cas qui valide l'hypothèse de départ est la paire A1 et B1 : le dépôt à chaud a une meilleure conductivité. Mais tous les autres cas montrent un effet inverse : le recuit augmente la résistivité.
 
+Étant donné les résultats des rayons X, on peut penser que c'est la mesure de résistivité qui a eu un problème : il est vérifié que les cristaux deviennent plus gros en moyenne avec le recuit et avec la température de cuisson, il est très possible que les contacts sur la couche n'aient pas été parfait : leur dimensions ayant été assez grande, elles ont peut être influé sur le facteur de correction, ce qui rend le choix de le mettre à 1 incorrecte.
 
-LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT LAURENT 
+Par ailleurs, il a été utilisé ici les mesures du profilomètre pour d, les mesures de d par la reflexion conserve les aberrations précédentes.
+
 
 \begin{table}[ht]
 \centering
@@ -353,6 +355,10 @@ Dans une comparaison des échantillons A1, B1 et C1, il peut être remarqué que
 De même pour les recuits : on constate qu'à chaque recuit, le nombre d'orientation différentes diminue (le bruit de fond diminue), le pic se reserre (augmentation de la taille moyenne des cristaux).
 
 En revanche si on compare le dépôt C2 avec les dépôts B2 et A3, on remarque qu'il est moins bons, ce qui ne colle pas avec les attentes qu'on a de l'expérience. Il est possible que l'échantillon ait été abîmé : il avait été observé des colorations sur la surface de la couche. Il faudrait refaire l'expérience, le nombre d'échantillons était un peu petit.
+
+Dans le tableau \ref{tab:X}, on montre en effet la croissance des cristaux avec les recuits et la température de dépôt. Il y a un seul problème pour A2 : ceci peut s'expliquer par l'origine légèrement différente des deux échantillons. Pour ce qui est du reste, tout est cohérent avec les hypothèse initiales.
+
+
 
 \begin{figure}[!ht]
 	\centering
