@@ -1,0 +1,10 @@
+Nb
+as received
+Sample dimentions in mm: 1.0000 x 0.000 x 40.00
+Photocell sensitivity 0.056 V/mm, Optic arm 328 mm
+User: Iva
+H 1 299 1.0 300 60 1.000  30 3.0E-1
+12/2/2013, 3:07 PM
+
+T[K]   F[Hz]  Theta[rad]   Modulus  MaxStrain Center[mm] Time[s] TOven[K]
+298.73 1.000576 3.506052E-3 0.697392  5.000E-5 7.93837 36 298.60
