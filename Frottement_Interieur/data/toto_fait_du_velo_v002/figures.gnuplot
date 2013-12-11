@@ -13,13 +13,13 @@ kb=1.380*10**(-23)
 filename(n) = sprintf('< gawk "NR>=10"  MegaBalayageH%d.txt', n)
 
 
-set xlabel 'Température [°K]'
-set ylabel 'Déphasage'
+#set xlabel 'Température [°K]'
+#set ylabel 'Déphasage'
 unset key
 
-plot for[i=1:21:2] filename(i) using 1:3 lc rgb 'blue' lt 1
+#plot for[i=1:21:2] filename(i) using 1:3 lc rgb 'blue' lt 1
 
-pause -1;print "Press Enter to continue";
+#pause -1;print "Press Enter to continue";
 
 #Sauve les valeurs max et leurs positions x respective
 set print "statsa.dat"
@@ -51,8 +51,8 @@ fit f1(x) 'statsa.dat' using (1/$1):(log($2*2*pi)) via a1,b1
 set title 'Droite des maximums, scan fréquence'
 
 set ylabel 'ln(ω)'
-set xlabel '1/T'
-
+set xlabel '1/T [1/K]'
+set key
 
 set arrow from 0.00265,-1.0 to 0.0026,-1.5
 set arrow from 0.0021,5.0 to 0.002,5.4
@@ -64,10 +64,11 @@ set print
 print a1, -a1*kb
 print 1/b1, exp(-b1)
 
-plot[0.002:*] 'statsa.dat' using (1/$1):(log($2*2*pi)), f1(x)
+plot[0.002:*] 'statsa.dat' using (1/$1):(log($2*2*pi)) title 'Data', f1(x) title 'Interpolation'
 
 unset label
 unset arrow
+unset key
 
 pause -1;
 
@@ -103,7 +104,7 @@ fit f2(x) 'statsb.dat' using (1/$1):(log($2*2*pi)) via a2,b2
 set title 'Droite des maximums, scan température'
 
 set ylabel 'ln(ω)'
-set xlabel '1/T'
+set xlabel '1/T [1/K]'
 
 set xtics 0.000025
 
@@ -112,17 +113,19 @@ set arrow from 0.00217,4.25 to 0.00215,4.42
 
 set label '-E/k' at 0.00227,3.1
 set label 'ln(1/τ0)' at 0.00217,4.25
+set key
 
 set print
 print a2, -a2*kb
 print 1/b2, exp(-b2)
 
 
-plot 'statsb.dat' using (1/$1):(log($2*2*pi)), f2(x)
+plot 'statsb.dat' using (1/$1):(log($2*2*pi)) title 'Data', f2(x) title 'Interpolation'
 
 unset label
 unset arrow
 set xtics auto
+unset key
 
 pause -1;
 
@@ -152,13 +155,14 @@ pause -1;
 
 unset pm3d
 
-f2(x)=a3*x+b3
-fit f2(x) '< gawk "NR!=4" statsc.dat' using (1/$1):(log($2*2*pi)) via a3,b3
+f3(x)=a3*x+b3
+fit f3(x) '< gawk "NR!=4" statsc.dat' using (1/$1):(log($2*2*pi)) via a3,b3
 
 set title 'Droite des maximums, scan température, refroidissement'
 
 set ylabel 'ln(ω)'
-set xlabel '1/T'
+set xlabel '1/T [1/K]'
+set key
 
 set arrow from 0.002155,2.9 to 0.0021425,2.9
 set arrow from 0.00209,4.15 to 0.00206,4.3
@@ -170,10 +174,22 @@ set print
 print a3, -a3*kb
 print 1/b3, exp(-b3)
 
-plot[0.00206:*] '< gawk "NR!=4" statsc.dat' using (1/$1):(log($2*2*pi)), f2(x)
+plot[0.00206:*] '< gawk "NR!=4" statsc.dat' using (1/$1):(log($2*2*pi)) title 'Data', f3(x) title 'Interpolation'
 
 unset label
 unset arrow
+
+pause -1
+
+set title 'Déplacement du pic lors du refoidissement, F=1 [Hz]'
+
+set key
+
+set xlabel 'Température [°K]'
+set ylabel 'Déphasage' rotate by 90
+
+plot '< gawk "NR>=10" Balayage_TC2.txt' using 1:3 lc rgb "blue" title 'chauffage', '< gawk "NR>=10" Balayage_TH1.txt' using 1:3 lc rgb "red" title 'refroidissement'
+
 
 pause -1;
 
