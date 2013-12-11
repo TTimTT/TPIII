@@ -50,7 +50,7 @@ fit f1(x) 'statsa.dat' using (1/$1):(log($2*2*pi)) via a1,b1
 
 set title 'Droite des maximums, scan fréquence'
 
-set ylabel 'ln(ω0)'
+set ylabel 'ln(ω)'
 set xlabel '1/T'
 
 
@@ -58,11 +58,11 @@ set arrow from 0.00265,-1.0 to 0.0026,-1.5
 set arrow from 0.0021,5.0 to 0.002,5.4
 
 set label '-E/k' at 0.00265,-0.9
-set label 'ln(ω0)' at 0.00211,5.17
+set label 'ln(1/τ0)' at 0.00211,5.17
 
 set print
 print a1, -a1*kb
-print b1, exp(b1)
+print 1/b1, exp(-b1)
 
 plot[0.002:*] 'statsa.dat' using (1/$1):(log($2*2*pi)), f1(x)
 
@@ -102,7 +102,7 @@ fit f2(x) 'statsb.dat' using (1/$1):(log($2*2*pi)) via a2,b2
 
 set title 'Droite des maximums, scan température'
 
-set ylabel 'ln(ω0)'
+set ylabel 'ln(ω)'
 set xlabel '1/T'
 
 set xtics 0.000025
@@ -111,11 +111,11 @@ set arrow from 0.00227,3.1 to 0.00223709,3.1
 set arrow from 0.00217,4.25 to 0.00215,4.42
 
 set label '-E/k' at 0.00227,3.1
-set label 'ln(ω0)' at 0.00217,4.25
+set label 'ln(1/τ0)' at 0.00217,4.25
 
 set print
 print a2, -a2*kb
-print b2, exp(b2)
+print 1/b2, exp(-b2)
 
 
 plot 'statsb.dat' using (1/$1):(log($2*2*pi)), f2(x)
@@ -164,11 +164,11 @@ set arrow from 0.002155,2.9 to 0.0021425,2.9
 set arrow from 0.00209,4.15 to 0.00206,4.3
 
 set label '-E/k' at 0.002155,2.9
-set label 'ln(ω0)' at 0.00209,4.15
+set label 'ln(1/τ0)' at 0.00209,4.15
 
 set print
 print a3, -a3*kb
-print b3, exp(b3)
+print 1/b3, exp(-b3)
 
 plot[0.00206:*] '< gawk "NR!=4" statsc.dat' using (1/$1):(log($2*2*pi)), f2(x)
 
