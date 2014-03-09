@@ -1,0 +1,15 @@
+data:
+ - name: data
+   path: calibrage
+variables:
+ - name: dist
+   in: data::lines_pair_milliter
+ - name: pixel
+   in: data::pixel_lines
+expressions:
+ - name: mmPP
+   expr: 1/(2*dist*pixel)
+   prec: 10
+text:
+ - path: calibrage_nat
+   content: [dist,pixel,mmPP]
