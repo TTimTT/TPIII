@@ -1,0 +1,141 @@
+\documentclass[a4paper,12pt,twoside]{article}	% debut d'un fichier latex standard
+
+\usepackage{graphicx}	% pour l'inclusion de figures en eps,pdf,jpg
+\usepackage{amsmath}	% quelques symboles mathematiques en plus
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+%\usepackage{psfrag}
+
+\usepackage{listings}
+
+\usepackage{mathenv}
+\usepackage[british,UKenglish,USenglish,english,american]{babel}	
+% \usepackage[francais]{babel}	% le tout en langue francaise
+% \usepackage[latin1]{inputenc}	% on peut ecrire directement les caracteres avec l'accent(L/W)
+\usepackage[colorlinks,bookmarks=false,linkcolor=blue,urlcolor=blue]{hyperref}	% pour l'inclusion de links dans le document 
+
+\paperheight=297mm
+\paperwidth=210mm
+
+\setlength{\textheight}{235mm}
+\setlength{\topmargin}{-1.2cm} % pour centrer la page verticalement -1.2
+%\setlength{\footskip}{5mm}
+\setlength{\textwidth}{15cm}
+\setlength{\oddsidemargin}{0.2cm}
+\setlength{\evensidemargin}{0.56cm}
+
+\pagestyle{plain}
+
+% quelques abreviations utiles
+\def \be {\begin{equation}}
+\def \ee {\end{equation}}
+\def \bs {\begin{equation} \left\{  \begin{aligned}}
+\def \es {\end{aligned} \right. \end{equation}}
+\def \dd  {{\rm d}}
+\def \un {\,\,\mathrm}
+
+
+\newcommand{\mail}[1]{{\href{mailto:#1}{#1}}}
+\newcommand{\ftplink}[1]{{\href{ftp://#1}{#1}}}
+
+
+% ======= Le document commence ici ======
+\begin{document}
+
+% Le titre, l'auteur et la date
+\title{Optical tweezer}
+\date{\today}
+\author{
+	% Laurent \bsc{Rohrbasser}\\{\small \mail{laurent.rohrbasser@epfl.ch}} \and 
+	% Tim \bsc{Tuuva}\\{\small \mail{tim.tuuva@epfl.ch}}
+	Laurent Rohrbasser\\{\small \mail{laurent.rohrbasser@epfl.ch}} \and 
+	Tim Tuuva\\{\small \mail{tim.tuuva@epfl.ch}}
+	}
+\maketitle
+
+\tableofcontents % Table des matieres
+
+% Quelques options pour les espacements entre lignes, l'identation 
+% des nouveaux paragraphes, et l'espacement entre paragraphes
+\baselineskip=16pt
+\parindent=15pt
+\parskip=5pt
+
+% \section{Abstract}
+\begin{abstract}
+
+This document will show the results got on an implementation of the lowcost optical tweezer decribed in the paper called "Inexpensive optical tweezers for undergraduate laboratories". The goal is to see how well that experiments works on simple shapes such as tiny dielectric spheres in water by looking at their position through time while trapped and not trapped.
+
+\end{abstract}
+
+\section{Introduction}
+
+Comment que c'est que ca marche que donc ??? 
+
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.8\linewidth,angle=0]{lazor_zoom}
+	\caption{} \label{fig:}
+	\end{center}
+\end{figure}
+
+\section{Dispositif}
+
+Comment c'est que qu'on va implementer ca ? hein ?
+
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.8\linewidth,angle=0]{montage_1}
+	\caption{} \label{fig:}
+	\end{center}
+\end{figure}
+
+\section{Results}
+
+The microscope part did work well. After many observations on serval samples with different concentrations, it was possible to get a $XXXXXXX $x zoom with a clear image when the focus was correct. All particles were distinguishable and it was observed that if a partcle moved on z, the focus was easly lost but that did happen slowly, so it was not a big problem to collect data. It had been a delicate task to find the best lighting so that the algorithm of the given software (MOSAIC in imageJ) can detect some particles (the particle had to appear darker or brighter than everything else, the ring shape was not the optimal input).
+
+ILLUSTRATION DETECTION PARTICULE RING -> GROS CACA
+
+ILLUSTRATION DETECTION PARTICULE POINT -> TRAJECTOIRE
+
+c'est quoi qu'on a vu ?
+
+- le trap selon x y : OK
+
+- le trap selon z : pas OK (decrire ce qui s'est passe)
+
+\section{Analyse et Discussion}
+
+- expliquer les calculs
+
+- le trap selon x y : montrer que ca marche
+
+- le trap selon z : expliquer
+
+le plus important!!!
+
+\section{Conclusion}
+
+un bref résumé de la manipulation, revenir sur les buts, une analyse avec plus de recul de l'expérience et ses résultats
+
+description du but du TP
+
+description du dispositif experimental
+
+Résumé (abstract)
+Introduction (et background théorique)
+Dispositif
+Résultats
+Bibliographie
+
+
+
+
+
+\end{document} %%%% THE END %%%%
+
+
