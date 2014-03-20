@@ -76,12 +76,16 @@ An optical tweezer is a focused beam of light which can hold microscopic particl
 There are different phenomena that applies, depending on the size of the dieletric objects, to explain the trapping force.
 If the objects is much more smaller than the laser wavelenght we use the electric dipole model.
 If the objects is much more bigger than the laser wavelenght we explain the trapping by the refracting force and the momentum conservation.
-This experiment uses a red HeNe laser light with a $658 nm$ wavelenght and the smallest objects size is $0.5\micro m$, %TODO CHECK WAVELENGTH
+This experiment uses a red HeNe laser light with a $658 nm$ wavelenght and the smallest objects size is $0.5\mu m$, %TODO CHECK WAVELENGTH
 therefore we will focus on the optic approach.
 
 The individual rays of light (from the laser) are refracted at the interface of the dieletric, when they enter and leave it.
 Since light is associated with a momentum, one can notice that its momentum change when its direction change.
 By applying the third law of Newton and the conservation of momentum, the momentum of light is transfered to the particle when the ray is refracted.
+As the laser is aligned on the microscope axis, the trapping force is greater on this axis because
+ the refraction is greater as the particle is far from the axis and practically inexistant if the particle is perfectly aligned on the axis.
+The beam is also focused by the objective lens, thus, the seme argument applies on the z axis.
+
 
 
 \begin{figure}[h]
@@ -113,6 +117,25 @@ Initially, the laser is colimated, but since it is too small one should enlarged
 \end{figure}
 
 \section{Results}
+\subsection{Calibration}
+The first task is to calibrate the microscope using a resolution test target (R3L3S1P - Positive 1951 USAF), the results are reasumed in the table~\ref{tab:calibration}
+
+\begin{table}[h!]
+\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+﻿		schema & lines pair by milliter[$LP/mm$]& pixel by lines[$Pixel/L$] & [$mm/Pixel$]\\
+		\hline
+		7.1	& 128.0	& 52 & 7.51e-05\\
+		7.2	& 144.0	& 46 & 7.54e-05\\
+		7.3	& 161.0	& 41 & 7.57e-05\\
+		7.5	& 203.0	& 33 & 7.46e-05\\
+		7.6	& 228.0	& 30 & 7.30e-05\\
+		\hline
+	\end{tabular}
+	\caption{Calibration values table}
+	\label{tab:calibration}
+\end{table}
 
 The microscope part did work well. After many observations on serval samples with different concentrations, it was possible to get a $XXXXXXX $x zoom with a clear image when the focus was correct. All particles were distinguishable and it was observed that if a partcle moved on z, the focus was easly lost but that did happen slowly, so it was not a big problem to collect data. It had been a delicate task to find the best lighting so that the algorithm of the given software (MOSAIC in imageJ) can detect some particles (the particle had to appear darker or brighter than everything else, the ring shape was not the optimal input).
 
