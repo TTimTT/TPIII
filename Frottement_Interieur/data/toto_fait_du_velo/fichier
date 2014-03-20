@@ -1,0 +1,56 @@
+#Pour gnuplot et l'expérience frottement intérieur
+
+!rm maximum.dat
+!rm maximum2.dat
+#Sauve les valeurs max et leurs positions x respective
+set print "maximum.dat"
+
+filename(n) = sprintf('< gawk "NR>=10"  MegaBalayageF%d.txt', n)
+
+do for[i=2:22:2]{ stats[*:2] filename(i) using 2:3 nooutput;X=STATS_pos_max_y;Y=STATS_max_y;stats[*:2] filename(i) using 0:1 nooutput;print STATS_max_y,X,Y;}
+
+#Courbe 3D
+set pm3d
+set logscale y
+
+splot '<(for i in {2..22..2}; do gawk "NR>=10" MegaBalayageF${i}.txt;echo; done)' using 1:2:3 lc rgb 'black', 'maximum.dat' using 1:2:3
+
+pause -1; Press Enter to continue;
+
+unset pm3d
+
+f1(x)=a1*x+b1
+fit f1(x) 'maximum.dat' using (1/$1):2 via a1,b1
+
+plot 'maximum.dat' using (1/$1):2, f1(x)
+
+pause -1; Press Enter to continue;
+
+##
+##
+##
+
+unset logscale y
+
+set print "maximum2.dat"
+
+filename(n) = sprintf('< gawk "NR>=10"  Balayage_TC%d.txt', n)
+
+do for[i=2:20:2]{ stats filename(i) using 1:3 nooutput;X=STATS_pos_max_y;Y=STATS_max_y;stats filename(i) using 0:2 nooutput;print X,STATS_max_y,Y;}
+
+
+#Courbe 3D
+set pm3d
+
+splot '<(for i in {2..20..2}; do gawk "NR>=10" Balayage_TC${i}.txt;echo; done)' using 1:2:3 lc rgb 'black', 'maximum2.dat' using 1:2:3
+
+pause -1; Press Enter to continue;
+
+unset pm3d
+
+f2(x)=a2*x+b2
+fit f2(x) 'maximum.dat' using (1/$1):2 via a2,b2
+
+plot 'maximum2.dat' using (1/$1):2, f2(x)
+
+pause -1; Press Enter to continue;
