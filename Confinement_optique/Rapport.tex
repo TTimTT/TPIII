@@ -69,29 +69,29 @@ This document will show the results got on an implementation of the lowcost opti
 \end{abstract}
 
 \section{Introduction}
-An optical tweezer is a focused beam of light which can hold microscopic particles in three dimensions. It was first reported ine 1970 by Arthur Ashkin in Bell labs. Optical tweezers are useful in many areas, as in biology for instance. This tool can apply an attractive or a repulsive force on living cells or any microscopic dieletric objects. Therefore, this experiment aims to introduce ourselves to optical tweezers and the optical trapping force, mean squares displacement and (un)confined Browmian motions analysis.
+In 1970, Arthur Ashkin did implement the first tool that could control a tiny object's position without touching it using a laser beam in Bell labs. It was the first implementation of what we call now an optical tweezer, a tool that is commonly used in a lot of domains where it is needed to manipulate precisely some small objects (eg. mooving cells in biology). An optical tweezer is a focused beam of light that can hold microscopic particles in three dimensions. This tool can apply an attractive or a repulsive force on any dieletric objects. 
 
 
 \section{Theory}
 There are different phenomena that applies, depending on the size of the dieletric objects, to explain the trapping force.
-If the objects is much more smaller than the laser wavelenght we use the electric dipole model.
-If the objects is much more bigger than the laser wavelenght we explain the trapping by the refracting force and the momentum conservation.
+If the objects is much smaller than the laser wavelenght we use the electric dipole model.
+If the objects is much bigger than the laser wavelenght we explain the trapping by the refracting force and the momentum conservation.
 This experiment uses a red HeNe laser light with a $658 nm$ wavelenght and the smallest objects size is $0.5\mu m$, %TODO CHECK WAVELENGTH
 therefore we will focus on the optic approach.
 
 The individual rays of light (from the laser) are refracted at the interface of the dieletric, when they enter and leave it.
-Since light is associated with a momentum, one can notice that its momentum change when its direction change.
+Since light is associated with a momentum, one can notice that its momentum change when its direction changes.
 By applying the third law of Newton and the conservation of momentum, the momentum of light is transfered to the particle when the ray is refracted.
 As the laser is aligned on the microscope axis, the trapping force is greater on this axis because
  the refraction is greater as the particle is far from the axis and practically inexistant if the particle is perfectly aligned on the axis.
-The beam is also focused by the objective lens, thus, the seme argument applies on the z axis.
+The beam is also focused by the objective lens, thus, the same argument applies on the z axis.
 
 
 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.5\linewidth,angle=0]{./figures/lazor_zoom}
-	\caption{TODO} \label{fig:theory}
+	\caption{The laser is focused on one point, a particle that gets some rays through it refracts them, and momentum conservation conduct them to be attracted to a point near the focus point.} \label{fig:theory}
 	\end{center}
 \end{figure}
 
@@ -103,15 +103,15 @@ There are two main parts to build an optical tweezer:
 \end{itemize}
 
 \subsection{Microscope}
-It is made of an objective and an ocular lens. A lamp enlights the sample placed in the focal plane of the objective lens which enlarged the observed object. A filter is placed between the objective and the lens to filter out the laser beam reflected from the sample plate. Finally, the ocular lens focus the objective image into the CCD camera which shows us the image on a monitor screen.
+It is made of an objective and an ocular lens. A lamp enlights the sample placed in the focal plane of the objective lens which enlarged the observed object. A shortpass filter that reflects only one kind of electromagnetic wave (one wavelength) is used as a filter : it is placed between the objective and the lens to filter out the laser beam reflected from the sample plate by reflecting it back on the plate. Finally, the ocular lens focus the objective image into the CCD camera which shows us the image on a monitor screen. Experimentally, it has been constated that the last lens had no really other effects than making the final image bigger or smaller.
 
 \subsection{Laser system}
-The laser is sent into the microscope objective using mirrors and a dichoirc mirror. It reflects the laser beam on one direction and let it pass on the other direction.
+The laser is sent into the microscope objective using some mirrors and a dichoirc mirror. It reflects the laser beam on one direction and let it pass on the other direction.
 Initially, the laser is colimated, but since it is too small one should enlarged it, using 2 lens placed in each other focal plane, thus to create a telescope. Therefore, the laser is enlarged and slightly diverging when arriving into the objective. This particular configuration helps to the trapping force effect.
 
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[width=0.6\linewidth,angle=0]{./figures/montage_1}
+		\includegraphics[width=0.8\linewidth,angle=0]{./figures/montage_1}
 		\caption{Optical tweezer setup schema.} \label{fig:dispositif}
 	\end{center}
 \end{figure}
@@ -137,17 +137,20 @@ The first task is to calibrate the microscope using a resolution test target (R3
 	\label{tab:calibration}
 \end{table}
 
-The microscope part did work well. After many observations on serval samples with different concentrations, it was possible to get a $XXXXXXX $x zoom with a clear image when the focus was correct. All particles were distinguishable and it was observed that if a partcle moved on z, the focus was easly lost but that did happen slowly, so it was not a big problem to collect data. It had been a delicate task to find the best lighting so that the algorithm of the given software (MOSAIC in imageJ) can detect some particles (the particle had to appear darker or brighter than everything else, the ring shape was not the optimal input).
+The microscope part did work well. After many observations on serval samples with different concentrations, it was possible to get a $4000 $x zoom with a clear image when the focus was correct. All particles were distinguishable and it was observed that if a partcle moved on z, the focus was easly lost but that did happen slowly, so it was not a big problem to collect data. It had been a delicate task to find the best lighting so that the algorithm of the given software (MOSAIC in imageJ) can detect some particles (the particle had to appear darker or brighter than everything else, the ring shape was not the optimal input).
 
-ILLUSTRATION DETECTION PARTICULE RING -> GROS CACA
 
-ILLUSTRATION DETECTION PARTICULE POINT -> TRAJECTOIRE
+The trapping part was an other story. The installation worked well in a particular case that did not look like the description in the theory. When the lens were choosed so that they fit the specifications (get a bigger beam with a colimated light beam), the force applied on the particles was weak, almost negligeable. It was hard to catch and move a particle in space. However, when a complety wrong lens was used (L2 had a way too large focal length), there was an other effect and the laser did catch successfully on x and y. There was a very strong force and it was possile to catch a lot of particles in same time, it was possible to see some particles "fall" from a high z to the focal point (a blurry effect made that easy to intuite). With a small sheet of paper, it was possible to see how the laser looked like in the line between L4 and the dichroic mirror : it was almost parallel and slightly growing when approaching the L4 lens. It was seen that the force was much stronger than in the normal case, but there was a problem : the trapping was working only on x and y, not on z, more details about that is given in the next section. The wrong lens was initially choosen by mistake because all lenses were not put in their correct box. Since it had been constated that there were some better results with those wrong lenses, it had been tried some other configurations of pairs of lenses, in some cases with some random lenses and in some cases with a pair that did fit the specification. It had been seen that the best result was always been got by using a lens L2 with a very high focal length, but that the force with the "correct" pair of lens had somme poor attraction (hard to test on x,y and so on z too). 
 
-c'est quoi qu'on a vu ?
 
-- le trap selon x y : OK
 
-- le trap selon z : pas OK (decrire ce qui s'est passe)
+
+
+
+% ILLUSTRATION DETECTION PARTICULE RING -> GROS CACA
+
+% ILLUSTRATION DETECTION PARTICULE POINT -> TRAJECTOIRE
+
 
 \begin{table}
 	\begin{tabular}{ r|c|c|c| }
@@ -163,15 +166,17 @@ c'est quoi qu'on a vu ?
 	\label{tab:diffusion}
 \end{table}
 
-\section{Analyse et Discussion}
+\section{Analysis and Discussion}
 
-- expliquer les calculs
+By moving the focus, it was possible to see that particles were trapped when the focus was close the bottom plate : it looked that all particles were trapped in a cone under the focal point. When the focus was near the plate, it was possible to see a clear reflexion of the laser in the plate when the filter was removed, and it was on that moment that the force was at the highest point.  
 
-- le trap selon x y : montrer que ca marche
+% - expliquer les calculs
 
-- le trap selon z : expliquer
+% - le trap selon x y : montrer que ca marche
 
-le plus important!!!
+% - le trap selon z : expliquer
+
+% le plus important!!!
 
 \section{Conclusion}
 
