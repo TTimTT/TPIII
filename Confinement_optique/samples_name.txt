@@ -1,0 +1,4 @@
+GG     = grand faible concentration
+Gmoyen = grand faible 
+
+ 

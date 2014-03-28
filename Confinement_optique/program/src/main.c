@@ -112,11 +112,13 @@ int main(int argc, char** argv){
 	printf("file parsed !\n");
 	printf("-----\n");
 
-	//=============================
-	// TRAITER LES DATAS MAINTENANT
-	//=============================
-	//=============================
-	//=============================
+	//==========================================================
+	//==========================================================
+	//==========================================================
+	//============== TRAITER LES DATAS MAINTENANT ==============
+	//==========================================================
+	//==========================================================
+	//==========================================================
 
 
 	double * MSD[traj_i];
@@ -153,6 +155,8 @@ int main(int argc, char** argv){
 		Trajectorie * t = traj_tab+(i);
 		D[i]=0;
 
+		// use this to ignore too short trajectories
+
 		// if(t->pos_count<100){
 		// 	continue;
 		// }
@@ -175,6 +179,53 @@ int main(int argc, char** argv){
 
 
 
+
+
+	// k = k_B T / <r^2>
+	// [x,y] average position calculation
+	double * x_average=malloc(sizeof(double)*traj_i);
+	double * y_average=malloc(sizeof(double)*traj_i);
+	for (int i=0;i<traj_i;i++){
+		x_average[i]=0;
+		y_average[i]=0;
+		Trajectorie * t = traj_tab+(i);
+		for(int j=1;j<t->pos_count;j++){
+			x_average[i]+=t->pos_tab[j].x;
+			y_average[i]+=t->pos_tab[j].y;
+		}
+		x_average[i]/=t->pos_count;
+		y_average[i]/=t->pos_count;
+		// printf("%lf,%lf\n", x_average[i],y_average[i]);
+	}
+	// r^2 calculation
+	double * r2=malloc(sizeof(double)*traj_i);
+	for (int i=0;i<traj_i;i++){
+		Trajectorie * t = traj_tab+(i);
+		for(int j=1;j<t->pos_count;j++){
+			r2[i]+= (x_average[i]-t->pos_tab[j].x)*(x_average[i]-t->pos_tab[j].x)
+				+ (y_average[i]-t->pos_tab[j].y)*(y_average[i]-t->pos_tab[j].y);
+		}
+		r2[i]/=t->pos_count;
+	}
+	// k calculation
+	double * k=malloc(sizeof(double)*traj_i);
+	
+	//put actual temperature here
+	double T=298;
+	
+	// boltzmann constant
+	double k_b = 1.3806488e-23;
+
+	for (int i=0;i<traj_i;i++){
+		//k per trapped particle (the input must content only trapped particles)
+		k[i]=k_b * T / r2[i];
+	}
+	//average k
+	double k_average =0;
+	for (int i=0;i<traj_i;i++){
+		k_average+=k[i];
+	}
+	k_average/=traj_i;
 
 	return 0;
 }

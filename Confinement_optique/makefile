@@ -34,3 +34,6 @@ cleancontext:
 cleanfigure:
 	rm -vf ./figures/*.tex
 	rm -vf ./figures/*.pdf
+
+view:all
+	xdg-open Rapport.pdf
