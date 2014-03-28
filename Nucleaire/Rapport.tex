@@ -1,0 +1,134 @@
+\documentclass[a4paper,12pt,oneside]{article}
+
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage[colorlinks,bookmarks=false,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{booktabs}
+
+\paperheight=297mm
+\paperwidth=210mm
+
+\setlength{\textheight}{235mm}
+\setlength{\topmargin}{-1.2cm}
+%\setlength{\footskip}{5mm}
+\setlength{\textwidth}{15cm}
+\setlength{\oddsidemargin}{0.56cm}
+\setlength{\evensidemargin}{0.56cm}
+
+\pagestyle{plain}
+
+
+\def \be {\begin{equation}}
+\def \ee {\end{equation}}
+\def \dd  {{\rm d}}
+
+\newcommand{\mail}[1]{{\href{mailto:#1}{#1}}}
+\newcommand{\ftplink}[1]{{\href{ftp://#1}{#1}}}
+
+
+\begin{document}
+
+\title{}
+\author{Laurent Rohrbasser \& Tim Tuuva}
+
+\maketitle
+\tableofcontents
+\baselineskip=16pt
+\parindent=15pt
+\parskip=5pt
+
+\begin{abstract}
+%Résumé de l'expérience, on fait des tps sur le chaos, rappeler vite fait 
+%dire le but de ces manips, qu'est ce qu'on veut?
+\end{abstract}
+
+\section{Introduction}
+%expliqué les enjeux théoriques sur le chaos.
+%domaine très théoriques
+%peu de compréhension sur le sujet ( pourquoi???)
+
+\section{Theory}
+\subsection{Spectrometry $\gamma$}
+Radioactive sources generates one or multiple gamma photons of various 
+energy level. However, these photons cannot directly interact with the
+ detector by a photoelectric effect due to their high energy level. 
+%TODO iodure de sodium
+This is why, "iodure de sodium" cristal is used, thus to make the 
+photons react with the cristal which generates electrons, this 
+process generates new photons which will interact with electrons. 
+This cristal realises, therefore, a chain reaction that amplifies the 
+number of photons, which are less powerful than the original one, 
+thus it can be detected on the photocathode. The measured tension 
+depends on the energy level of the initial gamma photons.
+
+There are several kind of phenomena that can happen on the gamma photons.
+\subsubsection{Photoelectric effect}
+This effect occurs when a photon has enough energy to free an electron from its atom. The kinetic energy of the ejected electron is given by:
+
+$$T=E_p - E_l$$
+
+, where $E_l$ is the link energy between the electron and the atom.
+
+\subsubsection{Compton effect}
+This effect occurs when a photon gives a part of its momentum to an 
+electron as they interact. The electron will follow a direction given 
+by the angle $\phi$ and a new photon will be emitted with an angle $\theta$.
+The kinetic energy of the electron is given by:
+
+$$T=\frac{E_p}{1+\frac{m_0c^2}{E_p(1-\cos(\theta))}}$$
+
+The Compton effect creates a flat pattern on the energy spectrum, it ends at $E_{max}=XXX$%TODO,
+
+One can notice that if the angle of scattering is $\theta=180^{\circ}$, then the resulted photon can interact with the cristal thus an other electron can be emitted with the following energy:
+
+$$E_{e_2}=E_p-E_{max}$$
+
+\subsubsection{Position-Electron interaction}
+During disintegration, $\beta^+$ particle can be emitted, These 
+particles are, in fact, positron that can interact with electrons in 
+%TODO  change scintilleur
+the "scintilleur" to create 2 gamma photons, which has both an energy of $511$ [Kev].
+$^{22}_{11}$Na is known to emit those kind of particle, which is why we have a typical peak for this energy level.
+
+
+\section{Dispositif}
+%Description du dispositif expérimental
+%Tim's duty
+
+
+\section{Résultats}
+%Exposition des graphes avec les légendes et un peu de texte explicatifs sur comment on les a obtenus.
+
+\begin{figure}[h!]
+  \begin{center}
+  %\includegraphics[width=0.8\linewidth,angle=0]{}
+  \caption{} \label{fig:}
+  \end{center}
+\end{figure}
+
+\section{Discussion}%le plus important
+
+\subsection{Interprétation}
+%Qu'est ce que les résultats nous permettent de conclure?
+%Est ce que cela nous aide pour nôtre but?
+
+\subsection{Discussions}
+%Validité de nos résultats
+%S'il y a des erreurs, d'ou viennent elle!
+%Avons nous atteind les buts du TP?
+\section{Conclusion}
+
+%Résumer du rapport
+%Ouverture
+
+
+
+
+
+%Reference
+\begin{thebibliography}{99}
+\end{thebibliography}
+
+\end{document}
