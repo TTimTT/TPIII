@@ -1,0 +1,56 @@
+1. spectrometrie γ
+	
+2. attenuation γ dans matière
+
+
+
+3. interaction β⁻ dans matière
+
+
+
+4. coincidence
+
+	80mg/cm² / k cm = 2.7g/cm³
+	.08g/cm² / k cm = 2.7g/cm³
+	k cm = .08/2.7=33cm
+	==============
+	coups12	= 1047
+	coups1 	= 235209
+	coups2 	= 266081
+	temps 		= 1359.7
+	A = m1m2 / m12 = 4.3963 10⁴
+	==============
+	like 12 seconds later...
+	==============
+	coups12	= 2663
+	coups1 	= 589929
+	coups2 	= 665516
+	temps 		= 3408.1
+	A = m1m2 / m12 = 4.3259 10⁴
+
+	1990.8=1991
+
+	t=ln(A0/A)τ
+	τ(CO60)=5.3ans
+	A0=3.7 10⁶
+
+
+5. mesure t1/2
+
+calibration
+
+delay[μs] 	channel[]
+10 			47
+16			83
+22 			113
+24 			123
+27 			138
+33 			168
+39 			190
+44 			223
+55 			278
+66 			332
+77 			386
+88 			441
+99 			496
+
