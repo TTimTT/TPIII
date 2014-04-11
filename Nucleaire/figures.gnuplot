@@ -38,7 +38,7 @@ set style histogram cluster gap 0
 set style fill solid border -1
 set boxwidth 0.8
 
-poisson(x,mu)=mu**int(x)/int(x)!*exp(-mu)*512
+poisson(x,mu)=mu**int(x)/(int(x)!)*exp(-mu)*512
 xRg=14
 
 plot[*:xRg] "< ./data/fill-in.sh ./data/Poisson_5ms.TKA ".xRg using ($1-1):xtic(2) notitle, poisson(x,6) lc rgb "blue"
