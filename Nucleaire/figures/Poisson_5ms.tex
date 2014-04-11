@@ -1,0 +1,326 @@
+% Written by ConTeXt terminal for GNUPLOT on: 2014-04-04 15:53 CEST
+% GNUPLOT version: 4.6.3 (Gentoo revision r0), terminal version: 1.0.0 (2011-11-05)
+% See also http://wiki.contextgarden.net/Gnuplot
+%
+\usemodule
+   [gnuplot]
+\setupcolors
+   [state=start]
+\setupbodyfont
+   [12pt]
+\setupGNUPLOTterminal
+   [context]
+   [linejoin=mitered, % *mitered* | rounded | beveled
+    linecap=butt, % *butt* | rounded | squared
+    dashed=yes, % *yes* | no
+    dashlength=1, % scaling factor for dash lengths
+    linewidth=1, % scaling factor for line widths (1.0 means 0.5bp)
+    %fontscale=1, % scaling factor for text labels
+    points=metapost, % *metapost* | tex (Should points be drawn with MetaPost or TeX?)
+    images=inline] % *inline* | external (inline only works in MKIV, external requires png support in gnuplot)
+
+\starttext
+
+\startGNUPLOTpage % Graphic Nr. 1
+string gnuplotversion; gnuplotversion := "4.6";
+string termversion;    termversion    := "1.0";
+% scaling factor, width and height of the figure
+a := 1cm; w := 12.700a; h := 7.620a; % (5in, 3in)
+% temporary variable for storing the path and images
+save p, img, ima; path p; string img, ima;
+% -------------------------
+% Different initialisations
+% -------------------------
+% for additional user-defined settings
+gp_setup_before;
+% text scaling factor for the whole figure
+gp_scale_text := 1;
+% pointsize scaling factor
+gp_set_pointsize(1);
+% linewidth scaling factor for individual lines
+gp_set_linewidth(1);
+% for additional user-defined settings
+gp_setup_after;
+% -------------------------
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (1.138a,0.967a)--(1.261a,0.967a);
+gp_draw(p);
+p := (12.078a,0.967a)--(11.955a,0.967a);
+gp_draw(p);
+gp_put_text((0.931a, 0.967a), align(right), \sometxt[gp]{0});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (1.138a,1.660a)--(1.261a,1.660a);
+gp_draw(p);
+p := (12.078a,1.660a)--(11.955a,1.660a);
+gp_draw(p);
+gp_put_text((0.931a, 1.660a), align(right), \sometxt[gp]{10});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (1.138a,2.353a)--(1.261a,2.353a);
+gp_draw(p);
+p := (12.078a,2.353a)--(11.955a,2.353a);
+gp_draw(p);
+gp_put_text((0.931a, 2.353a), align(right), \sometxt[gp]{20});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (1.138a,3.046a)--(1.261a,3.046a);
+gp_draw(p);
+p := (12.078a,3.046a)--(11.955a,3.046a);
+gp_draw(p);
+gp_put_text((0.931a, 3.046a), align(right), \sometxt[gp]{30});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (1.138a,3.739a)--(1.261a,3.739a);
+gp_draw(p);
+p := (12.078a,3.739a)--(11.955a,3.739a);
+gp_draw(p);
+gp_put_text((0.931a, 3.739a), align(right), \sometxt[gp]{40});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (1.138a,4.433a)--(1.261a,4.433a);
+gp_draw(p);
+p := (12.078a,4.433a)--(11.955a,4.433a);
+gp_draw(p);
+gp_put_text((0.931a, 4.433a), align(right), \sometxt[gp]{50});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (1.138a,5.126a)--(1.261a,5.126a);
+gp_draw(p);
+p := (12.078a,5.126a)--(11.955a,5.126a);
+gp_draw(p);
+gp_put_text((0.931a, 5.126a), align(right), \sometxt[gp]{60});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (1.138a,5.819a)--(1.261a,5.819a);
+gp_draw(p);
+p := (12.078a,5.819a)--(11.955a,5.819a);
+gp_draw(p);
+gp_put_text((0.931a, 5.819a), align(right), \sometxt[gp]{70});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (1.138a,6.512a)--(1.261a,6.512a);
+gp_draw(p);
+p := (12.078a,6.512a)--(11.955a,6.512a);
+gp_draw(p);
+gp_put_text((0.931a, 6.512a), align(right), \sometxt[gp]{80});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (1.138a,7.205a)--(1.261a,7.205a);
+gp_draw(p);
+p := (12.078a,7.205a)--(11.955a,7.205a);
+gp_draw(p);
+gp_put_text((0.931a, 7.205a), align(right), \sometxt[gp]{90});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (1.867a,0.967a)--(1.867a,0.844a);
+gp_draw(p);
+gp_put_text((2.322a, 0.422a), align(center), \sometxt[gp]{0});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (2.597a,0.967a)--(2.597a,0.844a);
+gp_draw(p);
+gp_put_text((3.052a, 0.422a), align(center), \sometxt[gp]{1});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (3.326a,0.967a)--(3.326a,0.844a);
+gp_draw(p);
+gp_put_text((3.781a, 0.422a), align(center), \sometxt[gp]{2});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (4.055a,0.967a)--(4.055a,0.844a);
+gp_draw(p);
+gp_put_text((4.510a, 0.422a), align(center), \sometxt[gp]{3});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (4.785a,0.967a)--(4.785a,0.844a);
+gp_draw(p);
+gp_put_text((5.240a, 0.422a), align(center), \sometxt[gp]{4});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (5.514a,0.967a)--(5.514a,0.844a);
+gp_draw(p);
+gp_put_text((5.969a, 0.422a), align(center), \sometxt[gp]{5});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (6.243a,0.967a)--(6.243a,0.844a);
+gp_draw(p);
+gp_put_text((6.698a, 0.422a), align(center), \sometxt[gp]{6});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (6.973a,0.967a)--(6.973a,0.844a);
+gp_draw(p);
+gp_put_text((7.428a, 0.422a), align(center), \sometxt[gp]{7});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (7.702a,0.967a)--(7.702a,0.844a);
+gp_draw(p);
+gp_put_text((8.157a, 0.422a), align(center), \sometxt[gp]{8});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (8.431a,0.967a)--(8.431a,0.844a);
+gp_draw(p);
+gp_put_text((8.886a, 0.422a), align(center), \sometxt[gp]{9});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (9.161a,0.967a)--(9.161a,0.844a);
+gp_draw(p);
+gp_put_text((9.616a, 0.422a), align(center), \sometxt[gp]{10});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (9.890a,0.967a)--(9.890a,0.844a);
+gp_draw(p);
+gp_put_text((10.345a, 0.422a), align(center), \sometxt[gp]{11});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (10.619a,0.967a)--(10.619a,0.844a);
+gp_draw(p);
+gp_put_text((11.074a, 0.422a), align(center), \sometxt[gp]{12});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (11.349a,0.967a)--(11.349a,0.844a);
+gp_draw(p);
+gp_put_text((11.804a, 0.422a), align(center), \sometxt[gp]{13});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (12.078a,0.967a)--(12.078a,0.844a);
+gp_draw(p);
+gp_put_text((12.533a, 0.422a), align(center), \sometxt[gp]{14});
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (1.138a,7.205a)--(1.138a,0.967a)--(12.078a,0.967a)--(12.078a,7.205a)--cycle;
+gp_draw(p);
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+gp_set_linetype(0);
+gp_set_color(lt(0));
+p := unitsquare xyscaled (0.585a,0.070a) shifted (1.940a,0.967a);
+gp_fill(p);
+gp_set_color(lt(-2));
+p := (1.940a,0.967a)--(1.940a,1.036a)--(2.524a,1.036a)--(2.524a,0.967a)--cycle;
+gp_draw(p);
+gp_set_linetype(0);
+p := unitsquare xyscaled (0.584a,0.555a) shifted (2.670a,0.967a);
+gp_fill(p);
+gp_set_color(lt(-2));
+p := (2.670a,0.967a)--(2.670a,1.521a)--(3.253a,1.521a)--(3.253a,0.967a)--cycle;
+gp_draw(p);
+gp_set_linetype(0);
+p := unitsquare xyscaled (0.584a,1.734a) shifted (3.399a,0.967a);
+gp_fill(p);
+gp_set_color(lt(-2));
+p := (3.399a,0.967a)--(3.399a,2.700a)--(3.982a,2.700a)--(3.982a,0.967a)--cycle;
+gp_draw(p);
+gp_set_linetype(0);
+p := unitsquare xyscaled (0.585a,2.773a) shifted (4.128a,0.967a);
+gp_fill(p);
+gp_set_color(lt(-2));
+p := (4.128a,0.967a)--(4.128a,3.739a)--(4.712a,3.739a)--(4.712a,0.967a)--cycle;
+gp_draw(p);
+gp_set_linetype(0);
+p := unitsquare xyscaled (0.584a,5.061a) shifted (4.858a,0.967a);
+gp_fill(p);
+gp_set_color(lt(-2));
+p := (4.858a,0.967a)--(4.858a,6.027a)--(5.441a,6.027a)--(5.441a,0.967a)--cycle;
+gp_draw(p);
+gp_set_linetype(0);
+p := unitsquare xyscaled (0.584a,5.823a) shifted (5.587a,0.967a);
+gp_fill(p);
+gp_set_color(lt(-2));
+p := (5.587a,0.967a)--(5.587a,6.789a)--(6.170a,6.789a)--(6.170a,0.967a)--cycle;
+gp_draw(p);
+gp_set_linetype(0);
+p := unitsquare xyscaled (0.585a,6.170a) shifted (6.316a,0.967a);
+gp_fill(p);
+gp_set_color(lt(-2));
+p := (6.316a,0.967a)--(6.316a,7.136a)--(6.900a,7.136a)--(6.900a,0.967a)--cycle;
+gp_draw(p);
+gp_set_linetype(0);
+p := unitsquare xyscaled (0.584a,4.229a) shifted (7.046a,0.967a);
+gp_fill(p);
+gp_set_color(lt(-2));
+p := (7.046a,0.967a)--(7.046a,5.195a)--(7.629a,5.195a)--(7.629a,0.967a)--cycle;
+gp_draw(p);
+gp_set_linetype(0);
+p := unitsquare xyscaled (0.584a,3.467a) shifted (7.775a,0.967a);
+gp_fill(p);
+gp_set_color(lt(-2));
+p := (7.775a,0.967a)--(7.775a,4.433a)--(8.358a,4.433a)--(8.358a,0.967a)--cycle;
+gp_draw(p);
+gp_set_linetype(0);
+p := unitsquare xyscaled (0.585a,2.635a) shifted (8.504a,0.967a);
+gp_fill(p);
+gp_set_color(lt(-2));
+p := (8.504a,0.967a)--(8.504a,3.601a)--(9.088a,3.601a)--(9.088a,0.967a)--cycle;
+gp_draw(p);
+gp_set_linetype(0);
+p := unitsquare xyscaled (0.584a,1.526a) shifted (9.234a,0.967a);
+gp_fill(p);
+gp_set_color(lt(-2));
+p := (9.234a,0.967a)--(9.234a,2.492a)--(9.817a,2.492a)--(9.817a,0.967a)--cycle;
+gp_draw(p);
+gp_set_linetype(0);
+p := unitsquare xyscaled (0.584a,0.971a) shifted (9.963a,0.967a);
+gp_fill(p);
+gp_set_color(lt(-2));
+p := (9.963a,0.967a)--(9.963a,1.937a)--(10.546a,1.937a)--(10.546a,0.967a)--cycle;
+gp_draw(p);
+gp_set_linetype(0);
+p := unitsquare xyscaled (0.585a,0.209a) shifted (10.692a,0.967a);
+gp_fill(p);
+gp_set_color(lt(-2));
+p := (10.692a,0.967a)--(10.692a,1.175a)--(11.276a,1.175a)--(11.276a,0.967a)--cycle;
+gp_draw(p);
+gp_set_linetype(0);
+p := unitsquare xyscaled (0.584a,0.140a) shifted (11.422a,0.967a);
+gp_fill(p);
+gp_set_color(lt(-2));
+p := (11.422a,0.967a)--(11.422a,1.106a)--(12.005a,1.106a)--(12.005a,0.967a)--cycle;
+gp_draw(p);
+gp_set_linetype(0);
+gp_set_linetype(1);
+gp_set_color(rgb(0.00,0.00,1.00));
+gp_set_color(lt(-2));
+gp_put_text((10.506a, 6.871a), align(right), \sometxt[gp]{poisson(x,6)});
+gp_set_linetype(1);
+gp_set_color(rgb(0.00,0.00,1.00));
+p := (10.713a,6.871a)--(11.664a,6.871a);
+gp_draw(p);
+p := (1.138a,0.982a)--(1.249a,1.055a)--(1.359a,1.055a)--(1.470a,1.055a)
+  --(1.580a,1.055a)--(1.691a,1.055a)--(1.801a,1.055a)--(1.912a,1.055a)
+  --(2.022a,1.055a)--(2.133a,1.055a)--(2.243a,1.055a)--(2.354a,1.055a)
+  --(2.464a,1.055a)--(2.575a,1.055a)--(2.685a,1.495a)--(2.796a,1.495a)
+  --(2.906a,1.495a)--(3.017a,1.495a)--(3.127a,1.495a)--(3.238a,1.495a)
+  --(3.348a,2.550a)--(3.459a,2.550a)--(3.569a,2.550a)--(3.680a,2.550a)
+  --(3.790a,2.550a)--(3.901a,2.550a)--(4.011a,2.550a)--(4.122a,4.134a)
+  --(4.232a,4.134a)--(4.343a,4.134a)--(4.453a,4.134a)--(4.564a,4.134a)
+  --(4.674a,4.134a)--(4.785a,5.717a)--(4.895a,5.717a)--(5.006a,5.717a)
+  --(5.116a,5.717a)--(5.227a,5.717a)--(5.337a,5.717a)--(5.448a,5.717a)
+  --(5.558a,6.667a)--(5.669a,6.667a)--(5.779a,6.667a)--(5.890a,6.667a)
+  --(6.000a,6.667a)--(6.111a,6.667a)--(6.221a,6.667a)--(6.332a,6.667a)
+  --(6.442a,6.667a)--(6.553a,6.667a)--(6.663a,6.667a)--(6.774a,6.667a)
+  --(6.884a,6.667a)--(6.995a,5.853a)--(7.105a,5.853a)--(7.216a,5.853a)
+  --(7.326a,5.853a)--(7.437a,5.853a)--(7.547a,5.853a)--(7.658a,5.853a)
+  --(7.768a,4.631a)--(7.879a,4.631a)--(7.989a,4.631a)--(8.100a,4.631a)
+  --(8.210a,4.631a)--(8.321a,4.631a)--(8.431a,3.410a)--(8.542a,3.410a)
+  --(8.652a,3.410a)--(8.763a,3.410a)--(8.873a,3.410a)--(8.984a,3.410a)
+  --(9.094a,3.410a)--(9.205a,2.433a)--(9.315a,2.433a)--(9.426a,2.433a)
+  --(9.536a,2.433a)--(9.647a,2.433a)--(9.757a,2.433a)--(9.868a,2.433a)
+  --(9.978a,1.766a)--(10.089a,1.766a)--(10.199a,1.766a)--(10.310a,1.766a)
+  --(10.420a,1.766a)--(10.531a,1.766a)--(10.641a,1.367a)--(10.752a,1.367a)
+  --(10.862a,1.367a)--(10.973a,1.367a)--(11.083a,1.367a)--(11.194a,1.367a)
+  --(11.304a,1.367a)--(11.415a,1.151a)--(11.525a,1.151a)--(11.636a,1.151a)
+  --(11.746a,1.151a)--(11.857a,1.151a)--(11.967a,1.151a)--(12.078a,1.046a);
+gp_draw(p);
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+p := (1.138a,7.205a)--(1.138a,0.967a)--(12.078a,0.967a)--(12.078a,7.205a)--cycle;
+gp_draw(p);
+gp_set_linetype(-2);
+gp_set_color(lt(-2));
+setbounds currentpicture to unitsquare xyscaled (w,h);
+\stopGNUPLOTpage
+\stoptext
