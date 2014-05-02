@@ -1,9 +1,11 @@
 \documentclass[a4paper,12pt,oneside]{article}
 
+\usepackage{subfig}
 \usepackage{graphicx}
 \usepackage{verbatim}
 \usepackage{amsmath}
 \usepackage[english]{babel}
+\usepackage[utf8]{inputenc} 
 \usepackage[colorlinks,bookmarks=false,linkcolor=blue,urlcolor=blue]{hyperref}
 \usepackage{booktabs}
 
@@ -104,25 +106,112 @@ $$E=E_{\gamma}-E_{X}$$
 \item Energy resolution of the detector, which is the ability to discriminate two photons of similar energy level.
 \end{itemize}
 
+\subsection{Figures}
+
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width=1.0\linewidth,angle=0]{./figures/Co57.pdf}
+  \caption{} \label{fig:Co57}
+  \end{center}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width=1.0\linewidth,angle=0]{./figures/Co60.pdf}
+  \caption{} \label{fig:Co60}
+  \end{center}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width=1.0\linewidth,angle=0]{./figures/Cs137.pdf}
+  \caption{} \label{fig:Cs137}
+  \end{center}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width=1.0\linewidth,angle=0]{./figures/Na22.pdf}
+  \caption{} \label{fig:Na22}
+  \end{center}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width=1.0\linewidth,angle=0]{./figures/Pb120.pdf}
+  \caption{} \label{fig:Pb120}
+  \end{center}
+\end{figure}
+
+\subsection{Spectrum Analysis}
+By reporting the peak of the different spectrum and knowing the energy level of this peak, we can obtain a linear curve showing that the detection configuration has a linear behaviour and thus we can guess the different energy level of the Hf181:
+
+%TODO caption and errors
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width=1.0\linewidth,angle=0]{./figures/Spectrumcal.pdf}
+  \caption{} \label{fig:calibrate}
+  \end{center}
+\end{figure}
+
+Finally, one can verify the dependance of resolution $\sigma_E/E$ function of $\frac{1}{\sqrt{E}}$.
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width=1.0\linewidth,angle=0]{./figures/Resolution.pdf}
+  \caption{} \label{fig:resolution}
+  \end{center}
+\end{figure}
+
+\subsection{Hf 181}
+%TODO ANALYSIS
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width=1.0\linewidth,angle=0]{./figures/Hf181.pdf}
+  \caption{} \label{fig:Hf181}
+  \end{center}
+\end{figure}
+
 \section{Poisson Distribution}
 
 This section shows the statistic behaviour of nuclear particles detection. We can use a Poissonian distribution to describe this behaviour.
+The experiment is made from 512 measures, One measure lasts $\Delta t$, thus the experiment takes 512*$\Delta t$ s to be done.
+
+The mean $\overline{N}$ of the sample is given by: $$\overline{N}=\frac{\Sigma N_i}{512}$$
+The deviation is given by: $$\sigma_{\overline{N}}=\sqrt{\frac{1}{512}\Sigma^{\infty}_{N=0} (N-\overline{N})^2 f(N)}$$
+Also, the theorical probability of Poisson distribution is given by: $$p(N)=\overline{N}^N \frac{e^{\overline{N}}}{N!}$$
 %TODO complete
 
-As we know that the Poisson law tends to a normal law when $N_i$ goes to infinite, we can apply the $\chi^2$ test.
+Finally, as we know that the Poisson law tends to a normal law when $N_i$ goes to infinite, we can apply the $\chi^2$ test.
 
 $$T^2=\Sigma^{14}_{i=1}{\left(\frac{f(N_i)-n*p(N_i)}{\sqrt{n*p(N_i)}}\right)^2}$$
 
-Several measures have been made by varying XXX which are shown in the table~\ref{tab:poisson}
+The following histogram shows the theorical and the experimental distribution for the experiments with different $\Delta t$ of time integration.
 
+Several measures have been made by varying $\Delta t$ which are shown in the table~\ref{tab:poisson}.
 
-%TODO
-%XXX est epreuve a convertir en anglais
-\begin{table}
+%TODO captions
+\begin{figure}[H]
+  \centering
+
+  \subfloat[Subcaption 1]{\label{figur:1}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_5ms.pdf}}
+  \subfloat[Subcaption 2]{\label{figur:2}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_6ms.pdf}}
+  \\
+  \subfloat[Subcaption 3]{\label{figur:3}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_7ms.pdf}}
+  \subfloat[Subcaption 4]{\label{figur:4}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_8ms.pdf}}
+  \\
+  \subfloat[Subcaption 5]{\label{figur:5}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_9ms.pdf}}
+  \subfloat[Subcaption 6]{\label{figur:6}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_10ms.pdf}}
+  \\
+  \subfloat[Subcaption 5]{\label{figur:5}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_15ms.pdf}}
+  \subfloat[Subcaption 6]{\label{figur:6}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_20ms.pdf}}
+  \label{figur}\caption{Histogram}
+\end{figure}
+
+\begin{table}[H]
 \centering
 	\begin{tabular}{|c|c|c|c|c|c|}
 	   \hline
-	   Type (time) & Theory ($\overline{N}\pm\sigma$)& Experimental ($\overline{N}\pm\sigma$) & one XXX & 100 XXX & $\chi^2$ \\
+	   Type (time) & Theory ($\overline{N}\pm\sigma$)& Experimental ($\overline{N}\pm\sigma$) & one trial & 100 trials & $\chi^2$ \\
 		\hline
 	   5 ms & $6\pm 2.45$ & $5.94\pm 2.41$ & 0.41 & 0.018 & 6.32\\
 	   6 ms & $8\pm 2.82$ & $7.3\pm 2.72$ & 0.37 & 0.016 & 19.67\\
@@ -138,22 +227,40 @@ Several measures have been made by varying XXX which are shown in the table~\ref
 	\label{tab:poisson}
 \end{table}
 
-\section{Dispositif}
-%Description du dispositif expérimental
-%Tim's duty
+%TODO ANALYSIS OF TABLE
 
+\section{Attenuation in matter}%le plus important
+We know from the different kind of effect that the gamma rays can be attenuate in the matter when it goes through. The attenuation correspond of a discreasing amount of photons received without lost of energy from the photons.
+This phenomena is described by an exponential law:
+$$I=I_0e^{-\mu(E,Z)x}=I_0 e^{-\mu_d d}$$
+,where $\mu_d=\frac{\mu}{\rho}$ which is the mass attenuation coefficient and $d=\rho x$ is the area screen density.
 
-\section{Résultats}
-%Exposition des graphes avec les légendes et un peu de texte explicatifs sur comment on les a obtenus.
+The figure~\ref{fig:attenuation} shows the experimental results from the attenuation of Cs137 through an aluminium or a lead obstacle with different thickness. The slope of this curves correspond to the attenuation coefficient $\mu$ (c.f table~\ref{tab:attenuation}).
+Whereas the $\mu$ values of both samples are clearly different, the $\mu_d$ coefficient seems to be quite similar. One can also see that the lead is more efficient to protect someone from the radiation than aluminium. This is due to the higher density of lead, which corresponds to a higher probability of interaction between a gamma photons and matter.%TODO energy DECAY table D6 D7???
 
-\begin{figure}[h!]
+%COMPLETE
+
+%TODO
+\begin{figure}[H]
   \begin{center}
-  %\includegraphics[width=0.8\linewidth,angle=0]{}
-  \caption{} \label{fig:}
+  \includegraphics[width=1.0\linewidth,angle=0]{./figures/Attenuation.pdf}
+  \caption{} \label{fig:attenuation}
   \end{center}
 \end{figure}
 
-\section{Discussion}%le plus important
+\begin{table}[H]
+\centering
+	\begin{tabular}{|c|c|c|}
+	   \hline
+		Material & $\mu$ [$cm^{-1}$] & $\mu_d$ [$cm^2/g$]\\
+		\hline
+		Pb	& 0.97 & 0.085 \\
+		Al	& 0.18 & 0.066 \\
+	   	\hline
+	\end{tabular}
+	\caption{TODO}
+	\label{tab:attenuation}
+\end{table}
 
 \subsection{Interprétation}
 %Qu'est ce que les résultats nous permettent de conclure?

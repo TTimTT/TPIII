@@ -9,6 +9,16 @@ f(x)=a*x+b
 fit f(x) datadir."calibration.dat" using 2:3 via a,b
 plot datadir."calibration.dat" using 2:3, f(x) lc rgb "blue"
 
+set output figuresdir.'Resolution.tex'
+fit f(x) "< sort -h -k3 ./data/sig_energy.dat" using ($3/$2):(1/sqrt($2)) via a,b
+plot "< sort -h -k3 ./data/sig_energy.dat" using ($3/$2):(1/sqrt($2)) notitle, f(x) notitle
+
+set output figuresdir.'Attenuation.tex'
+f1(x)=a1*x+b1
+f2(x)=a2*x+b2
+fit f1(x) datadir."attenuation_alu.dat" using 2:(log($4/(18.30*$3))) via a1,b1
+fit f2(x) datadir."attenuation_pb.dat" using 2:(log($4/(18.30*$3))) via a2,b2
+plot datadir."attenuation_alu.dat" using 2:(log($4/(18.30*$3))), datadir."attenuation_pb.dat" using 2:(log($4/(18.30*$3))), f1(x), f2(x)
 
 slope=2.93
 
