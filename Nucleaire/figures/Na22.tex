@@ -1,4 +1,4 @@
-% Written by ConTeXt terminal for GNUPLOT on: 2014-05-01 23:20 CEST
+% Written by ConTeXt terminal for GNUPLOT on: 2014-05-11 17:13 CEST
 % GNUPLOT version: 4.6.3 (Gentoo revision r0), terminal version: 1.0.0 (2011-11-05)
 % See also http://wiki.contextgarden.net/Gnuplot
 %
@@ -153,12 +153,18 @@ gp_set_linetype(-2);
 gp_set_color(lt(-2));
 p := (1.345a,7.205a)--(1.345a,0.844a)--(12.078a,0.844a)--(12.078a,7.205a)--cycle;
 gp_draw(p);
+gp_set_color(lt(-1));
+gp_put_text((1.821a, 5.297a), align(left), \sometxt[gp]{1});
+gp_set_color(lt(-1));
+gp_put_text((4.935a, 6.569a), align(left), \sometxt[gp]{2});
+gp_set_color(lt(-1));
+gp_put_text((10.430a, 1.692a), align(left), \sometxt[gp]{3});
 gp_set_linetype(-2);
 gp_set_color(lt(-2));
 gp_set_linetype(0);
 gp_set_color(lt(0));
 gp_set_color(lt(-2));
-gp_put_text((10.506a, 6.871a), align(right), \sometxt[gp]{datadir."Na22.TKA" using ($0*slope):($1)});
+gp_put_text((10.506a, 6.871a), align(right), \sometxt[gp]{Na22});
 gp_set_linetype(0);
 gp_point(1.388a,2.901a,0);
 gp_point(1.409a,2.943a,0);

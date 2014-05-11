@@ -1,4 +1,4 @@
-% Written by ConTeXt terminal for GNUPLOT on: 2014-05-01 23:20 CEST
+% Written by ConTeXt terminal for GNUPLOT on: 2014-05-11 17:13 CEST
 % GNUPLOT version: 4.6.3 (Gentoo revision r0), terminal version: 1.0.0 (2011-11-05)
 % See also http://wiki.contextgarden.net/Gnuplot
 %
@@ -188,12 +188,22 @@ gp_set_linetype(-2);
 gp_set_color(lt(-2));
 p := (1.552a,7.205a)--(1.552a,0.844a)--(12.078a,0.844a)--(12.078a,7.205a)--cycle;
 gp_draw(p);
+gp_set_color(lt(-1));
+gp_put_text((1.881a, 4.979a), align(left), \sometxt[gp]{1});
+gp_set_color(lt(-1));
+gp_put_text((2.934a, 4.247a), align(left), \sometxt[gp]{2});
+gp_set_color(lt(-1));
+gp_put_text((7.210a, 2.434a), align(left), \sometxt[gp]{3});
+gp_set_color(lt(-1));
+gp_put_text((9.150a, 2.180a), align(left), \sometxt[gp]{4});
+gp_set_color(lt(-1));
+gp_put_text((10.269a, 1.798a), align(left), \sometxt[gp]{5});
 gp_set_linetype(-2);
 gp_set_color(lt(-2));
 gp_set_linetype(0);
 gp_set_color(lt(0));
 gp_set_color(lt(-2));
-gp_put_text((10.506a, 6.871a), align(right), \sometxt[gp]{datadir."Co60.TKA" using ($0*slope):($1)});
+gp_put_text((10.506a, 6.871a), align(right), \sometxt[gp]{Co60});
 gp_set_linetype(0);
 gp_point(1.552a,7.110a,0);
 gp_point(1.571a,7.110a,0);

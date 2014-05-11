@@ -47,9 +47,7 @@
 \end{abstract}
 
 \section{Introduction}
-%expliqué les enjeux théoriques sur le chaos.
-%domaine très théoriques
-%peu de compréhension sur le sujet ( pourquoi???)
+Nuclear physic is one of the most famous and important field in physics, the understanding of these phenomena is a requirement for any physicist. It is a link to the deep matter complexity and can be used in different fields. In this experiments we introduce ourselves to nuclear physics and the radioactive decays. First of all, by measuring different desintegration spectrum, a calibration of the instrument is made. Then the study of nuclear phenomena statistic is done, after that the attenuation of gamma rays is studied using lead and aluminium plate and finally coincidence phenomena will be used to aged a radioactive source.
 
 \section{Spectrometry $\gamma$}
 \subsection{Theory}
@@ -81,7 +79,7 @@ The kinetic energy of the electron is given by:
 
 $$T=\frac{E_p}{1+\frac{m_0c^2}{E_p(1-\cos(\theta))}}$$
 
-The Compton effect creates a flat pattern on the energy spectrum, it ends at $E_{max}=XXX$%TODO,
+The Compton effect creates a flat pattern on the energy spectrum, it ends at $E_{max}=T$,
 
 One can notice that if the angle of scattering is $\theta=180^{\circ}$, then the resulted photon can interact with the cristal thus an other electron can be emitted with the following energy:
 
@@ -90,11 +88,10 @@ $$E_{e_2}=E_p-E_{max}$$
 \subsubsection{Position-Electron interaction}
 During disintegration, $\beta^+$ particle can be emitted, These 
 particles are, in fact, positron that can interact with electrons in 
-%TODO  change scintilleur
-the "scintillateur" to create 2 gamma photons, which has both an energy of $511$ [Kev].
+the scintillator to create 2 gamma photons, which has both an energy of $511$ [Kev].
 $^{22}_{11}$Na is known to emit those kind of particle, which is why we have a typical peak for this energy level.
 
-\subsubsection{X rearrangement}%TODO rearrangement
+\subsubsection{X rearrangement}
 When a photoelectric effect occurs and the energy of the $\gamma$ is closed to "33.17 keV" ( which is the energy corresponding to the damping energy). The interaction between the photon and the face of the cristal is highly likely, thus a X photon is likely to escape. The typical peak corresponding is called the "Escaping peak" which is given by:
 
 $$E=E_{\gamma}-E_{X}$$
@@ -106,48 +103,97 @@ $$E=E_{\gamma}-E_{X}$$
 \item Energy resolution of the detector, which is the ability to discriminate two photons of similar energy level.
 \end{itemize}
 
+\newpage
 \subsection{Figures}
-
-\begin{figure}[H]
+\begin{comment}
+\subsubsection{Co 57}
+\begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Co57.pdf}
   \caption{} \label{fig:Co57}
   \end{center}
 \end{figure}
 
-\begin{figure}[H]
+
+\newpage
+\end{comment}
+\subsubsection{Co 60}
+\begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Co60.pdf}
   \caption{} \label{fig:Co60}
   \end{center}
 \end{figure}
 
-\begin{figure}[H]
+$^{60}Co$ is desintegrating into $^{60}$Ni which gives 2 gamma photons, $\gamma_1,\gamma_2$.
+
+\begin{itemize}
+\item Peak \#1, from the collimator lead, E=69.07 [KeV]
+\item Peak \#2, back-scattering with $\gamma_1,\gamma_2$ confounded, E=215.84 [KeV]
+\item Peak \#3, End of Compton effect $\gamma_1,\gamma_2$ confounded, E=892.16 [KeV]
+\item Peak \#4, Photoelectric peak from $\gamma_1$, E=1159.82 [KeV]
+\item Peak \#5, Photoelectric peak from $\gamma_2$, E=1318.10 [KeV]
+\end{itemize}
+
+
+\newpage
+\subsubsection{Cs 137}
+\begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Cs137.pdf}
   \caption{} \label{fig:Cs137}
   \end{center}
 \end{figure}
 
-\begin{figure}[H]
+$^{137}Cs$ is desintegrating into $^{137}$Ba which gives 1 gamma photon, $\gamma$
+
+\begin{itemize}
+\item Peak \#1, from the collimator lead, E=64.23 [KeV]
+\item Peak \#2, back-scattering, E=182.49 [KeV]
+\item Peak \#3, End of Compton effect, E=408.79 [KeV]
+\item Peak \#4, Photoelectric peak from $\gamma$, E=642.39 [KeV]
+\end{itemize}
+
+
+\newpage
+\subsubsection{Na 22}
+\begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Na22.pdf}
   \caption{} \label{fig:Na22}
   \end{center}
 \end{figure}
 
-\begin{figure}[H]
+$^{22}Na$ is desintegrating into $^{22}$Ne which gives 1 gamma photon, $\gamma$.
+
+\begin{itemize}
+\item Peak \#1, from the collimator lead, E=67.54 [KeV]
+\item Peak \#2, Annihlation of $e^+e^-$, E=496.17 [KeV]
+\item Peak \#3, Photoelectric peak from $\gamma$, E=1254.71 [KeV]
+\end{itemize}
+
+
+\newpage
+\subsubsection{Pb 120}
+\begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Pb120.pdf}
   \caption{} \label{fig:Pb120}
   \end{center}
 \end{figure}
 
+$^{210}Pb$ is desintegrating into $^{210}$Bi which gives 2 gamma photons, $\gamma$.
+
+\begin{itemize}
+\item Peak \#1, from photoelectric effect, E=35.47 [KeV]
+\end{itemize}
+
+\newpage
 \subsection{Spectrum Analysis}
 By reporting the peak of the different spectrum and knowing the energy level of this peak, we can obtain a linear curve showing that the detection configuration has a linear behaviour and thus we can guess the different energy level of the Hf181:
 
 %TODO caption and errors
-\begin{figure}[H]
+\begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Spectrumcal.pdf}
   \caption{} \label{fig:calibrate}
@@ -155,22 +201,24 @@ By reporting the peak of the different spectrum and knowing the energy level of 
 \end{figure}
 
 Finally, one can verify the dependance of resolution $\sigma_E/E$ function of $\frac{1}{\sqrt{E}}$.
-\begin{figure}[H]
+\begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Resolution.pdf}
   \caption{} \label{fig:resolution}
   \end{center}
 \end{figure}
 
+\newpage
 \subsection{Hf 181}
 %TODO ANALYSIS
-\begin{figure}[H]
+\begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Hf181.pdf}
   \caption{} \label{fig:Hf181}
   \end{center}
 \end{figure}
 
+\newpage
 \section{Poisson Distribution}
 
 This section shows the statistic behaviour of nuclear particles detection. We can use a Poissonian distribution to describe this behaviour.
@@ -190,7 +238,7 @@ The following histogram shows the theorical and the experimental distribution fo
 Several measures have been made by varying $\Delta t$ which are shown in the table~\ref{tab:poisson}.
 
 %TODO captions
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
 
   \subfloat[Subcaption 1]{\label{figur:1}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_5ms.pdf}}
@@ -207,7 +255,7 @@ Several measures have been made by varying $\Delta t$ which are shown in the tab
   \label{figur}\caption{Histogram}
 \end{figure}
 
-\begin{table}[H]
+\begin{table}[h!]
 \centering
 	\begin{tabular}{|c|c|c|c|c|c|}
 	   \hline
@@ -229,6 +277,7 @@ Several measures have been made by varying $\Delta t$ which are shown in the tab
 
 %TODO ANALYSIS OF TABLE
 
+\newpage
 \section{Attenuation in matter}%le plus important
 We know from the different kind of effect that the gamma rays can be attenuate in the matter when it goes through. The attenuation correspond of a discreasing amount of photons received without lost of energy from the photons.
 This phenomena is described by an exponential law:
@@ -241,14 +290,14 @@ Whereas the $\mu$ values of both samples are clearly different, the $\mu_d$ coef
 %COMPLETE
 
 %TODO
-\begin{figure}[H]
+\begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Attenuation.pdf}
   \caption{} \label{fig:attenuation}
   \end{center}
 \end{figure}
 
-\begin{table}[H]
+\begin{table}[h!]
 \centering
 	\begin{tabular}{|c|c|c|}
 	   \hline

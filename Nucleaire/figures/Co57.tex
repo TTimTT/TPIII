@@ -1,4 +1,4 @@
-% Written by ConTeXt terminal for GNUPLOT on: 2014-05-01 23:20 CEST
+% Written by ConTeXt terminal for GNUPLOT on: 2014-05-11 17:13 CEST
 % GNUPLOT version: 4.6.3 (Gentoo revision r0), terminal version: 1.0.0 (2011-11-05)
 % See also http://wiki.contextgarden.net/Gnuplot
 %
@@ -132,12 +132,14 @@ gp_set_linetype(-2);
 gp_set_color(lt(-2));
 p := (1.966a,7.205a)--(1.966a,0.844a)--(12.078a,0.844a)--(12.078a,7.205a)--cycle;
 gp_draw(p);
+gp_set_color(lt(-1));
+gp_put_text((5.831a, 6.569a), align(left), \sometxt[gp]{1});
 gp_set_linetype(-2);
 gp_set_color(lt(-2));
 gp_set_linetype(0);
 gp_set_color(lt(0));
 gp_set_color(lt(-2));
-gp_put_text((10.506a, 6.871a), align(right), \sometxt[gp]{datadir."Co57.TKA" using ($0*slope):($1)});
+gp_put_text((10.506a, 6.871a), align(right), \sometxt[gp]{Co57});
 gp_set_linetype(0);
 gp_point(1.966a,0.859a,0);
 gp_point(2.067a,0.859a,0);

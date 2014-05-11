@@ -1,4 +1,4 @@
-% Written by ConTeXt terminal for GNUPLOT on: 2014-05-01 23:20 CEST
+% Written by ConTeXt terminal for GNUPLOT on: 2014-05-11 17:13 CEST
 % GNUPLOT version: 4.6.3 (Gentoo revision r0), terminal version: 1.0.0 (2011-11-05)
 % See also http://wiki.contextgarden.net/Gnuplot
 %
@@ -188,12 +188,20 @@ gp_set_linetype(-2);
 gp_set_color(lt(-2));
 p := (1.759a,7.205a)--(1.759a,0.844a)--(12.078a,0.844a)--(12.078a,7.205a)--cycle;
 gp_draw(p);
+gp_set_color(lt(-1));
+gp_put_text((2.533a, 5.297a), align(left), \sometxt[gp]{1});
+gp_set_color(lt(-1));
+gp_put_text((4.081a, 4.979a), align(left), \sometxt[gp]{2});
+gp_set_color(lt(-1));
+gp_put_text((6.983a, 3.706a), align(left), \sometxt[gp]{3});
+gp_set_color(lt(-1));
+gp_put_text((9.563a, 7.046a), align(left), \sometxt[gp]{4});
 gp_set_linetype(-2);
 gp_set_color(lt(-2));
 gp_set_linetype(0);
 gp_set_color(lt(0));
 gp_set_color(lt(-2));
-gp_put_text((10.506a, 6.871a), align(right), \sometxt[gp]{datadir."Cs137.TKA" using ($0*slope):($1)});
+gp_put_text((6.753a, 6.871a), align(right), \sometxt[gp]{Cs137});
 gp_set_linetype(0);
 gp_point(1.759a,1.019a,0);
 gp_point(1.797a,1.021a,0);
@@ -469,7 +477,7 @@ gp_point(11.963a,0.856a,0);
 gp_point(12.001a,0.854a,0);
 gp_point(12.039a,0.858a,0);
 gp_point(12.077a,0.851a,0);
-gp_point(11.188a,6.871a,0);
+gp_point(7.435a,6.871a,0);
 gp_set_linetype(-2);
 gp_set_color(lt(-2));
 p := (1.759a,7.205a)--(1.759a,0.844a)--(12.078a,0.844a)--(12.078a,7.205a)--cycle;
