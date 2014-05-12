@@ -54,8 +54,8 @@ Nuclear physic is one of the most famous and important field in physics, the und
 Radioactive sources generates one or multiple gamma photons of various 
 energy level. However, these photons cannot directly interact with the
  detector by a photoelectric effect due to their high energy level. 
-%TODO iodure de sodium
-This is why, "iodure de sodium" cristal is used, thus to make the 
+
+This is why, sodium iodide cristal is used, thus to make the 
 photons react with the cristal which generates electrons, this 
 process generates new photons which will interact with electrons. 
 This cristal realises, therefore, a chain reaction that amplifies the 
@@ -121,11 +121,11 @@ $$E=E_{\gamma}-E_{X}$$
 \begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Co60.pdf}
-  \caption{} \label{fig:Co60}
+  \caption{$_{27}^{60}$Co spectrum} \label{fig:Co60}
   \end{center}
 \end{figure}
 
-$^{60}Co$ is desintegrating into $^{60}$Ni which gives 2 gamma photons, $\gamma_1,\gamma_2$.
+$_{27}^{60}$Co is desintegrating into $_{28}^{60}$Ni which gives 2 gamma photons, $\gamma_1,\gamma_2$.
 
 \begin{itemize}
 \item Peak \#1, from the collimator lead, E=69.07 [KeV]
@@ -141,11 +141,11 @@ $^{60}Co$ is desintegrating into $^{60}$Ni which gives 2 gamma photons, $\gamma_
 \begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Cs137.pdf}
-  \caption{} \label{fig:Cs137}
+  \caption{$_{55}^{137}$Cs spectrum} \label{fig:Cs137}
   \end{center}
 \end{figure}
 
-$^{137}Cs$ is desintegrating into $^{137}$Ba which gives 1 gamma photon, $\gamma$
+$_{55}^{137}$Cs is desintegrating into $_{56}^{137}$Ba which gives 1 gamma photon, $\gamma$
 
 \begin{itemize}
 \item Peak \#1, from the collimator lead, E=64.23 [KeV]
@@ -160,11 +160,11 @@ $^{137}Cs$ is desintegrating into $^{137}$Ba which gives 1 gamma photon, $\gamma
 \begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Na22.pdf}
-  \caption{} \label{fig:Na22}
+  \caption{$_{11}^{22}$Na spectrum} \label{fig:Na22}
   \end{center}
 \end{figure}
 
-$^{22}Na$ is desintegrating into $^{22}$Ne which gives 1 gamma photon, $\gamma$.
+$_{11}^{22}$Na is desintegrating into $_{10}^{22}$Ne which gives 1 gamma photon, $\gamma$.
 
 \begin{itemize}
 \item Peak \#1, from the collimator lead, E=67.54 [KeV]
@@ -178,11 +178,11 @@ $^{22}Na$ is desintegrating into $^{22}$Ne which gives 1 gamma photon, $\gamma$.
 \begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Pb120.pdf}
-  \caption{} \label{fig:Pb120}
+  \caption{$_{82}^{210}$Pb spectrum} \label{fig:Pb120}
   \end{center}
 \end{figure}
 
-$^{210}Pb$ is desintegrating into $^{210}$Bi which gives 2 gamma photons, $\gamma$.
+$_{82}^{210}$Pb is desintegrating into $_{83}^{210}$Bi which gives 2 gamma photons, $\gamma$.
 
 \begin{itemize}
 \item Peak \#1, from photoelectric effect, E=35.47 [KeV]
@@ -192,11 +192,11 @@ $^{210}Pb$ is desintegrating into $^{210}$Bi which gives 2 gamma photons, $\gamm
 \subsection{Spectrum Analysis}
 By reporting the peak of the different spectrum and knowing the energy level of this peak, we can obtain a linear curve showing that the detection configuration has a linear behaviour and thus we can guess the different energy level of the Hf181:
 
-%TODO caption and errors
+
 \begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Spectrumcal.pdf}
-  \caption{} \label{fig:calibrate}
+  \caption{Plot of the linear function fit to the calibration process, one can see a linear dependance between an energy level and the channel.} \label{fig:calibrate}
   \end{center}
 \end{figure}
 
@@ -204,7 +204,7 @@ Finally, one can verify the dependance of resolution $\sigma_E/E$ function of $\
 \begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Resolution.pdf}
-  \caption{} \label{fig:resolution}
+  \caption{Plot of the system resolution, $\sigma_E/E$ function of $\frac{1}{\sqrt{E}}$, the fit is a linear function.} \label{fig:resolution}
   \end{center}
 \end{figure}
 
@@ -214,7 +214,7 @@ Finally, one can verify the dependance of resolution $\sigma_E/E$ function of $\
 \begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Hf181.pdf}
-  \caption{} \label{fig:Hf181}
+  \caption{$_{72}^{181}$Hf spectrum} \label{fig:Hf181}
   \end{center}
 \end{figure}
 
@@ -237,22 +237,21 @@ The following histogram shows the theorical and the experimental distribution fo
 
 Several measures have been made by varying $\Delta t$ which are shown in the table~\ref{tab:poisson}.
 
-%TODO captions
 \begin{figure}[h!]
   \centering
 
-  \subfloat[Subcaption 1]{\label{figur:1}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_5ms.pdf}}
-  \subfloat[Subcaption 2]{\label{figur:2}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_6ms.pdf}}
+  \subfloat{\label{figur:1}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_5ms.pdf}}
+  \subfloat{\label{figur:2}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_6ms.pdf}}
   \\
-  \subfloat[Subcaption 3]{\label{figur:3}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_7ms.pdf}}
-  \subfloat[Subcaption 4]{\label{figur:4}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_8ms.pdf}}
+  \subfloat{\label{figur:3}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_7ms.pdf}}
+  \subfloat{\label{figur:4}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_8ms.pdf}}
   \\
-  \subfloat[Subcaption 5]{\label{figur:5}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_9ms.pdf}}
-  \subfloat[Subcaption 6]{\label{figur:6}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_10ms.pdf}}
+  \subfloat{\label{figur:5}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_9ms.pdf}}
+  \subfloat{\label{figur:6}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_10ms.pdf}}
   \\
-  \subfloat[Subcaption 5]{\label{figur:5}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_15ms.pdf}}
-  \subfloat[Subcaption 6]{\label{figur:6}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_20ms.pdf}}
-  \label{figur}\caption{Histogram}
+  \subfloat{\label{figur:5}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_15ms.pdf}}
+  \subfloat{\label{figur:6}\includegraphics[width=0.5\linewidth,angle=0]{./figures/Poisson_20ms.pdf}}
+  \label{figur}\caption{Histogram of different $\Delta t$ for Poissonian distribution behaviour of nuclear phenomena.}
 \end{figure}
 
 \begin{table}[h!]

@@ -5,13 +5,28 @@ set terminal context standalone
 
 
 set output figuresdir.'Spectrumcal.tex'
+
+set xlabel 'Channel'
+set ylabel 'Energy [KeV]'
+
+set key top left
+
 f(x)=a*x+b
 fit f(x) datadir."calibration.dat" using 2:3 via a,b
-plot datadir."calibration.dat" using 2:3, f(x) lc rgb "blue"
+plot datadir."calibration.dat" using 2:3 notitle, f(x) lc rgb "blue" title 'Fit'
 
 set output figuresdir.'Resolution.tex'
+
+set xlabel '$\frac{1}{\sqrt{E}}$'
+set ylabel '$\frac{\sigma_E}{E}$'
+
 fit f(x) "< sort -h -k3 ./data/sig_energy.dat" using ($3/$2):(1/sqrt($2)) via a,b
-plot "< sort -h -k3 ./data/sig_energy.dat" using ($3/$2):(1/sqrt($2)) notitle, f(x) notitle
+plot "< sort -h -k3 ./data/sig_energy.dat" using ($3/$2):(1/sqrt($2)) notitle, f(x) title 'Fit'
+
+set key top left
+
+set xlabel 'Thickness [cm]'
+set ylabel '$ln(N/t)$'
 
 set output figuresdir.'Attenuation.tex'
 f1(x)=a1*x+b1
@@ -23,6 +38,10 @@ plot[0:*][-4:1] datadir."attenuation_alu.dat" using 2:(log($4/(18.30*$3))):(1/sq
 slope=2.93
 
 set label 1 '1' at 112,90000 tc ls 0
+
+
+set xlabel 'Energy [KeV]'
+set ylabel 'Amount of $\gamma$'
 
 set output figuresdir.'Co57.tex'
 plot[*:100*slope][0:100000] datadir."Co57.TKA" using ($0*slope):($1) title "Co57"
@@ -82,6 +101,10 @@ plot[*:250*slope][0:300000] datadir."Hf181.TKA" using ($0*slope):($1) title "Hf1
 
 set xtics out nomirror offset 2.2,0
 
+
+set xlabel 'N (number of measured photons)'
+set ylabel 'f(N)'
+
 set output figuresdir.'Poisson_5ms.tex'
 set style data histogram
 set style histogram cluster gap 0
@@ -140,7 +163,6 @@ xRg=21
 plot[*:xRg] "< ./data/fill-in.sh ./data/Poisson_9ms.TKA ".xRg using ($1-1):xtic(2) notitle, poisson(x,11) lc rgb "blue"
 
 
-
 set output figuresdir.'Poisson_10ms.tex'
 set style data histogram
 set style histogram cluster gap 0
@@ -149,8 +171,9 @@ set boxwidth 0.8
 
 
 xRg=24
+everyNth(countColumn,labelColumnNum,N) =((int(column(countColumn)) % N == 0) ? stringcolumn(labelColumnNum) : '');
 
-plot[*:xRg] "< ./data/fill-in.sh ./data/Poisson_10ms.TKA ".xRg using ($1-1):xtic(2) notitle, poisson(x,12) lc rgb "blue"
+plot[0:xRg] "< ./data/fill-in.sh ./data/Poisson_10ms.TKA ".xRg using ($1-1):xtic(everyNth(2,2,2))  notitle, poisson(x,12) lc rgb "blue"
 
 
 set output figuresdir.'Poisson_15ms.tex'
@@ -162,7 +185,7 @@ set boxwidth 0.8
 
 xRg=30
 
-plot[*:xRg] "< ./data/fill-in.sh ./data/Poisson_15ms.TKA ".xRg using ($1-1):xtic(2) notitle, poisson(x,18) lc rgb "blue"
+plot[5:xRg] "< ./data/fill-in.sh ./data/Poisson_15ms.TKA ".xRg using ($1-1):xtic(everyNth(2,2,2)) notitle, poisson(x,18) lc rgb "blue"
 
 set output figuresdir.'Poisson_20ms.tex'
 set style data histogram
@@ -173,4 +196,4 @@ set boxwidth 0.8
 
 xRg=40
 
-plot[*:xRg] "< ./data/fill-in.sh ./data/Poisson_20ms.TKA ".xRg using ($1-1):xtic(2) notitle, poisson(x,24) lc rgb "blue"
+plot[5:xRg] "< ./data/fill-in.sh ./data/Poisson_20ms.TKA ".xRg using ($1-1):xtic(everyNth(2,2,2)) notitle, poisson(x,24) lc rgb "blue"
