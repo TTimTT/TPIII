@@ -90,14 +90,19 @@ unset label 5
 set output figuresdir.'Pb120.tex'
 plot[*:40*slope] datadir."Pb120.TKA" using ($0*slope):($1) title "Pb120"
 
-unset label 1
-unset label 2
-unset label 3
+
+set label 1 '1' at 115,269659 tc ls 0
+set label 2 '2' at 320,73000 tc ls 0
+set label 3 '3' at 460,60500 tc ls 0
 unset label 4
 unset label 5
 
 set output figuresdir.'Hf181.tex'
 plot[*:250*slope][0:300000] datadir."Hf181.TKA" using ($0*slope):($1) title "Hf181"
+
+unset label 1
+unset label 2
+unset label 3
 
 set xtics out nomirror offset 2.2,0
 

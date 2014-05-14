@@ -196,10 +196,11 @@ By reporting the peak of the different spectrum and knowing the energy level of 
 \begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Spectrumcal.pdf}
-  \caption{Plot of the linear function fit to the calibration process, one can see a linear dependance between an energy level and the channel.} \label{fig:calibrate}
+  \caption{Plot of the linear function fit to the calibration process, one can see a linear dependance between an energy level and the channel, the slope is approximatley 2.93 [KeV/Channel].} \label{fig:calibrate}
   \end{center}
 \end{figure}
 
+\newpage
 Finally, one can verify the dependance of resolution $\sigma_E/E$ function of $\frac{1}{\sqrt{E}}$.
 \begin{figure}[h!]
   \begin{center}
@@ -210,13 +211,21 @@ Finally, one can verify the dependance of resolution $\sigma_E/E$ function of $\
 
 \newpage
 \subsection{Hf 181}
-%TODO ANALYSIS
+
 \begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Hf181.pdf}
   \caption{$_{72}^{181}$Hf spectrum} \label{fig:Hf181}
   \end{center}
 \end{figure}
+
+$_{72}^{181}$Na is desintegrating into $_{72}^{181}$Ta which gives 1 gamma photon, $\gamma$.
+
+\begin{itemize}
+\item Peak \#1, E=115.31 [KeV]
+\item Peak \#2, E=320.15 [KeV]
+\item Peak \#3, E=461.24 [KeV]
+\end{itemize}
 
 \newpage
 \section{Poisson Distribution}
@@ -227,7 +236,6 @@ The experiment is made from 512 measures, One measure lasts $\Delta t$, thus the
 The mean $\overline{N}$ of the sample is given by: $$\overline{N}=\frac{\Sigma N_i}{512}$$
 The deviation is given by: $$\sigma_{\overline{N}}=\sqrt{\frac{1}{512}\Sigma^{\infty}_{N=0} (N-\overline{N})^2 f(N)}$$
 Also, the theorical probability of Poisson distribution is given by: $$p(N)=\overline{N}^N \frac{e^{\overline{N}}}{N!}$$
-%TODO complete
 
 Finally, as we know that the Poisson law tends to a normal law when $N_i$ goes to infinite, we can apply the $\chi^2$ test.
 
@@ -256,43 +264,40 @@ Several measures have been made by varying $\Delta t$ which are shown in the tab
 
 \begin{table}[h!]
 \centering
-	\begin{tabular}{|c|c|c|c|c|c|}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
 	   \hline
-	   Type (time) & Theory ($\overline{N}\pm\sigma$)& Experimental ($\overline{N}\pm\sigma$) & one trial & 100 trials & $\chi^2$ \\
+	   Type (time) & Theory ($\overline{N}\pm\sigma$)& Experimental ($\overline{N}\pm\sigma$) & one trial & 100 trials & $\chi^2$  & $\chi^2$ Theorical 0.90\\
 		\hline
-	   5 ms & $6\pm 2.45$ & $5.94\pm 2.41$ & 0.41 & 0.018 & 6.32\\
-	   6 ms & $8\pm 2.82$ & $7.3\pm 2.72$ & 0.37 & 0.016 & 19.67\\
-	   7 ms & $9\pm 3.0$ & $8.5\pm 3.03$ & 0.34 & 0.015 & 28.15\\
-	   8 ms & $10\pm 3.16$ & $9.82\pm 3.18$ & 0.31 & 0.014 & 19.1\\
-	   9 ms & $11\pm 3.31$ & $10.7\pm 3.28$ & 0.30 & 0.013 & 14.12\\
-	   10 ms & $12\pm 3.46$ & $12.2\pm 3.54$ & 0.28 & 0.012 & 12.38\\
-	   15 ms & $18\pm 4.24$ & $18.1\pm 4.16$ & 0.23 & 0.010 & 24.24\\
-	   20 ms & $24\pm 4.89$ & $24.35\pm 5.26$ & 0.20 & 0.008 & 46.2\\
+	   5 ms & $6\pm 2.45$ & $5.94\pm 2.41$ & 0.41 & 0.018 & 6.32 & 7.790\\
+	   6 ms & $8\pm 2.82$ & $7.3\pm 2.72$ & 0.37 & 0.016 & 19.67 & 9.312\\
+	   7 ms & $9\pm 3.0$ & $8.5\pm 3.03$ & 0.34 & 0.015 & 28.15 & 10.085\\
+	   8 ms & $10\pm 3.16$ & $9.82\pm 3.18$ & 0.31 & 0.014 & 19.1 & 11.651\\
+	   9 ms & $11\pm 3.31$ & $10.7\pm 3.28$ & 0.30 & 0.013 & 14.12 & 12.443\\
+	   10 ms & $12\pm 3.46$ & $12.2\pm 3.54$ & 0.28 & 0.012 & 12.38 & 15.659\\
+	   15 ms & $18\pm 4.24$ & $18.1\pm 4.16$ & 0.23 & 0.010 & 24.24 & 20.599\\
+	   20 ms & $24\pm 4.89$ & $24.35\pm 5.26$ & 0.20 & 0.008 & 46.2 & 29.051\\
 		\hline
 	\end{tabular}
 	\caption{Summary of values for the Poissonian Distribution}
 	\label{tab:poisson}
 \end{table}
 
-%TODO ANALYSIS OF TABLE
+As we see on the table~\ref{tab:poisson} for different $\Delta t$ experimental results keeps to the theorical one. One can also see that doing 100 trials is more precise than only a long one. Finally, the Chi squared test with the correspond parameter $\nu$ and using a confidence of 90$\%$ isnot concluding. Datas are close but not good enough to have a sufficient confidence for standard physics convention.
 
 \newpage
-\section{Attenuation in matter}%le plus important
+\section{Attenuation in matter}
 We know from the different kind of effect that the gamma rays can be attenuate in the matter when it goes through. The attenuation correspond of a discreasing amount of photons received without lost of energy from the photons.
 This phenomena is described by an exponential law:
 $$I=I_0e^{-\mu(E,Z)x}=I_0 e^{-\mu_d d}$$
 ,where $\mu_d=\frac{\mu}{\rho}$ which is the mass attenuation coefficient and $d=\rho x$ is the area screen density.
 
 The figure~\ref{fig:attenuation} shows the experimental results from the attenuation of Cs137 through an aluminium or a lead obstacle with different thickness. The slope of this curves correspond to the attenuation coefficient $\mu$ (c.f table~\ref{tab:attenuation}).
-Whereas the $\mu$ values of both samples are clearly different, the $\mu_d$ coefficient seems to be quite similar. One can also see that the lead is more efficient to protect someone from the radiation than aluminium. This is due to the higher density of lead, which corresponds to a higher probability of interaction between a gamma photons and matter.%TODO energy DECAY table D6 D7???
+Whereas the $\mu$ values of both samples are clearly different, the $\mu_d$ coefficient seems to be quite similar. One can also see that the lead is more efficient to protect someone from the radiation than aluminium. This is due to the higher density of lead, which corresponds to a higher probability of interaction between a gamma photons and matter.
 
-%COMPLETE
-
-%TODO
 \begin{figure}[h!]
   \begin{center}
   \includegraphics[width=1.0\linewidth,angle=0]{./figures/Attenuation.pdf}
-  \caption{} \label{fig:attenuation}
+  \caption{Attenuation fit for both aluminium an lead, the lead seems to attenuate more efficiently than aluminium, therefore its wiser to use lead.} \label{fig:attenuation}
   \end{center}
 \end{figure}
 
@@ -306,7 +311,7 @@ Whereas the $\mu$ values of both samples are clearly different, the $\mu_d$ coef
 		Al	& 0.18 & 0.066 \\
 	   	\hline
 	\end{tabular}
-	\caption{TODO}
+	\caption{Resume of the values from lead and aluminium attenuation thus to compare, Pb is more efficient, although, both $\mu_d$ seems quite close.}
 	\label{tab:attenuation}
 \end{table}
 
