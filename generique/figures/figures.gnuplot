@@ -1,5 +1,5 @@
-figuresdir = './figures/'
-datadir = './data/'
+figuresdir = './'
+datadir = '../data/'
 
 set terminal context standalone
 set output figuresdir.'test.tex'

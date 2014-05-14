@@ -80,6 +80,7 @@ pulse[us][*]	mean_integral[*][*]	deviation_integral[*][*]
 #8	493.4
 #8	521.9
 #Mean
+#8	508.88	14.45
 8	508.88	14.45
 
 
@@ -116,7 +117,8 @@ pulse[us][*]	mean_integral[*][*]	deviation_integral[*][*]
 #12	812.9
 #12	1022.0
 #Mean
-12	925.98	71.47
+#12	925.98	71.47
+12	787.20	71.47
 
 
 #13	1038
