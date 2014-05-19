@@ -65,16 +65,16 @@ plot datadir."coincidence8.nat" using 1:($4/$5) notitle, g(x) title 'Fit'
 set output figuresdir.'2theta.tex'
 
 set xtics rotate by 270
-set xlabel '$m_f$ [1/s]'
-set ylabel '$m_1*m_2$ [$1/s^2$]'
+set xlabel '$m_1*m_2$ [$1/s^2$]'
+set ylabel '$m_r$ [1/s]'
 
 set key top right
 
 g(x)=a*x+b
 a=1.28525e-06
 b=-0.143648
-fit g(x) datadir."coincidence8.nat" using ($2*$3/$5):4 via a,b
-plot datadir."coincidence8.nat" using ($2*$3/$5):4 notitle, g(x) title 'Fit'
+fit g(x) datadir."coincidence8.nat" using ($2*$3/$5):($4) via a,b
+plot datadir."coincidence8.nat" using ($2*$3/$5):($4) notitle, g(x) title 'Fit'
 
 set xtics rotate by 0
 slope=2.93
