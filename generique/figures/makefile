@@ -12,7 +12,7 @@ all: figure $(TARGETS) clean
 figure: gnuplot.log
 
 gnuplot.log:
-	gnuplot figures.gnuplot | tee gnuplot.log
+	gnuplot figures.gnuplot > gnuplot.log
 	$(MAKE)
 #	$(MAKEFLAGS) wierd w written :S
 
