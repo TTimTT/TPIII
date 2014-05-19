@@ -68,14 +68,16 @@ set xtics rotate by 270
 set xlabel '$m_1*m_2$ [$1/s^2$]'
 set ylabel '$m_r$ [1/s]'
 
-set key top right
+set key top left
 
 g(x)=a*x+b
 a=1.28525e-06
 b=-0.143648
-fit g(x) datadir."coincidence8.nat" using ($2*$3/$5):($4) via a,b
-plot datadir."coincidence8.nat" using ($2*$3/$5):($4) notitle, g(x) title 'Fit'
+fit g(x) datadir."coincidence8.nat" using ($2*$3/$5):($4-0.53) via a,b
 
+plot datadir."coincidence8.nat" using ($2*$3/$5):($4-0.53) notitle, g(x) title 'f(x)=1.25019e-06*x-0.143648'
+
+set key top right
 set xtics rotate by 0
 slope=2.93
 
