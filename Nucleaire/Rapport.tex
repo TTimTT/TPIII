@@ -336,7 +336,20 @@ where $m_f$ represent the rate due to the fortuit collision, $m_c$ the rate due 
 
 \subsection{cosmic background coincidence measurement}
 
-!!!! METTRE LES MESURES !!!!
+
+\begin{table}[h!]
+\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+			gamma count		&beta count		&coincidence	&time\\
+		\hline
+			7760			&246			&0				&10327\\
+		\hline
+	\end{tabular}
+	\caption{measurements}
+	\label{tab:poisson}
+\end{table}
+
 
 Some measurement were taken without any samples : some particles were detected, but the the coincidence rate was so low that it wasn't possible to get any of those during $1033 s$ ($17 min$). It is so low that it can be negliged. so the measurement for $m_m$ becomes :
 
@@ -361,24 +374,70 @@ So in this case $m_r$ is set to $0$ so that $\theta$ can be measured.
 \ee
 
 
-!!!!! GRAPH : $m_f$ en fonction de $m_1*m_2$ !!!!!
-CALCULER LA PENTE, C'EST EGALE A 2THETA
+% type[*][*]	nb_coups_gamma[*][*]		nb_coups_beta[*][*]		coincidence[*][*]		temps[s][*]
+% fortuite		2198562						147272					1304					2444
+
+For the measurement we had $2198562$ gamma rays, $147272$ beta rays with $1304$ coincidences in $2444$ seconds.
+That means
+% $2\theta=\frac{m_f}{m_1m_2} = (1304/2444) / ( (2198562/2444) * (147272/2444) ) = 9.8428\cdot10^{-6} seconds$
+$2\theta=\frac{m_f}{m_1m_2}                                                      = 9.8428\cdot10^{-6} seconds$
+
+
+
+
+
+
+
+
+% !!!!! GRAPH : $m_f$ en fonction de $m_1*m_2$ !!!!!
+% CALCULER LA PENTE, C'EST EGALE A 2THETA
 
 
 \subsection{tentale 181 activity, period and age of the sample}
 
 
 \subsubsection{activity}
+
+	% \begin{figure}[h!]
+	% 	\begin{center}
+	% 	\includegraphics[width=1.0\linewidth,angle=0]{./figures/2theta.pdf}
+	% 	\caption{Plot of $	m_f = 2\theta m_1 m_2$ with a linear fit} \label{fig:2theta}
+	% 	\end{center}
+	% \end{figure}
+
 	The activity of the tentale 181 sample we had can be measured with this relation :
 
 	\be
-		A = \frac{m_1 m_2}{2 m_r}
+		A = \frac{m_1 m_2}{2 m_r} = \frac{m_1 m_2}{2(m_m - 2\theta m_1 m_2)}
 	\ee
 
-	where $m_1$ and $m_2$ are the measurements got in the last part and $m_r$ is the real coincidence discussed before.
+	where $m_1$ and $m_2$ are the measurements got in the last part and $m_r$ is the real coincidence discussed before, that value can be estimated to $m_m - 2\theta m_1 m_2$.
 
-	!!! ON A QQCH COMME $A = m1m2 / m12 = 4.3259 10^4$ QUI EST OK SELON L'ASSISSTANTE
-	!!! AJOUTER TABLE OU GRAPHE DES DATAS RECOLTES
+
+	\begin{table}[h!]
+	\centering
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+				beta count	&gamma count	&coincidence	&time[s] 	&$2\theta$[s]\\
+			\hline
+				44324		&1052777		&104			&895.1		&$9.8\cdot10^{-6}$\\
+			\hline
+		\end{tabular}
+		\caption{measurements}
+		\label{tab:poisson}
+	\end{table}
+
+	% ((44324/895.1) * (1052777/895.1))/(2*104/895.1 - 2*9.8*10^(-6) * (44324/895.1) * (1052777/895.1))
+	$A = -6.4061e+04 $
+
+
+
+	% The fit given in the graph \ref{fig:2theta} show a value for $2A$ of $1.29 \cdot 10^{-6} \pm 1.6\cdot 10^{-7} (12.5\%) seconds$ and the value at the origin is almost $0$.
+
+	
+
+	% !!! ON A QQCH COMME $A = m1m2 / m12 = 4.3259 10^4$ QUI EST OK SELON L'ASSISSTANTE
+	% !!! AJOUTER TABLE OU GRAPHE DES DATAS RECOLTES
 
 
 \subsubsection{period}
@@ -392,7 +451,17 @@ CALCULER LA PENTE, C'EST EGALE A 2THETA
 	(where $p$ represent the distribution function that represent the lifetime of the observed particle, $\lambda$ a factor for normalization, $t$ the delay and $\tau$ the period of the observed particle) we can measure and calculate the $\tau$ parameter. 
 
 
-	!!! METTRE LE GRAPHE AVEC LE FIT EXPONENTIEL QUE T'AS FAIT EN DERNIER.
+	\begin{figure}[h!]
+		\begin{center}
+		\includegraphics[width=1.0\linewidth,angle=0]{./figures/coincidence.pdf}
+		\caption{Plot of $	m_f = 2\theta m_1 m_2$ with a linear fit} \label{fig:2theta}
+		\end{center}
+	\end{figure}
+
+
+	% $\tau = 1/0.00994745$
+	$\tau = 1.0348 \cdot 10^8$ seconds which is $3.27915$ years.
+	% 0.00966398       +/- 0.0005028    (5.203%)
 
 \subsubsection{age}
 
