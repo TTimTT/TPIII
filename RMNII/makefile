@@ -1,36 +1,29 @@
-#Esquisse du futur makefile
-RAP=Rapport
+MAKEFLAGS += --no-buildtin-rules
+LATEX= context
+NAMEGET=Rapport
 
-all: latex
 
-gla: figure context latex
+.PHONY: all clean mr.washee 
+.SUFFIXES:
 
-latex: buildlatex cleanlatex
-
-context: buildcontext cleancontext
-
-figure:
-	gnuplot figures.gnuplot	
+all: Rapport.pdf
 
 #3 fois car on veut la version final du rapport
-buildlatex:
-	pdflatex $(RAP).tex;
-	pdflatex $(RAP).tex;
-	pdflatex $(RAP).tex;
+$(NAMEGET).pdf: $(NAMEGET).tex figure
+	pdflatex $<
+	pdflatex $<
+	pdflatex $<
 
-buildcontext:
-	cd ./figures;context *.tex;
+figure:
+	$(MAKE) -C ./figures/
 
 
-clean: cleanlatex cleancontext cleanfigure
+clean:
+	-rm -vf *.aux
+	-rm -vf *.toc
+	-rm -vf *.log
 	@echo "finnish the clean"
 
-cleanlatex:
-	rm -vf $(RAP).aux $(RAP).toc $(RAP).log
-
-cleancontext:
-	cd ./figures;rm -vf *.tuc; rm -vf *.log; rm -vf *.tmp;
-
-cleanfigure:
-	rm -vf ./figures/*.tex
-	rm -vf ./figures/*.pdf
+mr.washee: clean
+	rm -vf $(NAMEGET).pdf
+	$(MAKE) -C ./figures/ $@
