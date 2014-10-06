@@ -219,12 +219,12 @@ Finally, one can verify the dependance of resolution $\sigma_E/E$ function of $\
 	\end{center}
 \end{figure}
 
-$_{72}^{181}$Na is desintegrating into $_{72}^{181}$Ta which gives 1 gamma photon, $\gamma$.
+$_{72}^{181}$Hf is desintegrating into $_{72}^{181}$Ta which gives 1 gamma photon, $\gamma$.
 
 \begin{itemize}
-\item Peak \#1, E=115.31 [KeV], total elastic scattering
-\item Peak \#2, E=320.15 [KeV], total elastic and inelastic scattering
-\item Peak \#3, E=461.24 [KeV], thershold reaction
+\item Peak \#1, E=115.31 [KeV], photoelectric peak; $E_{th1}=133\ [MeV]$, $E_{th2}=136\ [MeV]$
+\item Peak \#2, E=320.15 [KeV], photoelectric peak; $E_{th}=346\ [MeV]$
+\item Peak \#3, E=461.24 [KeV], photoelectric peak; $E_{th}=482\ [MeV]$
 \end{itemize}
 
 \newpage
@@ -369,35 +369,25 @@ So in this case $m_r$ is set to $0$ so that $\theta$ can be measured.
 % type[*][*]	nb_coups_gamma[*][*]		nb_coups_beta[*][*]		coincidence[*][*]		temps[s][*]
 % fortuite		2198562						147272					1304					2444
 
-For the measurement we had $2198562$ gamma rays, $147272$ beta rays with $1304$ coincidences in $2444$ seconds.
-That means
-% $2\theta=\frac{m_f}{m_1m_2} = (1304/2444) / ( (2198562/2444) * (147272/2444) ) = 9.8428\cdot10^{-6} seconds$
-$2\theta=\frac{m_f}{m_1m_2}                                                      = 9.8428\cdot10^{-6} seconds$
+From the fit of Figure~\ref{fig:2theta}, we obtain $2\theta = 1.25\times 10^{-6}\ [s]$.
 
-
-
-
-
+\begin{figure}[h!]
+	\begin{center}
+	\includegraphics[width=1.0\linewidth,angle=0]{./figures/2theta.pdf}
+	\caption{Plot of $	m_f = 2\theta m_1 m_2$ with a linear fit, we get $2\theta \approx 1.25\times10^{-6}$} \label{fig:2theta}
+	\end{center}
+\end{figure}
 
 
 
 % !!!!! GRAPH : $m_f$ en fonction de $m_1*m_2$ !!!!!
 % CALCULER LA PENTE, C'EST EGALE A 2THETA
+\newpage
+\subsection{Activity and age of Cobalt 60}
 
+\subsubsection{Activity of Cobalt 60}
 
-\subsection{Tantalum 181 activity, period and age of the sample}
-
-
-\subsubsection{Activity}
-
-	% \begin{figure}[h!]
-	% 	\begin{center}
-	% 	\includegraphics[width=1.0\linewidth,angle=0]{./figures/2theta.pdf}
-	% 	\caption{Plot of $	m_f = 2\theta m_1 m_2$ with a linear fit} \label{fig:2theta}
-	% 	\end{center}
-	% \end{figure}
-
-	The activity of the tantalum 181 sample we had can be measured with this relation :
+	The activity of the Cobalt 60 sample we had can be measured with this relation :
 
 	\be
 		A = \frac{m_1 m_2}{2 m_r} = \frac{m_1 m_2}{2(m_m - 2\theta m_1 m_2)}
@@ -412,17 +402,16 @@ $2\theta=\frac{m_f}{m_1m_2}                                                     
 			\hline
 				beta count	&gamma count	&coincidence	&time[s] 	&$2\theta$[s]\\
 			\hline
-				44324		&1052777		&104			&895.1		&$9.8\cdot10^{-6}$\\
+				44324		&1052777		&104			&895.1		& $1.25\times 10^{-6}$\\
 			\hline
 		\end{tabular}
 		\caption{Table of measures to calculate the activity.}
 		\label{tab:poisson}
 	\end{table}
 
-	% ((44324/895.1) * (1052777/895.1))/(2*104/895.1 - 2*9.8*10^(-6) * (44324/895.1) * (1052777/895.1))
-	By these value we have, $A = -6.4061e+04 $
-
-Due to unaccurate value of $m_m$ it is impossible to get a decent value for the Activity, this might be due to a bad calibration or a bad measurement by the experimentalist physicist.
+	% ((44324/895.1) * (1052777))/(2*(104 - 1.25*10**(-6) * (44324) * (1052777)))
+	By these value we have, $A = 6.71196\times 10^5\ [Bq]$
+	This value is quite good and let us calculate the age of Cobalt 60 in the next section.
 
 
 	% The fit given in the graph \ref	{fig:2theta} show a value for $2A$ of $1.29 \cdot 10^{-6} \pm 1.6\cdot 10^{-7} (12.5\%) seconds$ and the value at the origin is almost $0$.
@@ -432,38 +421,14 @@ Due to unaccurate value of $m_m$ it is impossible to get a decent value for the 
 	% !!! ON A QQCH COMME $A = m1m2 / m12 = 4.3259 10^4$ QUI EST OK SELON L'ASSISSTANTE
 	% !!! AJOUTER TABLE OU GRAPHE DES DATAS RECOLTES
 
-
-\subsubsection{Period}
-
-	By measuring the coincidence with a delay, using the relation :
-
-	\be
-		p(t)= \lambda e^{-\frac{t}{\tau}}
-	\ee
-
-	(where $p$ represent the distribution function that represent the lifetime of the observed particle, $\lambda$ a factor for normalization, $t$ the delay and $\tau$ the period of the observed particle) we can measure and calculate the $\tau$ parameter. 
-
-
-	\begin{figure}[h!]
-		\begin{center}
-		\includegraphics[width=1.0\linewidth,angle=0]{./figures/coincidence.pdf}
-		\caption{Plot of $	m_f = 2\theta m_1 m_2$ with a linear fit} \label{fig:2theta}
-		\end{center}
-	\end{figure}
-
-
-	% $\tau = 1/0.00994745$
-	Which gives, $\tau = 1.0348 \cdot 10^8$ seconds which is $3.27915$ years.
-	% 0.00966398       +/- 0.0005028    (5.203%)
-
-\subsubsection{Age}
+\subsubsection{Age of Cobalt 60}
 
 	Knowing that the activity of the sample was at the begining $A_0 = 3.7\times10^6 Bq$, with the relation :
 	\be
-		t=ln(A_0/A)\tau
+		t=\frac	{ln(A_0/A)\tau}{ln(2)}
 	\ee
-	we can estimate the age of the sample, since we have the value of $\tau$ but not $A$, we cannot make the calculus. 
-
+	
+	We obtain $t=13.05\ [years]$, it should have been normally around 22 years, although a factor 10 is missing somewhere, which gives this lower result.
 	% 1990.8=1991
 
 	% $ t=ln(A0/A)\tau $

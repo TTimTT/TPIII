@@ -1,12 +1,12 @@
 MAKEFLAGS += --no-buildtin-rules
 LATEX= context
-NAMEGET=Rapport
+NAMEGET=./Rapport/Rapport
 
 
 .PHONY: all clean mr.washee 
 .SUFFIXES:
 
-all: Rapport.pdf	
+all: $(NAMEGET).pdf clean
 
 #3 fois car on veut la version final du rapport
 $(NAMEGET).pdf: $(NAMEGET).tex figure

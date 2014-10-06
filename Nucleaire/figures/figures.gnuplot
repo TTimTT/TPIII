@@ -246,3 +246,4 @@ set boxwidth 0.8
 xRg=40
 
 plot[5:xRg] "< ../data/fill-in.sh ../data/Poisson_20ms.TKA ".xRg using ($1-1):xtic(everyNth(2,2,2)) notitle, poisson(x,24) lc rgb "blue"
+
