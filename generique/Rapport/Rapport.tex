@@ -29,7 +29,7 @@
 \begin{document}
 
 \title{XXX}%TODO a completer
-\author{... \& ... \& Tim Tuuva}
+\author{ ... \& Tim Tuuva}
 
 \maketitle
 \tableofcontents
@@ -42,25 +42,32 @@
 \end{abstract}
 
 \section{Introduction}
+\input{./Rapport/Introduction.tex}
 
 \section{Théorie}
-\input{Theorie.tex}
+\input{./Rapport/Theory.tex}
 
 \section{Dispositif}
-\input{Dispositif.tex}
+\input{./Rapport/Dispositif.tex}
 
 
 \section{Résultats}
-\input{Resultats.tex}
+\input{./Rapport/Results.tex}
 
 \section{Discussion}
-\input{Discussion.tex}
+\input{./Rapport/Discussion.tex}
 
-\section{Conclusion}
+\section{./Rapport/Conclusion.tex}
+
 
 
 %Reference
-\begin{thebibliography}{99}
-\end{thebibliography}
+\cite{article}
+\cite{book}
+
+\medskip
+ 
+\bibliographystyle{unsrt}
+\bibliography{./Bibliography/bibliography}
 
 \end{document}
