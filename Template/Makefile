@@ -1,6 +1,8 @@
 MAKEFLAGS += --no-buildtin-rules
 LATEX= context
-NAMEGET=./Rapport/Rapport
+NAMEFOLDER=Report
+NAMETARGET=Report
+NAMEGET=./$(NAMEFOLDER)/$(NAMETARGET)
 
 
 .PHONY: all clean mr.washee 
@@ -11,12 +13,12 @@ all: $(NAMEGET).pdf clean
 #3 fois car on veut la version final du rapport
 $(NAMEGET).pdf: $(NAMEGET).tex figure
 	pdflatex $<
-	bibtex Rapport.aux
+	bibtex $(NAMETARGET).aux
 	pdflatex $<
 	pdflatex $<
 
 figure:
-	$(MAKE) -C ./figures/
+	$(MAKE) -C ./Figures/
 
 
 clean:
@@ -29,4 +31,4 @@ clean:
 
 mr.washee: clean
 	rm -vf $(NAMEGET).pdf
-	$(MAKE) -C ./figures/ $@
+	$(MAKE) -C ./Figures/ $@
