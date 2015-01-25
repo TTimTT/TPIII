@@ -4,6 +4,9 @@ NAMEFOLDER=Report
 NAMETARGET=Report
 NAMEGET=./$(NAMEFOLDER)/$(NAMETARGET)
 
+#LaTeX Macro
+MACROTEX = .Macro.tex
+LANG = english
 
 .PHONY: all clean mr.washee 
 .SUFFIXES:
@@ -12,6 +15,7 @@ all: $(NAMEGET).pdf clean
 
 #3 fois car on veut la version final du rapport
 $(NAMEGET).pdf: $(NAMEGET).tex figure
+	echo "\def\langparam{$(LANG)}">./$(NAMEFOLDER)/$(MACROTEX)
 	pdflatex $<
 	bibtex $(NAMETARGET).aux
 	pdflatex $<

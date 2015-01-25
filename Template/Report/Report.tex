@@ -1,58 +1,50 @@
 \documentclass[a4paper,12pt,oneside]{article}
+\input{./Report/.Macro.tex}
 
-\usepackage[english]{babel}
+
+\usepackage[\langparam]{babel}
 \usepackage[utf8]{inputenc} 
 \usepackage{graphicx}
-\usepackage{subfig}
+\usepackage{subcaption}
 \usepackage{verbatim}
 \usepackage{amsmath}
 \usepackage[colorlinks,bookmarks=false,linkcolor=blue,urlcolor=blue]{hyperref}
 \usepackage{booktabs}
 
-\paperheight=297mm
-\paperwidth=210mm
-
-\setlength{\textheight}{235mm}
-\setlength{\topmargin}{-1.2cm}
-%\setlength{\footskip}{5mm}
-\setlength{\textwidth}{15cm}
-\setlength{\oddsidemargin}{0.56cm}
-\setlength{\evensidemargin}{0.56cm}
-
-\pagestyle{plain}
-
-
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \newcommand{\mail}[1]{{\href{mailto:#1}{#1}}}
 \newcommand{\ftplink}[1]{{\href{ftp://#1}{#1}}}
 
 
 \begin{document}
 
-\title{XXX}%TODO a completer
-\author{ ... \& Tim Tuuva}
+%Test the languague used
+\def\en{english}
+\def\fr{french}
+\ifx\en\langparam
+	\def\Theory{Theory}
+	\def\Experiment{Experiment}
+\fi
+\ifx\fr\langparam
+	\def\Theory{Théorie}
+	\def\Experiment{Expérience}
+\fi
 
-\maketitle
-\tableofcontents
-\baselineskip=16pt
-\parindent=15pt
-\parskip=5pt
 
-\begin{abstract}
-
-\end{abstract}
+%Begin the Report
+\input{./Report/Title.tex}
 
 \section{Introduction}
 \input{./Report/Introduction.tex}
 
-\section{Théorie}
+\section{\Theory}
 \input{./Report/Theory.tex}
 
-\section{Dispositif}
-\input{./Report/Device.tex}
+\section{Simulation}
+\input{./Report/Simulation.tex}
 
-
-\section{Résultats}
-\input{./Report/Results.tex}
+\section{\Experiment}
+\input{./Report/Experiment.tex}
 
 \section{Discussion}
 \input{./Report/Discussion.tex}
@@ -60,12 +52,9 @@
 \section{Conclusion}
 \input{./Report/Conclusion.tex}
 
-%Reference
-\cite{article}
-\cite{book}
-
 \medskip
  
+%Ending with Bib
 \bibliographystyle{unsrt}
 \bibliography{./Bibliography/bibliography}
 
