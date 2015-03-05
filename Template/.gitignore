@@ -1,0 +1,10 @@
+*.pdf
+Figures/*.pdf
+Figures/*.tex
+*.tuc
+*.log
+*.tmp
+*.dvi
+*.aux
+*.toc
+*~
